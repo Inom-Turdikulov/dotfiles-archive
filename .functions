@@ -308,3 +308,6 @@ stopwatch() {
         sleep 0.1
     done
 }
+
+# Initialize file at give path (better touch)
+t() { mkdir -p "$(dirname "$1")" && touch "$1" ;  }
