@@ -7,6 +7,6 @@ https://yadm.io/docs/getting_started
 
 <style type="text/css">
     img {
-        width: 790px;
+        width: 395px;
     }
 </style>
