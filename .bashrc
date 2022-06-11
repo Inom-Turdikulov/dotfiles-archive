@@ -19,8 +19,7 @@ unset file;
 # * `cdspell`, autocorrect typos in path names when using `cd`
 # * `histappend`, append to the Bash history file, rather than overwriting it
 # * `checkwinsize`, checks the window size after each command and, if necessary, updates the values of LINES and COLUMNS
-# * `expand_aliases`, aliases are not expanded when the shell is not interactive, unless the
-   expand_aliases shell option is set
+# * `expand_aliases`, aliases are not expanded when the shell is not interactive, unless the expand_aliases shell option is set
 for option in autocd globstar nocaseglob cdspell histappend checkwinsize expand_aliases; do
 	shopt -s "$option" 2> /dev/null;
 done;
@@ -29,7 +28,7 @@ done;
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Alacritty" killall;
+complete -o "nospace" -W "alacritty" killall;
 
 # Completion with sudo
 complete -cf sudo
