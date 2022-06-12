@@ -30,6 +30,7 @@ alias dt="cd ~/desktop"
 alias p="cd ~/projects"
 alias e="emacsclient -nw"
 alias E="SUDO_EDITOR=\"emacsclient\" sudo -e"
+alias vi="echo Use e instead vi"
 alias g='git'
 alias gc="git checkout"
 alias gp="git push"
