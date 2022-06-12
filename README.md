@@ -15,4 +15,4 @@ yadm status
 Got a lot from here:
 
 * Mathias Bynens - https://github.com/mathiasbynens/dotfiles
-* Peter Hogg - https://github.com/pigmonkey
+* Peter Hogg - https://github.com/pigmonkey/dotfiles
