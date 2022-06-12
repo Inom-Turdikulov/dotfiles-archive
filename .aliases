@@ -30,6 +30,9 @@ alias dt="cd ~/desktop"
 alias p="cd ~/projects"
 alias e="emacsclient -nw"
 alias E="SUDO_EDITOR=\"emacsclient\" sudo -e"
+alias g='git'
+alias gc="git checkout"
+alias gp="git push"
 
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
@@ -129,3 +132,14 @@ alias fonts-mono='fc-list :spacing=mono family style | sort'
 alias fonts-all='fc-list | sort'
 alias autorandr_save="autorandr --force --save default"
 alias latest_file='/usr/bin/ls -t | head -n1'
+
+# Enable Git completions for aliases
+if [ -f "/usr/share/bash-completion/completions/git" ]; then
+  source /usr/share/bash-completion/completions/git
+  __git_complete g __git_main
+  __git_complete gc _git_checkout
+  __git_complete gp _git_pull
+else
+  echo "Error loading git completions"
+fi
+
