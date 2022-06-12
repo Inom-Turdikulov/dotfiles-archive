@@ -1,0 +1,8 @@
+audio/*; /usr/bin/xdg-open %s ; copiousoutput
+image/*; /usr/bin/xdg-open %s ; copiousoutput
+
+application/msword; /usr/bin/xdg-open %s ; copiousoutput
+application/pdf; /usr/bin/xdg-open %s ; copiousoutput
+application/postscript ; /usr/bin/xdg-open %s ; copiousoutput
+
+text/html; w3m -dump -I %{charset} -T text/html '%s'; copiousoutput; description=HTML Text; nametemplate=%s.html
