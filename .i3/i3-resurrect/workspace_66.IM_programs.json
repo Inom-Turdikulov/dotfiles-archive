@@ -7,6 +7,8 @@
   },
   {
     "command": [
+      "env",
+      "QT_QPA_PLATFORM_PLUGIN_PATH=/usr/lib/qt/plugins",
       "ripcord"
     ],
     "working_directory": "/home/inom"
