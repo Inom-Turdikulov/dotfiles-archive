@@ -57,10 +57,3 @@
           (require 'evil-terminal-cursor-changer)
           (evil-terminal-cursor-changer-activate) ; or (etcc-on)
           )
-
-
-(custom-set-variables
-  ;; ...other variables might be set here
- '(initial-buffer-choice nil))
-
-(setq inhibit-splash-screen t)
