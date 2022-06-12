@@ -1,0 +1,9 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3.10",
+      "/usr/bin/anki"
+    ],
+    "working_directory": "/home/inom"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "command": [
+      "slack"
+    ],
+    "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "ripcord"
+    ],
+    "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "telegram-desktop"
+    ],
+    "working_directory": "/home/inom/.local/share/TelegramDesktop"
+  }
+]

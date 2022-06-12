@@ -1,0 +1,14 @@
+[
+  {
+    "command": [
+      "/usr/bin/alacritty"
+    ],
+    "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "/usr/bin/zeal"
+    ],
+    "working_directory": "/home/inom"
+  }
+]

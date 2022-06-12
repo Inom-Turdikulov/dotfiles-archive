@@ -1,0 +1,14 @@
+[
+  {
+    "command": [
+      "/usr/bin/crow"
+    ],
+    "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "/usr/bin/qstardict"
+    ],
+    "working_directory": "/home/inom"
+  }
+]

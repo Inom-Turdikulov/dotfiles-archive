@@ -1,0 +1,11 @@
+[
+  {
+    "command": [
+      "/usr/lib/zotero/zotero-bin",
+      "-app",
+      "/usr/lib/zotero/application.ini",
+      "-url"
+    ],
+    "working_directory": "/home/inom"
+  }
+]

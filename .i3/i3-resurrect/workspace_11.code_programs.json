@@ -1,0 +1,9 @@
+[
+  {
+    "command": [
+      "emacsclient",
+      "-c"
+    ],
+    "working_directory": "/home/inom"
+  }
+]
