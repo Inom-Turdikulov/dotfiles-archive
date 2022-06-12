@@ -4,3 +4,6 @@
 
 ## Quickstart
 https://yadm.io/docs/getting_started
+
+# Thanks to…
+* Mathias Bynens - https://github.com/mathiasbynens/dotfiles
