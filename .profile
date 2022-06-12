@@ -3,8 +3,9 @@ export TERMINAL='alacritty'
 export TERM=xterm-256color
 
 # Editors
-export EDITOR="emacsclient -t -a ''"
-export VISUAL=$EDITOR
+export EDITOR="emacsclient -nw"
+export VISUAL="emacsclient -n -c -a emacs"
+export GIT_EDITOR="`which emacsclient` -t"
 export PAGER='less'
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.

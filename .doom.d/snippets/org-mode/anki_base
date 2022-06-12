@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ab4
+# key: ab4
+# uuid: ab4
+# --
+***** Front
+   $1
+***** Back
+   $0

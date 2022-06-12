@@ -29,7 +29,6 @@ alias dl="cd ~/downloads"
 alias dt="cd ~/desktop"
 alias p="cd ~/projects"
 alias e="$EDITOR"
-alias eg='emacsclient -n -c -a emacs'
 alias E="SUDO_EDITOR=\"emacsclient\" sudo -e"
 alias vi="echo Use e instead vi"
 alias g='git'
