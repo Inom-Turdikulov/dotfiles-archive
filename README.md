@@ -16,4 +16,4 @@ Got a lot from here:
 
 * Mathias Bynens - https://github.com/mathiasbynens/dotfiles
 * Peter Hogg - https://github.com/pigmonkey/dotfiles
-* Henrik Lissner - https://github.com/hlissner/dotfiles
+* Henrik Lissner and others (emacs) - https://github.com/doomemacs/doomemacs
