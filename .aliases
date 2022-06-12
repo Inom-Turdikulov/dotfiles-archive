@@ -28,7 +28,6 @@ alias d="cd ~/docs"
 alias dl="cd ~/downloads"
 alias dt="cd ~/desktop"
 alias p="cd ~/projects"
-alias g="git"
 alias e="emacsclient -nw"
 alias E="SUDO_EDITOR=\"emacsclient\" sudo -e"
 

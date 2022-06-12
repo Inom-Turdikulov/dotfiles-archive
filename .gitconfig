@@ -1,5 +1,6 @@
 [include]
 
+	# User specific configuration (name, email)
 	path = ~/.gitconfig.user
 
 [credential]
