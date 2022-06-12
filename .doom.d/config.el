@@ -30,7 +30,10 @@
       tramp-use-ssh-controlmaster-options nil     ; Use the customisations in your ~/.ssh/config
       )
 
-(load! "personal"       doom-private-dir) ;; Personal configuraton, like name, email, etc
+;; Personal configuraton, like name, email, etc
+(if (file-exists-p (file-name-concat doom-private-dir "personal.el"))
+(load! "personal"       doom-private-dir))
+
 (load! "style"          doom-private-dir) ;; Emacs visual styles
 (load! "org"            doom-private-dir) ;; org-mode
 (load! "voice-recorder" doom-private-dir) ;; voice recorder functions
