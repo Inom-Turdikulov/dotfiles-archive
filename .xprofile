@@ -1,0 +1,46 @@
+# Read the Xresources file if it exists.
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+# NetworkManager for managing networks.
+nm-applet &
+
+# Hide the cursor when idle.
+unclutter &
+
+# Notifications with dunst
+dunst &
+
+# Start geoclue
+/usr/lib/geoclue-2.0/demos/agent &
+
+# Udiskie for mounting.
+udiskie &
+
+# Blueman for bluetooth
+blueman-applet &
+
+# Parcellite clipboard manager
+parcellite &
+
+# MPD mpris support
+mpDris2 &
+
+# ALL apps
+i3-ressurect.sh &
+
+qbittorrent-nox &
+
+tapper &
+
+syncthing --no-browser &
+
+ss-local -c ~/.ssh/shadowsocks.json &
+
+blackd &
+
+# Need delay to intiialize display's / wm
+sleep 5 && hsetroot -root  -solid '#37474f' &
+
+/usr/bin/emacs --fg-daemon &
+
+# keebie & TODO: need test & modify
