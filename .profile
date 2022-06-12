@@ -3,9 +3,8 @@ export TERMINAL='alacritty'
 export TERM=xterm-256color
 
 # Editors
-export EDITOR="emacsclient -nw"
-export VISUAL="emacsclient -n -c -a emacs"
-export GIT_EDITOR="`which emacsclient` -t"
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 export PAGER='less'
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
@@ -67,4 +66,3 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 # Configure default fzf (fuzzy-finder) command
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules,tmp}/*'"
-
