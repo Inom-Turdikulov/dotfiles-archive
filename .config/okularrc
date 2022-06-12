@@ -1,0 +1,14 @@
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+DisplayPort-0 DisplayPort-1 Height 1920x1080=1040
+DisplayPort-0 DisplayPort-1 Width 1920x1080=1920
+DisplayPort-0 DisplayPort-1 XPosition 1920x1080=0
+DisplayPort-0 DisplayPort-1 YPosition 1920x1080=1697
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPAAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/books/storage/2W4YK9WT/Vulkan® 1.3.212 - A Specification (with all regist.pdf
+Name1[$e]=Vulkan® 1.3.212 - A Specification (with all regist.pdf
