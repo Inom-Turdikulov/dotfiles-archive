@@ -38,7 +38,7 @@
 ;; Whether display the workspace name. Non-nil to display in the mode-line.
 (after! doom-modeline
   (setq doom-modeline-persp-name t))
-(setq all-the-icons-scale-factor 0.8)
+(setq all-the-icons-scale-factor 1)
 
 ;; Alert style
 (use-package! alert
