@@ -1,0 +1,387 @@
+# i config file (v4)
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# set default desktop layout (default is tiling, aviable tabbed, stacking)
+workspace_layout default
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod4
+
+# Focus on window activation
+# The window will always be focused and not be marked urgent.
+focus_on_window_activation focus
+focus_follows_mouse no
+
+# Don’t focus window upon opening
+no_focus [window_role="pop-up"]
+
+# add fake padding in title
+for_window [class=".*"] title_format " %title "
+
+# Workspace names
+set $ws1  1:1.code
+set $ws2  2:2.web
+set $ws3  3:3.life
+set $ws4  4:4.dict
+set $ws5  5:5.media
+set $ws6  6:6.IM
+set $ws7  7:7.CG
+set $ws8  8:8.flashcards
+set $ws9  9:9.games
+set $ws10 10:10.help
+set $ws11 11:11.lib
+set $ws12 12:12.email
+
+set $DISPLAY_2 DisplayPort-1
+workspace $ws1 output primary
+workspace $ws2  output primary
+workspace $ws3  output primary
+workspace $ws4  output primary
+workspace $ws5  output primary
+workspace $ws6  output primary
+workspace $ws7  output primary
+workspace $ws8  output primary
+workspace $ws9  output primary
+workspace $ws10 output $DISPLAY_2
+workspace $ws11 output $DISPLAY_2
+workspace $ws12 output $DISPLAY_2
+
+# Speicfy floating windows
+for_window [window_role="pop-up"]                       floating enable
+for_window [class="zoom"]                               floating enable
+for_window [window_role="bubble"]                       floating enable
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable
+for_window [window_type="menu"]                         floating enable
+for_window [class="^nvidia-settings$"]                  floating enable
+for_window [class="^Inkscape$"]                         floating enable
+for_window [class="^Tk$"]                               floating enable
+for_window [class="^OSD Lyrics$"]                       floating enable
+for_window [title="^xprop$"]                            floating enable
+for_window [class="^GParted$"]                          floating enable
+for_window [class="^Gtk-pipe-viewer$"]                  floating enable
+for_window [class="^mpv$"]                              floating enable
+for_window [class="^PureRef$"]                          floating enable
+for_window [title="^Emacs Everywhere"]                  floating enable, 1200 1000, move position center
+for_window [title="^org-roam-paste$"]                   floating enable, resize set 1600 1200, move position center
+for_window [class="^UnrealEditor$"]                     floating enable
+for_window [class="^Godot$" title="^.*DEBUG\)$"]                       floating enable
+for_window [class="^Gnome-system-monitor$"]                       floating enable
+for_window [title="^alacritty-pop-up$"]                       floating enable, resize set 2000 1600, move position center
+for_window [class="^Pavucontrol$"]                       floating enable
+
+
+# Specify windows dimensions
+for_window [class="Tk"]                                 resize set 600 600
+for_window [class="OSD Lyrics"]                         resize set 1000 1500
+for_window [class="Gtk-pipe-viewer"]                    resize set 1800 1500
+for_window [class="Sxiv"]                    move position 0px 38px
+for_window [class="Sxiv"]                    resize set 1800 1500
+for_window [class="chatty"]                             border pixel 2
+for_window [class="Steam"]                              border pixel 2
+
+# Open applications on specific workspaces
+assign [title="^Terminal$"]    $ws3
+assign [title="^IM$"]    $ws4
+
+assign [title="^Mail$"]        $ws5
+assign [class="^OSD Lyrics$"]  $ws6
+assign [class="^discord$"]       $ws6
+for_window [class="discord"] workspace $ws6
+
+
+# Polybar startup script
+exec_always ~/.config/polybar/launch.sh &
+
+# Configure border style <normal|1pixel|pixel xx|none|pixel>
+default_border pixel 2
+default_floating_border pixel 2
+
+# Hide borders
+hide_edge_borders smart
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font xft:monospace 10
+set_from_resource $term_background background
+set_from_resource $term_foreground foreground
+set_from_resource $term_color0     color0
+set_from_resource $term_color1     color1
+set_from_resource $term_color2     color2
+set_from_resource $term_color3     color3
+set_from_resource $term_color4     color4
+set_from_resource $term_color5     color5
+set_from_resource $term_color6     color6
+set_from_resource $term_color7     color7
+set_from_resource $term_color8     color8
+set_from_resource $term_color9     color9
+set_from_resource $term_color10    color10
+set_from_resource $term_color11    color11
+set_from_resource $term_color12    color12
+set_from_resource $term_color13    color13
+set_from_resource $term_color14    color14
+set_from_resource $term_color15    color15
+
+# Theme colors
+# class                   border  backgr. text    indic.   child_border
+client.focused          #171e21 #ab4642 #80FFF9 #FDF6E3
+client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+client.placeholder      #000000 #0c0c0c #ffffff #000000
+
+client.background       #2B2C2B
+
+
+
+# ressurct command
+set $i3_resurrect i3-resurrect
+
+# Use Mouse+$mod to drag floating windows
+floating_modifier $mod
+
+# generate password and ope
+
+# kill focused window
+bindsym $mod+shift+q kill
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left 40px
+bindsym $mod+Shift+j move down 40px
+bindsym $mod+Shift+k move up 40px
+bindsym $mod+Shift+l move right 40px
+
+# Resize window (you can also use the mouse for that)
+bindsym Mod1+control+h resize grow left 5 px or 5 ppt
+bindsym Mod1+control+j resize grow down 5 px or 5 ppt
+bindsym Mod1+control+k resize grow up 5 px or 5 ppt
+bindsym Mod1+control+l resize grow right 5 px or 5 ppt
+
+bindsym Mod1+shift+control+h resize grow left 1 px or 1 ppt
+bindsym Mod1+shift+control+j resize grow down 1 px or 1 ppt
+bindsym Mod1+shift+control+k resize grow up 1 px or 1 ppt
+bindsym Mod1+shift+control+l resize grow right 1 px or 1 ppt
+
+# workspace back and forth (with/without active container)
+workspace_auto_back_and_forth no
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
+
+# split orientation
+bindsym $mod+control+v split h;exec notify-send 'tile horizontally'
+bindsym $mod+control+s split v;exec notify-send 'tile vertically'
+#bindsym $mod+q split toggle
+
+# toggle fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+shift+s sticky toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# move the currently focused window to the scratchpad
+bindsym $mod+Mod1+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+# bindsym $mod+x scratchpad show
+
+#navigate workspaces next / previous
+bindsym $mod+Shift+control+l workspace next
+bindsym $mod+Shift+control+h workspace prev
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+t workspace $ws10
+bindsym $mod+z exec wmctrl -a "Emacs>*elfeed"
+bindsym $mod+x exec wmctrl -a "Emacs>*notmuch"
+bindsym $mod+c exec wmctrl -a "Emacs>config"
+bindsym $mod+m exec wmctrl -a "File Manager"
+
+# Anywhere
+# translate
+bindsym $mod+shift+v exec emacsclient --eval "(emacs-everywhere)"
+bindsym $mod+Mod1+c exec emacsclient --alternate-editor='' --no-wait --create-frame --frame-parameters='(quote (name . "org-roam-paste"))' --eval "(org-roam-node-find)" --display $DISPLAY
+
+
+
+# open url in mpv
+bindsym $mod+shift+m exec mpv $(xclip -o -sel clip) || notify-send "Failed open URL in mpv"
+bindsym $mod+shift+p exec google-chrome-stable "https://www.livelib.ru/find/$(xclip -o -sel clip)" || notify-send "Failed search book in livelib"
+bindsym $mod+shift+o exec google-chrome-stable "https://www.google.com/search?tbm=bks&q=/$(xclip -o -sel clip)" || notify-send "Failed search book in google"
+
+bindsym $mod+minus workspace $ws11
+bindsym $mod+equal workspace $ws12
+
+
+# Restore workspaces
+bindsym $mod+control+1 exec $i3_resurrect restore -w $ws1
+bindsym $mod+control+2 exec $i3_resurrect restore -w $ws2
+bindsym $mod+control+3 exec $i3_resurrect restore -w $ws3
+bindsym $mod+control+4 exec $i3_resurrect restore -w $ws4
+bindsym $mod+control+5 exec $i3_resurrect restore -w $ws5
+bindsym $mod+control+6 exec $i3_resurrect restore -w $ws6
+bindsym $mod+control+7 exec $i3_resurrect restore -w $ws7
+bindsym $mod+control+8 exec $i3_resurrect restore -w $ws8
+bindsym $mod+control+9 exec $i3_resurrect restore -w $ws9
+bindsym $mod+control+0 exec $i3_resurrect restore -w $ws10
+bindsym $mod+control+minus exec $i3_resurrect restore -w $ws11
+bindsym $mod+control+equal exec $i3_resurrect restore -w $ws12
+
+# Move to workspaces
+bindsym $mod+shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+shift+0 move container to workspace $ws10; workspace $ws10
+bindsym $mod+shift+minus move container to workspace $ws11; workspace $ws11
+bindsym $mod+shift+equal move container to workspace $ws12; workspace $ws12
+
+# Save workspace mode.
+mode "save" {
+  bindsym 1 exec $i3_resurrect save -w $ws1
+  bindsym 2 exec $i3_resurrect save -w $ws2
+  bindsym 3 exec $i3_resurrect save -w $ws3
+  bindsym 4 exec $i3_resurrect save -w $ws4
+  bindsym 5 exec $i3_resurrect save -w $ws5
+  bindsym 6 exec $i3_resurrect save -w $ws6
+  bindsym 7 exec $i3_resurrect save -w $ws7
+  bindsym 8 exec $i3_resurrect save -w $ws8
+  bindsym 9 exec $i3_resurrect save -w $ws9
+  bindsym 0 exec $i3_resurrect save -w $ws10
+  bindsym minus exec $i3_resurrect save -w $ws11
+  bindsym equal exec $i3_resurrect save -w $ws12
+
+  # Back to normal: Enter, Escape, or s
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym s mode "default"
+  bindsym $mod+s mode "default"
+}
+
+bindsym $mod+control+e mode "save"
+
+# Restore workspace mode.
+mode "restore" {
+  bindsym 1 exec $i3_resurrect restore -w $ws1
+  bindsym 2 exec $i3_resurrect restore -w $ws2
+  bindsym 3 exec $i3_resurrect restore -w $ws3
+  bindsym 4 exec $i3_resurrect restore -w $ws4
+  bindsym 5 exec $i3_resurrect restore -w $ws5
+  bindsym 6 exec $i3_resurrect restore -w $ws6
+  bindsym 7 exec $i3_resurrect restore -w $ws7
+  bindsym 8 exec $i3_resurrect restore -w $ws8
+  bindsym 9 exec $i3_resurrect restore -w $ws9
+  bindsym 0 exec $i3_resurrect restore -w $ws10
+  bindsym minus exec $i3_resurrect restore -w $ws11
+  bindsym equal exec $i3_resurrect restore -w $ws12
+
+  # Back to normal: Enter, Escape, or n
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym n mode "default"
+  bindsym $mod+n mode "default"
+}
+
+bindsym $mod+control+r mode "restore"
+
+# Set shut down, restart and locking features
+bindsym $mod+shift+e mode "$mode_system"
+set $mode_system L̲ock, E̲xit, S̲uspend, R̲eboot, Shutd̲own
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3lock --color=d84315, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym d exec --no-startup-id power-off.sh, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
+# start program launcher
+bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
+
+# Google
+bindsym $mod+g exec rofi-srch
+
+# Passwords
+bindsym $mod+p exec rofi-pass
+
+# Youtube FZF
+for_window [title="YTFZF"]  floating enable
+for_window [title="YTFZF"]  resize set 1400 1000
+
+bindsym $mod+y exec YTFZF_EXTMENU=' rofi -dmenu -fuzzy -width 1500' ytfzf -D
+bindsym $mod+shift+y exec alacritty --title="YTFZF" -e ytfzf -t
+
+
+# Weechat
+bindsym $mod+shift+w workspace $ws4; exec weechat.sh
+
+
+# Sound/Player related key bindings
+set $player mpd
+set $player_secondary $(playerctl -l|grep chromium.*)
+set $sound_controller pactl --
+
+bindsym XF86AudioPlay exec playerctl -p $player play-pause
+bindsym $mod+XF86AudioPlay exec playerctl -p $player_secondary play-pause
+
+bindsym XF86AudioPrev exec playerctl -p $player prev
+bindsym XF86AudioNext exec playerctl -p $player next
+
+bindsym XF86AudioRaiseVolume exec $sound_controller set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec $sound_controller set-sink-volume 0 -5%
+bindsym XF86AudioMute exec $sound_controller set-sink-mute 0 toggle
+
+bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec flameshot gui
+bindsym Control+Print exec --no-startup-id flameshot full -c
+
+# Generate a QR code from the clipboard
+bindsym $mod+q exec qcode
+bindsym $mod+control+q exec simplescreenrecorder
+
+# Rofimoji
+bindsym $mod+u exec rofimoji
