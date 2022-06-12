@@ -1,0 +1,304 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #263238
+background-alt = #4f5b62
+;foreground = ${xrdb:color7:#222}
+foreground = #90a4ae
+foreground-alt = #babdbe
+primary = #ffcc80
+secondary = #e91e63
+alert = #c2185b
+blue = #00a9f4
+
+[bar/inomoz]
+modules-left = pomodoro filesystem temperature temperature-gpu memory mpris
+modules-center = i3
+modules-right = pulseaudio date-default xkeyboard
+
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 42
+;offset-x = 1%
+;offset-y = -1%
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+
+; Put the bar at the bottom of the screen
+bottom = true
+
+line-size = 2
+line-color = #f00
+
+border-size = 4
+border-color = #263238
+border-bottom-size = 0
+
+padding-left = 3
+padding-right = 3
+padding-top = 4
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = FontAwesome:pixelsize=10;1
+font-1 = monospace:pixelsize=11;1
+
+tray-position = right
+tray-padding = 4
+tray-maxsize = 32
+tray-background = ${colors.background}
+
+wm-restack = i3
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+dpi-x = 198
+dpi-y = 198
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+enable-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-foreground = ${colors.primary}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+label-focused-font = 3
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-padding = 2
+label-unfocused-font = 3
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+#label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+label-visible-font = 3
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 2
+label-urgent-font = 3
+
+; Separator in between workspaces
+; label-separator = |
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume>  <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels%
+label-muted = mute
+label-muted-foreground = #f00
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+; Right and Middle click
+click-right = pavucontrol
+; click-middle =
+;
+;
+
+[module/mpris]
+type = custom/script
+exec = ~/scripts/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {:t18:{title}:}' --icon-playing ' ' --icon-paused ' ' --icon-stopped ' '
+tail =  true
+
+[module/filesystem]
+type = internal/fs
+interval = 120
+mount-0 = /home
+mount-1 = /data
+
+label-mounted = %{F#607d8b}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/weather]
+type = custom/script
+exec = ~/scripts/polybar-scripts/polybar-scripts/openweathermap-simple/openweathermap-simple.sh
+interval = 600
+label-font = 3
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+label = %percentage_used:4:4:%%
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+warn-temperature = 60
+
+format = <ramp> <label>
+#format-underline = #bdbdbd
+format-warn = <ramp> <label-warn>
+format-warn-underline = #ff5722
+
+label = C %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+; Base temperature for where to start the ramp (in degrees celsius)
+; Default: 0
+base-temperature = 45
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/temperature-gpu]
+type = internal/temperature
+thermal-zone = 0
+hwmon-path = /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon/hwmon4/temp1_input
+warn-temperature = 70
+
+format = <ramp> <label>
+#format-underline = #bdbdbd
+format-warn = <ramp> <label-warn>
+format-warn-underline = #ff5722
+
+label = G %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+; Base temperature for where to start the ramp (in degrees celsius)
+; Default: 0
+base-temperature = 39
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/date-default]
+type = custom/script
+format-prefix = 
+format-prefix-foreground = ${colors.accent}
+exec = date +'  %a %d-%b-%Y ~ %H:%M:%S'
+tail = false
+interval = 1
+click-left = popup-calendar.sh --popup
+
+; ; Seconds to sleep between updates
+; ; Default: 1.0
+; interval = 1.0
+
+; ; See "https://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; ; NOTE: if you want to use syntax tags here you need to use %%{...}
+; date = %Y-%m-%d% %{A}
+
+; ; Optional time format
+; time = %H:%M
+
+; ; if `date-alt` or `time-alt` is defined, clicking
+; ; the module will toggle between formats
+; ; date-alt = %A, %d %B %Y
+; ; time-alt = %H:%M:%S
+; click-left =
+; format-underline = #fb8c00
+; label = %date% %time%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = #ef5350
+
+label-layout = %layout%
+label-layout-underline = #ef5350
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = #1565c0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[module/pomodoro]
+type = custom/script
+exec = ~/.local/bin/pomidoro_time.sh
+interval = 5
+
+; vim:ft=dosini
