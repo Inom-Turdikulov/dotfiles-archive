@@ -3,7 +3,7 @@ export TERMINAL='alacritty'
 export TERM=xterm-256color
 
 # Editors
-export EDITOR="emacsclient -nw"
+export EDITOR="emacsclient -t -a ''"
 export VISUAL=$EDITOR
 export PAGER='less'
 

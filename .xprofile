@@ -41,6 +41,4 @@ blackd &
 # Need delay to intiialize display's / wm
 sleep 5 && hsetroot -root  -solid '#37474f' &
 
-/usr/bin/emacs --fg-daemon &
-
 # keebie & TODO: need test & modify

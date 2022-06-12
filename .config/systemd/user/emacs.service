@@ -4,7 +4,7 @@ Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
 
 [Service]
 Type=forking
-ExecStart=sh -c '/usr/bin/emacs --daemon && /usr/bin/emacsclient -c --eval "(delete-frame)"'
+ExecStart=/usr/bin/emacs --daemon
 ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
 Environment=SSH_AUTH_SOCK=%t/keyring/ssh
 Environment=GDK_DPI_SCALE=0.5
@@ -13,4 +13,3 @@ Restart=on-failure
 
 [Install]
 WantedBy=default.target
-
