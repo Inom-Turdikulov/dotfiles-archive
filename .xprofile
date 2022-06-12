@@ -19,8 +19,8 @@ udiskie &
 # Blueman for bluetooth
 blueman-applet &
 
-# Parcellite clipboard manager
-parcellite &
+# Clipboard manager
+clipit &
 
 # MPD mpris support
 mpDris2 &
