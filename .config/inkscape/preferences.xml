@@ -405,6 +405,13 @@
        id="paintbucket"
        style="fill:#a0a0a0;stroke:none;"
        usecurrent="1" />
+    <eventcontext
+       id="marker"
+       selcue="1"
+       gradientdrag="1" />
+    <group
+       id="geometric"
+       mode="drag" />
   </group>
   <group
      id="palette">
@@ -525,7 +532,8 @@
   </group>
   <group
      id="colorselector"
-     page="0" />
+     page="0"
+     switcher="1" />
   <group
      id="embedded">
     <group
@@ -709,7 +717,8 @@
        add-label-comments="0" />
   </group>
   <group
-     id="options">
+     id="options"
+     rotationlock="1">
     <group
        id="renderingcache"
        size="512" />
@@ -985,8 +994,8 @@
        value="2" />
     <group
        id="boot"
-       canvas="dark"
        theme="colorful"
+       canvas="dark"
        enabled="0">
       <group
          id="shown"
@@ -995,6 +1004,9 @@
   </group>
   <group
      id="extensions"
+     org.inkscape.output.png.inkscape.png_bitdepth="99"
+     org.inkscape.output.png.inkscape.png_compression="6"
+     org.inkscape.output.png.inkscape.png_antialias="2"
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality" />
   <group
      id="desktop"
@@ -1026,11 +1038,20 @@
      id="toolbox"
      icononly="1"
      secondary="0"
+     simplesnap="1"
      small="0">
     <group
        id="tools"
        icononly="1"
-       small="0" />
+       small="0"
+       iconsize="16"
+       width="32">
+      <group
+         id="buttons" />
+    </group>
+    <group
+       id="controlbars"
+       iconsize="16" />
   </group>
   <group
      id="iconpreview"
@@ -1105,18 +1126,19 @@
      language="" />
   <group
      id="theme"
-     defaultTheme="Adapta-Nokto-Eta-Maia"
+     defaultPreferDarkTheme="0"
      defaultIconTheme="Papirus-Dark"
-     menuIcons_canvas="0"
-     menuIcons_layers="0"
-     menuIcons_objects="0"
-     defaultPreferDarkTheme="1"
      defaultGtkTheme="Matcha-dark-sea"
+     narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"
      symbolicIcons="0"
      symbolicDefaultBaseColors="1"
-     symbolicDefaultHighColors="1">
+     symbolicDefaultHighColors="1"
+     defaultTheme="Adapta-Nokto-Eta-Maia"
+     menuIcons_canvas="0"
+     menuIcons_layers="0"
+     menuIcons_objects="0">
     <group
        id="multicolor"
        symbolicBaseColor="3958107135"
@@ -1127,4 +1149,9 @@
   <group
      id="live_effects"
      flattening="0" />
+  <group
+     id="statusbar">
+    <group
+       id="visibility" />
+  </group>
 </inkscape>
