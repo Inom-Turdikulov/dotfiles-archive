@@ -481,10 +481,10 @@ c.auto_save.session = True
 c.url.default_page = "https://stackexchange.com/"
 c.url.start_pages = "https://stackexchange.com/"
 
-#config.bind('<Ctrl-g>', 'leave-mode', mode='passthrough')
-#config.bind('<Ctrl-v>', 'spawn umpv {url}')
-config.bind(',m', 'hint links spawn umpv {hint-url}')
-config.bind(';M', 'hint --rapid links spawn umpv {hint-url}')
+config.bind('<Ctrl-g>', 'leave-mode', mode='passthrough')
+config.bind('<Ctrl-v>', 'spawn mpv {url}')
+config.bind(',m', 'hint links spawn mpv {hint-url}')
+config.bind(';M', 'hint --rapid links spawn mpv {hint-url}')
 
 config.bind('<p><l>', 'spawn --userscript qute-pass')
 config.bind('<p><u><l>', 'spawn --userscript qute-pass --username-only')
