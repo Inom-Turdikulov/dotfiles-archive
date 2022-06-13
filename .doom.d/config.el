@@ -41,5 +41,8 @@
 (load! "app"            doom-private-dir) ;; app specific config, like email, feeds, etc
 (load! "debugger"       doom-private-dir) ;; dap-debug and specific configurations
 (load! "lang"           doom-private-dir) ;; flyspell and programming languages specific configurations
-(load! "lang"           doom-private-dir) ;; flyspell and programming languages specific configurations
 (load! "key-bindings"   doom-private-dir) ;; global and custom keybindings
+
+;; Fix issue with commiting from terminal and $EDITOR
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override "main"))
