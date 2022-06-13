@@ -46,7 +46,9 @@ workspace $ws10 output $DISPLAY_2
 workspace $ws11 output $DISPLAY_2
 workspace $ws12 output $DISPLAY_2
 
-# Speicfy floating windows
+# Specify windows dimensions
+set $FLOAT_WIDTH=2000
+set $FLOAT_HEIGHT=1600
 for_window [window_role="pop-up"]                       floating enable
 for_window [class="zoom"]                               floating enable
 for_window [window_role="bubble"]                       floating enable
@@ -63,36 +65,15 @@ for_window [class="^GParted$"]                          floating enable
 for_window [class="^Gtk-pipe-viewer$"]                  floating enable
 for_window [class="^mpv$"]                              floating enable
 for_window [class="^PureRef$"]                          floating enable
-for_window [title="^Emacs Everywhere"]                  floating enable, 1200 1000, move position center
-for_window [title="^org-roam-paste$"]                   floating enable, resize set 1600 1200, move position center
 for_window [class="^UnrealEditor$"]                     floating enable
-for_window [class="^Godot$" title="^.*DEBUG\)$"]                       floating enable
-for_window [class="^Gnome-system-monitor$"]                       floating enable
-for_window [title="^alacritty-pop-up$"]                       floating enable, resize set 2000 1600, move position center
-for_window [class="^Pavucontrol$"]                       floating enable
-
-
-# Specify windows dimensions
-for_window [class="Tk"]                                 resize set 600 600
-for_window [class="OSD Lyrics"]                         resize set 1000 1500
-for_window [class="Gtk-pipe-viewer"]                    resize set 1800 1500
-for_window [class="Sxiv"]                    move position 0px 38px
-for_window [class="Sxiv"]                    resize set 1800 1500
-for_window [class="chatty"]                             border pixel 2
+for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
+for_window [class="^Gnome-system-monitor$"]             floating enable
+for_window [class="^Pavucontrol$"]                      floating enable
+for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
-
-# Open applications on specific workspaces
-assign [title="^Terminal$"]    $ws3
-assign [title="^IM$"]    $ws4
-
-assign [title="^Mail$"]        $ws5
-assign [class="^OSD Lyrics$"]  $ws6
-assign [class="^discord$"]       $ws6
-for_window [class="discord"] workspace $ws6
-
-
-# Polybar startup script
-exec_always ~/.config/polybar/launch.sh &
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
@@ -385,3 +366,6 @@ bindsym $mod+control+q exec simplescreenrecorder
 
 # Rofimoji
 bindsym $mod+u exec rofimoji
+
+# Polybar startup script
+exec_always ~/.config/polybar/launch.sh &
