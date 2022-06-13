@@ -13,12 +13,39 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": null,
+  "percent": 0.09017332356862526,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
   "workspace_layout": "default",
   "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 4,
+      "floating": "auto_off",
+      "fullscreen_mode": 0,
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 1616,
+        "height": 1584
+      },
+      "layout": "splith",
+      "marks": [],
+      "name": "Emacs>#f1ashko@Bitlbee",
+      "orientation": "none",
+      "percent": 0.4,
+      "scratchpad_state": "none",
+      "sticky": false,
+      "type": "con",
+      "workspace_layout": "default",
+      "swallows": [
+        {
+          "class": "^Emacs$",
+          "instance": "^emacs$"
+        }
+      ]
+    },
     {
       "border": "pixel",
       "current_border_width": -1,
@@ -34,7 +61,7 @@
       "marks": [],
       "name": null,
       "orientation": "horizontal",
-      "percent": 0.55,
+      "percent": 0.6000000000000001,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
@@ -53,9 +80,9 @@
           },
           "layout": "splith",
           "marks": [],
-          "name": "Slack | sentry-prod | Salesloop",
+          "name": "Slack | development | Salesloop",
           "orientation": "none",
-          "percent": 0.5,
+          "percent": 1.0,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
@@ -66,60 +93,6 @@
               "instance": "^slack$"
             }
           ]
-        },
-        {
-          "border": "pixel",
-          "current_border_width": 4,
-          "floating": "auto_off",
-          "fullscreen_mode": 0,
-          "geometry": {
-            "x": 0,
-            "y": 1720,
-            "width": 3840,
-            "height": 2086
-          },
-          "layout": "splith",
-          "marks": [],
-          "name": "#general",
-          "orientation": "none",
-          "percent": 0.5,
-          "scratchpad_state": "none",
-          "sticky": false,
-          "type": "con",
-          "workspace_layout": "default",
-          "swallows": [
-            {
-              "class": "^Ripcord$",
-              "instance": "^ripcord$"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "border": "none",
-      "current_border_width": 4,
-      "floating": "auto_off",
-      "fullscreen_mode": 0,
-      "geometry": {
-        "x": 1920,
-        "y": 0,
-        "width": 1920,
-        "height": 2120
-      },
-      "layout": "splith",
-      "marks": [],
-      "name": "Telegram (1)",
-      "orientation": "none",
-      "percent": 0.45,
-      "scratchpad_state": "none",
-      "sticky": false,
-      "type": "con",
-      "workspace_layout": "default",
-      "swallows": [
-        {
-          "class": "^TelegramDesktop$",
-          "instance": "^telegram\\-desktop$"
         }
       ]
     }

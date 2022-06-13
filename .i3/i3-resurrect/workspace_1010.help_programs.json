@@ -10,5 +10,13 @@
       "/usr/bin/zeal"
     ],
     "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "/usr/bin/mpv",
+      "--force-media-title=twitch.tv/f1ashko",
+      "-"
+    ],
+    "working_directory": "/home/inom/.emacs.d/.local/straight/repos/circe"
   }
 ]
