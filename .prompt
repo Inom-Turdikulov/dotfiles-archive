@@ -12,6 +12,12 @@
 #
 
 _bash_history_sync() {
+    # Usage example:
+    # $ history | grep something #note number
+    # $ !number
+
+    # Press enter to update history
+
     builtin history -a         #1
     HISTFILESIZE=$HISTSIZE     #2
     builtin history -c         #3
@@ -33,9 +39,6 @@ history() {                  #5
     builtin history "$@"
 }
 
-PROMPT_COMMAND=_bash_history_sync
-
-
 # User color
 case $(id -u) in
 	0) user_color="$RED" ;;  # root
@@ -49,6 +52,8 @@ prompt_dirty_symbol="☂ "
 prompt_venv_symbol="☁ "
 
 function prompt_command() {
+    _bash_history_sync
+
 	# Local or SSH session?
 	local remote=
 	[ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ] && remote=1
