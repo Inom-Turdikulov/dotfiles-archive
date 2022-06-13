@@ -25,7 +25,7 @@
 (setq doom-unicode-font doom-font)
 
 ;; Set theme
-(setq doom-theme 'doom-one)
+(setq doom-theme 'my-doom-one)
 (setq doom-themes-treemacs-theme "doom-colors")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
