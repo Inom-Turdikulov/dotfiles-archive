@@ -15,7 +15,8 @@
            (setq flycheck-pylintrc "pyproject.toml"))
      (org-hugo-base-dir . "~/website/")))
  '(warning-suppress-types
-   '((ox-pandoc)
+   '((emacs)
+     (ox-pandoc)
      (ox-pandoc)
      (ox-pandoc)
      (ox-pandoc)
