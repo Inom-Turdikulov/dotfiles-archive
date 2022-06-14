@@ -52,20 +52,8 @@
    :tag-symbol 'def-rss
    :save-vars '(major-mode default-directory))
 
-  (persp-def-buffer-save/load
-   :mode 'circe-server-mode
-   :mode-restore-function #'(lambda (_mode) (circe)) ; or #'identity if you do not want to start shell process
-   :tag-symbol 'def-irc
-   :save-vars '(major-mode default-directory))
-
   ;; Persp-mode and Special Buffers
   (persp-def-buffer-save/load
    :mode 'vterm-mode :tag-symbol 'def-vterm-buffer
    :save-vars '(major-mode default-directory))
-
-  ;; Command exmaple
-  ;; (defun my/persp-tmux-sync (file hash name)
-  ;;   (let ((tmux-command (concat "tmux " "switch-client " "-t " (file-name-nondirectory file) " > /dev/null 2>&1")))
-  ;;         (shell-command tmux-command nil nil)))
-  ;; (add-hook! 'persp-after-load-state-functions 'my/persp-tmux-sync)
 )
