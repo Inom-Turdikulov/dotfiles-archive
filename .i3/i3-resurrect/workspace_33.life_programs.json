@@ -1,12 +1,15 @@
 [
   {
     "command": [
-      "/usr/bin/alacritty",
-      "-e",
-      "tmux",
-      "new",
-      "-As0"
+      "/usr/bin/emacs-28.1.50",
+      "--daemon"
     ],
     "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "/usr/bin/alacritty"
+    ],
+    "working_directory": "/home/inom/.emacs.d"
   }
 ]
