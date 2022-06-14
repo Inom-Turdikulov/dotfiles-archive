@@ -38,7 +38,4 @@ ss-local -c ~/.ssh/shadowsocks.json &
 
 blackd &
 
-# Need delay to intiialize display's / wm
-sleep 5 && hsetroot -root  -solid '#37474f' &
-
 # keebie & TODO: need test & modify

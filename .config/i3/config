@@ -370,3 +370,6 @@ bindsym $mod+u exec rofimoji
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
+
+# Fix background color
+exec_always sleep 5 && hsetroot -root  -solid '#37474f'
