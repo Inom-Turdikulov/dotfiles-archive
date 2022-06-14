@@ -12,6 +12,7 @@
 # the system defaults.
 
 # Below, there should be one TERM entry for each termtype that is colorizable
+TERM xterm-24bit
 TERM alacritty
 TERM Eterm
 TERM ansi
