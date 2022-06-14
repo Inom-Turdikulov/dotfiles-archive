@@ -9,7 +9,13 @@
 #   qute://help/settings.html
 
 # GPU rendering/video decode
-c.qt.args = ["enable-native-gpu-memory-buffers", "enable-gpu-rasterization", "use-gl=desktop", "ignore-gpu-blacklist", "enable-accelerated-video-decode"]
+c.qt.args = [
+    "enable-native-gpu-memory-buffers",
+    "enable-gpu-rasterization",
+    "use-gl=desktop",
+    "ignore-gpu-blacklist",
+    "enable-accelerated-video-decode",
+]
 
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
@@ -45,7 +51,7 @@ c.qt.highdpi = True
 #   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
-config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
+config.set("content.cookies.accept", "all", "chrome-devtools://*")
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -69,12 +75,12 @@ config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 #   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
-config.set('content.cookies.accept', 'all', 'devtools://*')
+config.set("content.cookies.accept", "all", "devtools://*")
 
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
+config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -90,7 +96,11 @@ config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}",
+    "https://web.whatsapp.com/",
+)
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -106,7 +116,11 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version} Edg/{upstream_browser_version}', 'https://accounts.google.com/*')
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version} Edg/{upstream_browser_version}",
+    "https://accounts.google.com/*",
+)
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -122,31 +136,35 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36",
+    "https://*.slack.com/*",
+)
 
 # Load images automatically in web pages.
 # Type: Bool
-config.set('content.images', True, 'chrome-devtools://*')
+config.set("content.images", True, "chrome-devtools://*")
 
 # Load images automatically in web pages.
 # Type: Bool
-config.set('content.images', True, 'devtools://*')
+config.set("content.images", True, "devtools://*")
 
 # Enable JavaScript.
 # Type: Bool
-config.set('content.javascript.enabled', True, 'chrome-devtools://*')
+config.set("content.javascript.enabled", True, "chrome-devtools://*")
 
 # Enable JavaScript.
 # Type: Bool
-config.set('content.javascript.enabled', True, 'devtools://*')
+config.set("content.javascript.enabled", True, "devtools://*")
 
 # Enable JavaScript.
 # Type: Bool
-config.set('content.javascript.enabled', True, 'chrome://*/*')
+config.set("content.javascript.enabled", True, "chrome://*/*")
 
 # Enable JavaScript.
 # Type: Bool
-config.set('content.javascript.enabled', True, 'qute://*/*')
+config.set("content.javascript.enabled", True, "qute://*/*")
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -154,7 +172,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications.enabled', False, 'https://www.reddit.com')
+config.set("content.notifications.enabled", False, "https://www.reddit.com")
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -162,24 +180,24 @@ config.set('content.notifications.enabled', False, 'https://www.reddit.com')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications.enabled', False, 'https://www.youtube.com')
+config.set("content.notifications.enabled", False, "https://www.youtube.com")
 
 # Default font families to use. Whenever "default_family" is used in a
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = 'Iosevka, monospace'
+c.fonts.default_family = "Iosevka, monospace"
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = '11pt'
+c.fonts.default_size = "11pt"
 
 # Font used for the downloadbar.
 # Type: Font
-c.fonts.downloads = 'default_size default_family'
+c.fonts.downloads = "default_size default_family"
 
 c.url.searchengines = {"DEFAULT": "https://www.google.ru/search?q={}"}
 
@@ -262,12 +280,12 @@ c.colors.contextmenu.disabled.fg = base04
 c.colors.contextmenu.menu.bg = base00
 
 # Foreground color of the context menu. If set to null, the Qt default is used.
-c.colors.contextmenu.menu.fg =  base05
+c.colors.contextmenu.menu.fg = base05
 
 # Background color of the context menu’s selected item. If set to null, the Qt default is used.
 c.colors.contextmenu.selected.bg = base02
 
-#Foreground color of the context menu’s selected item. If set to null, the Qt default is used.
+# Foreground color of the context menu’s selected item. If set to null, the Qt default is used.
 c.colors.contextmenu.selected.fg = base05
 
 # Background color for the download bar.
@@ -477,25 +495,28 @@ c.colors.tabs.selected.even.fg = base05
 # Background color of selected even tabs.
 c.colors.tabs.selected.even.bg = base03
 
-c.tabs.select_on_remove = 'prev'
+c.tabs.select_on_remove = "prev"
 
 c.auto_save.session = True
 c.url.default_page = "https://stackexchange.com/"
 c.url.start_pages = "https://stackexchange.com/"
 
-config.bind('<Ctrl-g>', 'leave-mode', mode='passthrough')
-config.bind('<Ctrl-v>', 'spawn mpv {url}')
-config.bind(',m', 'hint links spawn mpv {hint-url}')
-config.bind(';M', 'hint --rapid links spawn mpv {hint-url}')
+config.bind("<Ctrl-g>", "leave-mode", mode="passthrough")
+config.bind("<Ctrl-v>", "spawn ~/.local/bin/qutebrowser-mpv.sh {url}")
+config.bind(",m", "hint links spawn ~/.local/bin/qutebrowser-mpv.sh {hint-url}")
+config.bind(";M", "hint --rapid links spawn ~/.local/bin/qutebrowser-mpv.sh {hint-url}")
 
-config.bind('<p><l>', 'spawn --userscript qute-pass')
-config.bind('<p><u><l>', 'spawn --userscript qute-pass --username-only')
-config.bind('<p><p><l>', 'spawn --userscript qute-pass --password-only')
-config.bind('<p><o><l>', 'spawn --userscript qute-pass --otp-only')
+config.bind("<p><l>", "spawn --userscript qute-pass")
+config.bind("<p><u><l>", "spawn --userscript qute-pass --username-only")
+config.bind("<p><p><l>", "spawn --userscript qute-pass --password-only")
+config.bind("<p><o><l>", "spawn --userscript qute-pass --otp-only")
 
-config.bind('xs', 'config-cycle statusbar.show always never')
-config.bind('xt', 'config-cycle tabs.show always never')
-config.bind('xx', 'config-cycle tabs.show always never;; config-cycle statusbar.show always never')
+config.bind("xs", "config-cycle statusbar.show always never")
+config.bind("xt", "config-cycle tabs.show always never")
+config.bind(
+    "xx",
+    "config-cycle tabs.show always never;; config-cycle statusbar.show always never",
+)
 
 # Vim-like tab navigation.
 config.bind("gT", "tab-prev")
@@ -519,6 +540,4 @@ config.bind("x", "devtools bottom")
 c.spellcheck.languages = ["en-US", "ru-RU"]
 
 # Launch vim in the terminal for editor.
-c.editor.command = ['alacritty', '-t', 'edit_text', '-e', 'vim {}']
-
-
+c.editor.command = ["alacritty", "-t", "edit_text", "-e", "vim {}"]
