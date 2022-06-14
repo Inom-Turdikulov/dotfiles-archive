@@ -35,7 +35,7 @@ modules-right = pulseaudio date-default xkeyboard
 
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 42
+height = 36
 ;offset-x = 1%
 ;offset-y = -1%
 radius = 0
