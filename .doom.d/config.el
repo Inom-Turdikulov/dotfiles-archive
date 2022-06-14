@@ -46,3 +46,4 @@
 ;; Fix issue with commiting from terminal and $EDITOR
 (after! persp-mode
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
+
