@@ -2,6 +2,7 @@
 x-scheme-handler/tg=userapp-Telegram Desktop-4YWBU0.desktop;userapp-Telegram Desktop-1SNMI1.desktop;
 application/x-extension-pur=pureref.desktop;
 image/x-adobe-dng=darktable.desktop;gimp.desktop;
+text/csv=emacsclient.desktop;
 
 [Default Applications]
 x-scheme-handler/http=google-chrome.desktop
@@ -179,3 +180,4 @@ image/bmp=nsxiv.desktop
 image/x-portable-bitmap=nsxiv.desktop
 image/png=nsxiv.desktop
 image/gif=nsxiv.desktop
+text/csv=emacsclient.desktop
