@@ -1,8 +1,0 @@
-# Stream options
-default-stream=720p60,720p,480p,best
-
-# Player options
-player=mpv
-player-passthrough=hls
-player-passthrough=http
-player-passthrough=rtmp
