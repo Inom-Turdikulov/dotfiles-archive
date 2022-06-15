@@ -248,10 +248,6 @@ n ()
     fi
 }
 
-tldr() {
-    curl -s "cheat.sh/$1"
-}
-
 function abspath() {
     if [ -d "$1" ]; then
         echo "$(cd $1; pwd)"
