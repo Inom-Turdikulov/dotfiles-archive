@@ -1,13 +1,6 @@
 [
     {
     "command": [
-        "emacsclient",
-        "-c"
-    ],
-    "working_directory": "/home/inom"
-},
-    {
-    "command": [
         "/usr/bin/alacritty",
         "-e",
         "tmux",

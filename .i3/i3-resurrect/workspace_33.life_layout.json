@@ -13,7 +13,7 @@
   "marks": [],
   "name": "3:3.life",
   "orientation": "horizontal",
-  "percent": 0.11007947909037986,
+  "percent": 0.01568627450980392,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -27,41 +27,14 @@
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 1472,
-        "height": 1872
-      },
-      "layout": "splith",
-      "marks": [],
-      "name": "Emacs>*doom*",
-      "orientation": "none",
-      "percent": 0.5,
-      "scratchpad_state": "none",
-      "sticky": false,
-      "type": "con",
-      "workspace_layout": "default",
-      "swallows": [
-        {
-          "class": "^Emacs$",
-          "instance": "^emacs$"
-        }
-      ]
-    },
-    {
-      "border": "pixel",
-      "current_border_width": 4,
-      "floating": "auto_off",
-      "fullscreen_mode": 0,
-      "geometry": {
-        "x": 0,
-        "y": 0,
         "width": 800,
         "height": 600
       },
       "layout": "splith",
       "marks": [],
-      "name": ".emacs.d",
+      "name": "0:3:bash - \"john_linkedin\" 1#",
       "orientation": "none",
-      "percent": 0.5,
+      "percent": 1.0,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
