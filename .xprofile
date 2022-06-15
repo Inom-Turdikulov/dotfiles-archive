@@ -38,4 +38,7 @@ sslocal -c ~/.ssh/shadowsocks.json &
 
 blackd &
 
+# Hugo server
+hugo server --buildDrafts --navigateToChanged &
+
 # keebie & TODO: need test & modify
