@@ -82,6 +82,10 @@ config.set("content.cookies.accept", "all", "devtools://*")
 # Type: String
 config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
 
+
+# Content proxy
+config.set("content.proxy", "socks://127.0.0.1:8084", "")
+
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
 # The underlying WebKit version (set to a fixed value   with
