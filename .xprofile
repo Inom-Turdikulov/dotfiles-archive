@@ -34,7 +34,7 @@ tapper &
 
 syncthing --no-browser &
 
-ss-local -c ~/.ssh/shadowsocks.json &
+sslocal -c ~/.ssh/shadowsocks.json &
 
 blackd &
 
