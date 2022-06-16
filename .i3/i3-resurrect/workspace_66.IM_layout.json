@@ -103,7 +103,7 @@
               "marks": [],
               "name": "Chatterino 2.3.5 - intoruss0uls",
               "orientation": "none",
-              "percent": 0.6,
+              "percent": 0.7000000000000001,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
@@ -118,29 +118,87 @@
             {
               "border": "pixel",
               "current_border_width": 4,
-              "floating": "user_off",
+              "floating": "auto_off",
               "fullscreen_mode": 0,
               "geometry": {
-                "x": 3520,
-                "y": 2220,
-                "width": 1920,
-                "height": 1080
+                "x": 0,
+                "y": 0,
+                "width": 800,
+                "height": 600
               },
               "layout": "splith",
               "marks": [],
-              "name": "twitch.tv/browjey - mpv",
+              "name": "inom",
               "orientation": "none",
-              "percent": 0.39999999999999997,
+              "percent": 0.3,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
               "workspace_layout": "default",
               "swallows": [
                 {
-                  "class": "^mpv$",
-                  "instance": "^gl$"
+                  "class": "^Alacritty$",
+                  "instance": "^Alacritty$"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "floating_nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": -1,
+      "floating": "auto_off",
+      "fullscreen_mode": 0,
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "layout": "splith",
+      "marks": [],
+      "name": null,
+      "orientation": "horizontal",
+      "percent": null,
+      "scratchpad_state": "none",
+      "sticky": false,
+      "type": "floating_con",
+      "workspace_layout": "default",
+      "rect": {
+        "x": 1788,
+        "y": 2449,
+        "width": 769,
+        "height": 436
+      },
+      "nodes": [
+        {
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "user_on",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 3520,
+            "y": 2220,
+            "width": 1920,
+            "height": 1080
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "https://www.youtube.com/watch?v=QeuwQ41zs7A - mpv",
+          "orientation": "none",
+          "percent": 1.0,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^mpv$",
+              "instance": "^gl$"
             }
           ]
         }
