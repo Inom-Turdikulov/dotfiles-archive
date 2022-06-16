@@ -12,7 +12,7 @@
 (use-package! elfeed
   :general
   (:keymaps '(elfeed-show-mode-map elfeed-search-mode-map)
-   "C-c o" 'elfeed-visit-or-play-with-mpv
+   "C-c C-c" 'elfeed-visit-or-play-with-mpv
    ))
 
 ;; Leader key-maps
