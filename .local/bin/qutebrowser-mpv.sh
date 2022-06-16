@@ -14,7 +14,7 @@ launch_options+=" --volume=70"
 launch_options+=" --autofit=35% --geometry=-10-50"
 launch_options+=" --x11-name=Picture-in-Picture"
 
-launch_cmd=(umpv $launch_options "$link")
+launch_cmd=(mpv $launch_options "$link")
 
 # start mpv in detached mode
 "${launch_cmd[@]}" &
