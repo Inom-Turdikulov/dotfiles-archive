@@ -29,7 +29,7 @@ alert = #c2185b
 blue = #00a9f4
 
 [bar/inomoz]
-modules-left = pomodoro filesystem temperature temperature-gpu memory mpris
+modules-left = pomodoro filesystem temperature temperature-gpu memory weather mpris
 modules-center = i3
 modules-right = pulseaudio date-default xkeyboard
 
@@ -64,6 +64,7 @@ module-margin-right = 2
 
 font-0 = FontAwesome:pixelsize=9;4
 font-1 = monospace:pixelsize=10;3
+font-2 = Weather Icons:pixelsize=10;3
 
 tray-position = right
 tray-padding = 4
