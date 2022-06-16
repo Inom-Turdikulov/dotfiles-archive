@@ -1,3 +1,5 @@
 --sponsorblock-mark all
+--no-check-certificate
+--no-cache-dir
+--cookies-from-browser chrome # or chrome:~/.local/share/qutebrowser
 --proxy socks5://127.0.0.1:8084
---concurrent-fragments 2
