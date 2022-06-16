@@ -13,7 +13,7 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": 0.11067193675889328,
+  "percent": 1.0,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -46,14 +46,14 @@
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
-            "x": 0,
-            "y": 0,
+            "x": 2560,
+            "y": 1680,
             "width": 3840,
             "height": 2120
           },
           "layout": "splith",
           "marks": [],
-          "name": "Slack | development | Salesloop",
+          "name": "Slack | sentry-staging | Salesloop",
           "orientation": "none",
           "percent": 0.5,
           "scratchpad_state": "none",
@@ -69,28 +69,78 @@
         },
         {
           "border": "pixel",
-          "current_border_width": 4,
+          "current_border_width": -1,
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
             "x": 0,
-            "y": 1726,
-            "width": 3840,
-            "height": 2074
+            "y": 0,
+            "width": 0,
+            "height": 0
           },
           "layout": "splith",
           "marks": [],
-          "name": "Chatterino 2.3.5 - intoruss0uls",
-          "orientation": "none",
+          "name": null,
+          "orientation": "horizontal",
           "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
           "workspace_layout": "default",
-          "swallows": [
+          "nodes": [
             {
-              "class": "^chatterino$",
-              "instance": "^chatterino$"
+              "border": "pixel",
+              "current_border_width": 4,
+              "floating": "auto_off",
+              "fullscreen_mode": 0,
+              "geometry": {
+                "x": 0,
+                "y": 1726,
+                "width": 3840,
+                "height": 2074
+              },
+              "layout": "splith",
+              "marks": [],
+              "name": "Chatterino 2.3.5 - intoruss0uls",
+              "orientation": "none",
+              "percent": 0.6,
+              "scratchpad_state": "none",
+              "sticky": false,
+              "type": "con",
+              "workspace_layout": "default",
+              "swallows": [
+                {
+                  "class": "^chatterino$",
+                  "instance": "^chatterino$"
+                }
+              ]
+            },
+            {
+              "border": "pixel",
+              "current_border_width": 4,
+              "floating": "user_off",
+              "fullscreen_mode": 0,
+              "geometry": {
+                "x": 3520,
+                "y": 2220,
+                "width": 1920,
+                "height": 1080
+              },
+              "layout": "splith",
+              "marks": [],
+              "name": "twitch.tv/browjey - mpv",
+              "orientation": "none",
+              "percent": 0.39999999999999997,
+              "scratchpad_state": "none",
+              "sticky": false,
+              "type": "con",
+              "workspace_layout": "default",
+              "swallows": [
+                {
+                  "class": "^mpv$",
+                  "instance": "^gl$"
+                }
+              ]
             }
           ]
         }

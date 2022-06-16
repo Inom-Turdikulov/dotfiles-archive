@@ -33,18 +33,19 @@ set $ws11 11:11.lib
 set $ws12 12:12.email
 
 set $DISPLAY_2 DisplayPort-1
+set $DISPLAY_3 DisplayPort-2
 workspace $ws1 output primary
 workspace $ws2  output primary
 workspace $ws3  output primary
 workspace $ws4  output primary
 workspace $ws5  output primary
-workspace $ws6  output primary
+workspace $ws6  output $DISPLAY_2
 workspace $ws7  output primary
 workspace $ws8  output primary
 workspace $ws9  output primary
-workspace $ws10 output $DISPLAY_2
-workspace $ws11 output $DISPLAY_2
-workspace $ws12 output $DISPLAY_2
+workspace $ws10 output $DISPLAY_3
+workspace $ws11 output $DISPLAY_3
+workspace $ws12 output $DISPLAY_3
 
 # Specify windows dimensions
 set $FLOAT_WIDTH 2000
