@@ -1,23 +1,14 @@
 [
   {
     "command": [
-      "/usr/lib/slack/slack",
-      "--enable-crashpad"
+      "slack",
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "/tmp/.mount_ChattexWD1dC/usr/bin/chatterino"
+      "/opt/Chatterino-x86_64.AppImage"
     ],
-    "working_directory": "/tmp/.mount_ChattexWD1dC/usr"
-  },
-  {
-    "command": [
-      "/usr/bin/mpv",
-      "--force-media-title=twitch.tv/browjey",
-      "-"
-    ],
-    "working_directory": "/tmp/.mount_ChattexWD1dC/usr"
+    "working_directory": "/home/inom"
   }
 ]
