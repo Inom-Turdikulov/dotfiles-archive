@@ -7,6 +7,13 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-S-p") (lambda () (interactive) (anki-editor-push-notes) (doom/reload-font)))
 (global-set-key (kbd "C-<F1>") 'execute-c-program)
+(global-set-key (kbd "C-<F1>") 'execute-c-program)
+
+(use-package! elfeed
+  :general
+  (:keymaps '(elfeed-show-mode-map elfeed-search-mode-map)
+   "C-c o" 'elfeed-visit-or-play-with-mpv
+   ))
 
 ;; Leader key-maps
 (map! :leader
