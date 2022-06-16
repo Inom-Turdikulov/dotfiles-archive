@@ -166,7 +166,7 @@ click-right = pavucontrol
 
 [module/mpris]
 type = custom/script
-exec = ~/scripts/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {:t18:{title}:}' --icon-playing ' ' --icon-paused ' ' --icon-stopped ' '
+exec = ~/scripts/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {:t42:{title}:}' --icon-playing ' ' --icon-paused ' ' --icon-stopped ' '
 tail =  true
 
 [module/filesystem]
