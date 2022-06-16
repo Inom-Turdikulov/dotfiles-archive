@@ -13,39 +13,12 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": 0.09017332356862526,
+  "percent": 0.11067193675889328,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
   "workspace_layout": "default",
   "nodes": [
-    {
-      "border": "pixel",
-      "current_border_width": 4,
-      "floating": "auto_off",
-      "fullscreen_mode": 0,
-      "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 1616,
-        "height": 1584
-      },
-      "layout": "splith",
-      "marks": [],
-      "name": "Emacs>#f1ashko@Bitlbee",
-      "orientation": "none",
-      "percent": 0.4,
-      "scratchpad_state": "none",
-      "sticky": false,
-      "type": "con",
-      "workspace_layout": "default",
-      "swallows": [
-        {
-          "class": "^Emacs$",
-          "instance": "^emacs$"
-        }
-      ]
-    },
     {
       "border": "pixel",
       "current_border_width": -1,
@@ -61,7 +34,7 @@
       "marks": [],
       "name": null,
       "orientation": "horizontal",
-      "percent": 0.6000000000000001,
+      "percent": 1.0,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
@@ -82,7 +55,7 @@
           "marks": [],
           "name": "Slack | development | Salesloop",
           "orientation": "none",
-          "percent": 1.0,
+          "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
@@ -91,6 +64,33 @@
             {
               "class": "^Slack$",
               "instance": "^slack$"
+            }
+          ]
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "auto_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 1726,
+            "width": 3840,
+            "height": 2074
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "Chatterino 2.3.5 - intoruss0uls",
+          "orientation": "none",
+          "percent": 0.5,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^chatterino$",
+              "instance": "^chatterino$"
             }
           ]
         }

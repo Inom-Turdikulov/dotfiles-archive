@@ -1,15 +1,13 @@
 [
   {
     "command": [
-      "/usr/bin/emacs-28.1.50",
-      "--daemon"
+      "slack"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "/usr/lib/slack/slack",
-      "--enable-crashpad"
+      "/opt/Chatterino-x86_64.AppImage"
     ],
     "working_directory": "/home/inom"
   }
