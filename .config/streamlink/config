@@ -1,0 +1,7 @@
+# Player options
+player=mpv
+player-passthrough=hls
+player-passthrough=http
+player-passthrough=rtmp
+http-proxy=socks5h://127.0.0.1:8084
+default-stream="720p60,720p,480p,best"
