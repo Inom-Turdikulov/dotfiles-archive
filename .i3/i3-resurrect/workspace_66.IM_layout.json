@@ -55,7 +55,7 @@
           "marks": [],
           "name": "Slack | sentry-staging | Salesloop",
           "orientation": "none",
-          "percent": 0.5,
+          "percent": 0.3333333333333333,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
@@ -82,7 +82,7 @@
           "marks": [],
           "name": null,
           "orientation": "horizontal",
-          "percent": 0.5,
+          "percent": 0.3333333333333333,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
@@ -103,7 +103,7 @@
               "marks": [],
               "name": "Chatterino 2.3.5 - intoruss0uls",
               "orientation": "none",
-              "percent": 0.7000000000000001,
+              "percent": 0.7000000000000002,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
@@ -130,7 +130,7 @@
               "marks": [],
               "name": "inom",
               "orientation": "none",
-              "percent": 0.3,
+              "percent": 0.29999999999999993,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
@@ -143,62 +143,31 @@
               ]
             }
           ]
-        }
-      ]
-    }
-  ],
-  "floating_nodes": [
-    {
-      "border": "pixel",
-      "current_border_width": -1,
-      "floating": "auto_off",
-      "fullscreen_mode": 0,
-      "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
-      },
-      "layout": "splith",
-      "marks": [],
-      "name": null,
-      "orientation": "horizontal",
-      "percent": null,
-      "scratchpad_state": "none",
-      "sticky": false,
-      "type": "floating_con",
-      "workspace_layout": "default",
-      "rect": {
-        "x": 1788,
-        "y": 2449,
-        "width": 769,
-        "height": 436
-      },
-      "nodes": [
+        },
         {
           "border": "pixel",
           "current_border_width": 4,
-          "floating": "user_on",
+          "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
-            "x": 3520,
-            "y": 2220,
-            "width": 1920,
-            "height": 1080
+            "x": 0,
+            "y": 0,
+            "width": 192,
+            "height": 216
           },
           "layout": "splith",
           "marks": [],
-          "name": "https://www.youtube.com/watch?v=QeuwQ41zs7A - mpv",
+          "name": "Emacs>###programming@localhost",
           "orientation": "none",
-          "percent": 1.0,
+          "percent": 0.3333333333333333,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
           "workspace_layout": "default",
           "swallows": [
             {
-              "class": "^mpv$",
-              "instance": "^gl$"
+              "class": "^Emacs$",
+              "instance": "^emacs$"
             }
           ]
         }
