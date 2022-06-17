@@ -335,11 +335,19 @@ bindsym $mod+p exec rofi-pass
 bindsym $mod+u exec rofimoji --skin-tone neutral --action copy
 
 # Youtube FZF
-for_window [title="YTFZF"]  floating enable
-for_window [title="YTFZF"]  resize set 1400 1000
+for_window [title="YTFZF"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 
-bindsym $mod+y exec YTFZF_EXTMENU=' rofi -dmenu -fuzzy -width 1500' ytfzf -D
-bindsym $mod+shift+y exec alacritty --title="YTFZF" -e ytfzf -t
+set $mode_ytfzf Youtube, V͟ideo, A͟udio
+bindsym $mod+y mode "$mode_ytfzf"
+mode "$mode_ytfzf" {
+    bindsym y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D, mode "default"
+    bindsym v exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -t, mode "default"
+    bindsym a exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 
 # Weechat
