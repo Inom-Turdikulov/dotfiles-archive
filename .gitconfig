@@ -139,6 +139,7 @@
 	# [default] trailing-space: looks for spaces at the end of a line
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [color]
 
@@ -215,3 +216,5 @@
 	proxy = socks5://127.0.0.1:8084
 [pull]
 	rebase = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
