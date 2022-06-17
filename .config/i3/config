@@ -79,6 +79,9 @@ for_window [title="^alacritty-pop-up$"]                 floating enable, resize 
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
+# Tabbed window for keybindings
+for_window [class="^tabbed$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
+
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
 default_floating_border pixel 2
@@ -187,7 +190,7 @@ bindsym $mod+Mod1+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-# bindsym $mod+x scratchpad show
+bindsym $mod+x scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Shift+control+l workspace next
@@ -212,7 +215,6 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+t workspace $ws10
 bindsym $mod+z exec wmctrl -a "Emacs>*elfeed"
-bindsym $mod+x exec wmctrl -a "Emacs>*notmuch"
 bindsym $mod+c exec wmctrl -a "Emacs>config"
 bindsym $mod+m workspace $ws13
 
