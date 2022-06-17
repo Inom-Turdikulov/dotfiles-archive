@@ -223,11 +223,6 @@ bindsym $mod+m workspace $ws13
 bindsym $mod+shift+v exec emacsclient --eval "(emacs-everywhere)"
 bindsym $mod+Mod1+c exec emacsclient --alternate-editor='' --no-wait --create-frame --frame-parameters='(quote (name . "org-roam-paste"))' --eval "(org-roam-node-find)" --display $DISPLAY
 
-# open url in mpv
-bindsym $mod+shift+m exec mpv $(xclip -o -sel clip) || notify-send "Failed open URL in mpv"
-bindsym $mod+shift+p exec google-chrome-stable "https://www.livelib.ru/find/$(xclip -o -sel clip)" || notify-send "Failed search book in livelib"
-bindsym $mod+shift+o exec google-chrome-stable "https://www.google.com/search?tbm=bks&q=/$(xclip -o -sel clip)" || notify-send "Failed search book in google"
-
 bindsym $mod+minus workspace $ws11
 bindsym $mod+equal workspace $ws12
 
@@ -343,7 +338,7 @@ for_window [title="YTFZF"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGH
 
 bindsym $mod+y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D , mode "default"
 
-set $mode_ytfzf ytfzf: [V]ideo, [A]udio, [P]aylists, Playli[s]ts Audio
+set $mode_ytfzf ytfzf: [V]ideo, [A]udio, [P]aylists, Playli[s]ts Audio, Open [c]lipboard
 bindsym $mod+shift+y mode "$mode_ytfzf"
 mode "$mode_ytfzf" {
     bindsym v exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -t, mode "default"
@@ -351,6 +346,10 @@ mode "$mode_ytfzf" {
 
     bindsym p exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --type=playlist --disable-submenus, mode "default"
     bindsym s exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --type=playlist --disable-submenus, mode "default"
+
+    # open url in mpv
+    bindsym c exec --no-startup-id notify-send "Trying to open $(xclip -o -sel clip)" && \
+            linkhandler $(xclip -o -sel clip) || notify-send "Failed open URL", mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
