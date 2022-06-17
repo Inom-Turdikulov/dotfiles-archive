@@ -31,6 +31,7 @@ set $ws9  9:9.games
 set $ws10 10:10.help
 set $ws11 11:11.lib
 set $ws12 12:12.email
+set $ws13 13:13.projector
 
 set $DISPLAY_2 DisplayPort-1
 set $DISPLAY_3 DisplayPort-2
@@ -39,13 +40,14 @@ workspace $ws2  output primary
 workspace $ws3  output primary
 workspace $ws4  output primary
 workspace $ws5  output primary
-workspace $ws6  output $DISPLAY_2
+workspace $ws6  output primary
 workspace $ws7  output primary
 workspace $ws8  output primary
 workspace $ws9  output primary
 workspace $ws10 output $DISPLAY_3
 workspace $ws11 output $DISPLAY_3
 workspace $ws12 output $DISPLAY_3
+workspace $ws13 output $DISPLAY_2
 
 # Specify windows dimensions
 set $FLOAT_WIDTH 1800
@@ -212,7 +214,7 @@ bindsym $mod+t workspace $ws10
 bindsym $mod+z exec wmctrl -a "Emacs>*elfeed"
 bindsym $mod+x exec wmctrl -a "Emacs>*notmuch"
 bindsym $mod+c exec wmctrl -a "Emacs>config"
-bindsym $mod+m exec wmctrl -a "File Manager"
+bindsym $mod+m workspace $ws13
 
 # Anywhere
 # translate
@@ -360,11 +362,11 @@ bindsym $mod+shift+w workspace $ws4; exec weechat.sh
 
 # Sound/Player related key bindings
 set $player mpd
-set $player_secondary $(playerctl -l|grep chromium.*)
+set $player_secondary mpv
 set $sound_controller pactl --
 
 bindsym XF86AudioPlay exec playerctl -p $player play-pause
-bindsym $mod+XF86AudioPlay exec playerctl -p $player_secondary play-pause
+bindsym Shift+XF86AudioPlay exec playerctl -p $player_secondary play-pause
 
 bindsym XF86AudioPrev exec playerctl -p $player prev
 bindsym XF86AudioNext exec playerctl -p $player next
