@@ -14,7 +14,9 @@ MEDIA_VIEWER=/usr/bin/mpv
 [ -z "$1" ] && { "$BROWSER"; exit; }
 
 case "$1" in
-    *twitch)
+    *twitch.tv\/videos*)
+		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
+    *twitch.tv*)
 		setsid -f streamlink "$1" >/dev/null 2>&1 ;;
 	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*)
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
