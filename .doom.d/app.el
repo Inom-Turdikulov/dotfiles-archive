@@ -4,6 +4,7 @@
 (enable-circe-display-images))
 
 ;; ElFeed configuraton
+
 (defun elfeed-play-with-mpv ()
   "Play entry link with mpv."
   (interactive)
@@ -34,6 +35,7 @@ See `elfeed-play-with-mpv'."
   :bind (:map elfeed-search-mode-map
               ("B" . elfeed-visit-or-play-with-mpv))
   :config
+  (run-with-timer 0 (* 45 60) 'elfeed-update) ;; Update feed each 45 minutes
   (defun ar/elfeed-search-browse-background-url ()
     "Open current `elfeed' entry (or region entries) in browser without losing focus."
     (interactive)
