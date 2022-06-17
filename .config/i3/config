@@ -306,7 +306,7 @@ bindsym $mod+control+r mode "restore"
 
 # Set shut down, restart and locking features
 bindsym $mod+shift+e mode "$mode_system"
-set $mode_system L̲ock, E̲xit, S̲uspend, R̲eboot, Shutd̲own
+set $mode_system Power: [L]ock, [E]xit, [S]uspend, [R]eboot, Shut[d]own
 mode "$mode_system" {
     # run i3lock (doesn't retrun exit code whilte running) in background and monitor off in same time
     bindsym l exec --no-startup-id i3lock --color=263238 & sleep 5 && xset dpms force off, mode "default"
@@ -337,12 +337,16 @@ bindsym $mod+u exec rofimoji --skin-tone neutral --action copy
 # Youtube FZF
 for_window [title="YTFZF"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 
-set $mode_ytfzf Youtube, V͟ideo, A͟udio
-bindsym $mod+y mode "$mode_ytfzf"
+bindsym $mod+y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D --detach, mode "default"
+
+set $mode_ytfzf ytfzf: [V]ideo, [A]udio, P[l]aylists, Playli[s]ts Audio
+bindsym $mod+shift+y mode "$mode_ytfzf"
 mode "$mode_ytfzf" {
-    bindsym y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D --detach, mode "default"
     bindsym v exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -t --detach, mode "default"
     bindsym a exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --detach, mode "default"
+
+    bindsym p exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --detach --type=playlist --disable-submenus, mode "default"
+    bindsym s exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --detach --type=playlist --disable-submenus, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
