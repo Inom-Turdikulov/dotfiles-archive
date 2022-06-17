@@ -162,18 +162,18 @@ workspace_auto_back_and_forth no
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
-# split orientation
-bindsym $mod+control+v split h;exec notify-send 'tile horizontally'
-bindsym $mod+control+s split v;exec notify-send 'tile vertically'
-#bindsym $mod+q split toggle
-
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+e layout toggle split
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split;exec notify-send 'Split layout'
+bindsym $mod+s layout stacking;exec notify-send 'Stacking layout'
+bindsym $mod+w layout tabbed;exec notify-send 'Tabbed layout'
+
+# split orientation
+bindsym $mod+control+v split h;exec notify-send 'Tile horizontally'
+bindsym $mod+control+s split v;exec notify-send 'Tile vertically'
+bindsym $mod+q split toggle;exec notify-send 'Tile toggle'
 
 # toggle tiling / floating
 bindsym $mod+shift+space floating toggle
@@ -379,9 +379,6 @@ bindsym XF86AudioMute exec $sound_controller set-sink-mute 0 toggle
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec flameshot gui
 bindsym Control+Print exec --no-startup-id flameshot full -c
-
-# Generate a QR code from the clipboard
-bindsym $mod+q exec qcode
 bindsym $mod+control+q exec simplescreenrecorder
 
 # Polybar startup script
