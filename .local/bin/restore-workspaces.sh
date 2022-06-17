@@ -1,6 +1,6 @@
 #!/bin/sh
 # load display configuration
-autorandr --change
+sleep 3 && autorandr --change
 
 ws1=1:1.code
 ws2=2:2.web
