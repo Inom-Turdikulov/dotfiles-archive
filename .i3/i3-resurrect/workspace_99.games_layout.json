@@ -41,8 +41,7 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Steam$",
-          "instance": "^Steam$"
+          "class": "^Steam$"
         }
       ]
     }
