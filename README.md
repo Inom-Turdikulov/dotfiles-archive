@@ -17,3 +17,4 @@ Got a lot from here:
 * Mathias Bynens - https://github.com/mathiasbynens/dotfiles
 * Peter Hogg - https://github.com/pigmonkey/dotfiles
 * Henrik Lissner and others (emacs) - https://github.com/doomemacs/doomemacs
+* Luke Smith - https://github.com/LukeSmithxyz/voidrice
