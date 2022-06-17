@@ -36,8 +36,8 @@ syncthing --no-browser &
 
 # Proxies
 sslocal -c ~/.ssh/shadowsocks.json &
-gost -L=:8085 -F=socks5://localhost:8084 &
 
+# Python blackd formatter
 blackd &
 
 # Hugo server
