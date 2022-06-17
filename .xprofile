@@ -43,7 +43,8 @@ blackd &
 # Hugo server
 hugo server --buildDrafts --navigateToChanged &
 
-# Tabbed alacritty for some information (scratchpad)
+# Scratchpad programs
 tabbed alacritty --embed &
+PureRef &
 
 # keebie & TODO: need test & modify

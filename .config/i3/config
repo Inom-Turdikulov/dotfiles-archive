@@ -67,7 +67,6 @@ for_window [title="^xprop$"]                            floating enable
 for_window [class="^GParted$"]                          floating enable
 for_window [class="^Gtk-pipe-viewer$"]                  floating enable
 for_window [class="^mpv$"]                              floating enable
-for_window [class="^PureRef$"]                          floating enable
 for_window [class="^UnrealEditor$"]                     floating enable
 for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
 for_window [class="^Gnome-system-monitor$"]             floating enable
@@ -79,8 +78,9 @@ for_window [title="^alacritty-pop-up$"]                 floating enable, resize 
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
-# Tabbed window for keybindings
+# Scratchpad windows
 for_window [class="^tabbed$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
+for_window [class="^PureRef$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
