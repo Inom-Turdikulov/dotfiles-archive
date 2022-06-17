@@ -308,7 +308,9 @@ bindsym $mod+control+r mode "restore"
 bindsym $mod+shift+e mode "$mode_system"
 set $mode_system L̲ock, E̲xit, S̲uspend, R̲eboot, Shutd̲own
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock --color=d84315, mode "default"
+    # run i3lock (doesn't retrun exit code whilte running) in background and monitor off in same time
+    bindsym l exec --no-startup-id i3lock --color=263238 & sleep 5 && xset dpms force off, mode "default"
+
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
@@ -324,10 +326,13 @@ mode "$mode_system" {
 bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
 
 # Google
-bindsym $mod+g exec rofi-srch
+bindsym $mod+b exec ~/build/rofi-buku/rofi-buku
 
 # Passwords
 bindsym $mod+p exec rofi-pass
+
+# Rofimoji
+bindsym $mod+u exec rofimoji
 
 # Youtube FZF
 for_window [title="YTFZF"]  floating enable
@@ -363,9 +368,6 @@ bindsym Control+Print exec --no-startup-id flameshot full -c
 # Generate a QR code from the clipboard
 bindsym $mod+q exec qcode
 bindsym $mod+control+q exec simplescreenrecorder
-
-# Rofimoji
-bindsym $mod+u exec rofimoji
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
