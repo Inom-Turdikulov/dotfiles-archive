@@ -1,4 +1,7 @@
 ;;; app.el -*- lexical-binding: t; -*-
+;; Circe configuration
+(after! circe
+(enable-circe-display-images))
 
 ;; ElFeed configuraton
 (defun elfeed-play-with-mpv ()
