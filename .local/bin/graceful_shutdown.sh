@@ -21,7 +21,7 @@ APPLIST_TO_TERMINATE=(
     bittorrent-nox
     tapper
     syncthing
-    ss-local
+    sslocal
     blackd
     keebie
     clipit
