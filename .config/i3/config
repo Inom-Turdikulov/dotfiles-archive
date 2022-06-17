@@ -332,7 +332,7 @@ bindsym $mod+b exec ~/build/rofi-buku/rofi-buku
 bindsym $mod+p exec rofi-pass
 
 # Rofimoji
-bindsym $mod+u exec rofimoji
+bindsym $mod+u exec rofimoji --skin-tone neutral --action copy
 
 # Youtube FZF
 for_window [title="YTFZF"]  floating enable
