@@ -1,3 +1,6 @@
+# ALL apps
+restore-workspaces.sh &
+
 # Read the Xresources file if it exists.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
@@ -25,16 +28,15 @@ clipit &
 # MPD mpris support
 mpDris2 &
 
-# ALL apps
-i3-ressurect.sh &
-
 qbittorrent-nox &
 
 tapper &
 
 syncthing --no-browser &
 
+# Proxies
 sslocal -c ~/.ssh/shadowsocks.json &
+gost -L=:8085 -F=socks5://localhost:8084 &
 
 blackd &
 

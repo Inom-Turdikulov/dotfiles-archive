@@ -39,8 +39,5 @@ fi
 # load autostart programs
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-# load display configuration
-autorandr --change
-
 # start i3wm
 exec i3
