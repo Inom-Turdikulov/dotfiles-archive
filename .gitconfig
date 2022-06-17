@@ -213,3 +213,5 @@
 	advertisePushOptions = true
 [http]
 	proxy = socks5://127.0.0.1:8084
+[pull]
+	rebase = true
