@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=linkhandler
+Exec=linkhandler %u
+Icon=chrome
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/http;x-scheme-handler/https;

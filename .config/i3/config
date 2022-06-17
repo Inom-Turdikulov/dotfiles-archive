@@ -48,8 +48,8 @@ workspace $ws11 output $DISPLAY_3
 workspace $ws12 output $DISPLAY_3
 
 # Specify windows dimensions
-set $FLOAT_WIDTH 2000
-set $FLOAT_HEIGHT 1600
+set $FLOAT_WIDTH 1800
+set $FLOAT_HEIGHT 1200
 for_window [window_role="pop-up"]                       floating enable
 for_window [class="zoom"]                               floating enable
 for_window [window_role="bubble"]                       floating enable
