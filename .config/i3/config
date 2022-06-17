@@ -340,9 +340,9 @@ for_window [title="YTFZF"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGH
 set $mode_ytfzf Youtube, V͟ideo, A͟udio
 bindsym $mod+y mode "$mode_ytfzf"
 mode "$mode_ytfzf" {
-    bindsym y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D, mode "default"
-    bindsym v exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -t, mode "default"
-    bindsym a exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm, mode "default"
+    bindsym y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D --detach, mode "default"
+    bindsym v exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -t --detach, mode "default"
+    bindsym a exec --no-startup-id alacritty --title="YTFZF" -e ytfzf -tm --detach, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
