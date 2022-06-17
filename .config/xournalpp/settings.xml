@@ -151,6 +151,10 @@
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="8"/>
     </data>
+    <data name="Wacom Intuos5 M Pen cursor">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="3"/>
+    </data>
     <data name="Wacom Intuos5 M Pen eraser">
       <attribute name="deviceClass" type="int" value="3"/>
       <attribute name="deviceSource" type="int" value="2"/>

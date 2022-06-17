@@ -40,7 +40,7 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # load display configuration
-[ -f ~/.screenlayout/main.sh ] && . ~/.screenlayout/main.sh
+autorandr --change
 
 # start i3wm
 exec i3
