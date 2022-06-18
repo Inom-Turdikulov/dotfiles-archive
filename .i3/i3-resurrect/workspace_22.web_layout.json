@@ -25,14 +25,14 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 1924,
-        "y": 4,
-        "width": 1912,
-        "height": 2112
+        "x": 2560,
+        "y": 1726,
+        "width": 3840,
+        "height": 2074
       },
       "layout": "splith",
       "marks": [],
-      "name": "Brain.fm: Music to improve focus, meditation & sleep. - Google Chrome",
+      "name": "qutebrowser",
       "orientation": "none",
       "percent": 1.0,
       "scratchpad_state": "none",
@@ -41,8 +41,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Google\\-chrome$",
-          "instance": "^google\\-chrome$"
+          "class": "^qutebrowser$",
+          "instance": "^qutebrowser$"
         }
       ]
     }

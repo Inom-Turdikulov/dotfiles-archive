@@ -1,14 +1,7 @@
 [
   {
     "command": [
-      "/opt/google/chrome/chrome",
-      "--enable-gpu-rasterization",
-      "--remote-debugging-port=12039",
-      "--ignore-gpu-blocklist",
-      "--disable-features=UseChromeOSDirectVideoDecoder",
-      "--use-gl=desktop",
-      "--enable-features=VaapiVideoDecoder",
-      "--enable-crashpad"
+      "qutebrowser"
     ],
     "working_directory": "/home/inom"
   }
