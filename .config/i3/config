@@ -315,7 +315,7 @@ mode "$mode_system" {
     # run i3lock (doesn't retrun exit code whilte running) in background and monitor off in same time
     bindsym l exec --no-startup-id i3lock --color=263238 & sleep 5 && xset dpms force off, mode "default"
 
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym e exec --no-startup-id graceful_shutdown.sh && i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id graceful_shutdown.sh && systemctl reboot, mode "default"
     bindsym d exec --no-startup-id graceful_shutdown.sh && power-off.sh, mode "default"
