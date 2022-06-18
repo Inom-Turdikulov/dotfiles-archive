@@ -1,9 +1,8 @@
 #!/bin/sh
 # load display configuration
 autorandr --change || true
+emacs &
 sleep 4
-
-emacsclient -nc
 ws1=1:1.code
 ws2=2:2.web
 ws3=3:3.life

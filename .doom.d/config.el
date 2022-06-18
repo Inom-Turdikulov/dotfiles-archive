@@ -46,3 +46,11 @@
 ;; Fix issue with commiting from terminal and $EDITOR
 (after! persp-mode
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
+
+;; Start server
+(use-package! server
+  :when (display-graphic-p)
+  :after-call doom-first-input-hook doom-first-file-hook focus-out-hook
+  :config
+  (unless (server-running-p)
+    (server-start)))
