@@ -1,13 +1,6 @@
 [
   {
     "command": [
-      "emacsclient",
-       "-nc"
-    ],
-    "working_directory": "/home/inom"
-  },
-  {
-    "command": [
       "slack"
     ],
     "working_directory": "/home/inom"
