@@ -1,7 +1,13 @@
 [
     {
     "command": [
-        "/usr/bin/alacritty",
+        "alacritty"
+    ],
+    "working_directory": "/home/inom/.emacs.d"
+},
+    {
+    "command": [
+        "alacritty",
         "-e",
         "tmux",
         "new",
