@@ -53,7 +53,5 @@
 (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
 
 ;; support cursor shape in terminal
-(unless (display-graphic-p)
-          (require 'evil-terminal-cursor-changer)
-          (evil-terminal-cursor-changer-activate) ; or (etcc-on)
-          )
+(use-package! evil-terminal-cursor-changer
+  :hook (tty-setup . evil-terminal-cursor-changer-activate))
