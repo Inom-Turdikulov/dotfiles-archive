@@ -7,7 +7,13 @@
   },
   {
     "command": [
-      "alacritty"
+      "emacs-mail.sh"
+    ],
+    "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "emacs-irc.sh"
     ],
     "working_directory": "/home/inom"
   },

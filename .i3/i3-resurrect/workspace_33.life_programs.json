@@ -1,9 +1,11 @@
 [
     {
     "command": [
-        "alacritty"
+        "alacritty",
+        "--title",
+        "Terminal"
     ],
-    "working_directory": "/home/inom/.emacs.d"
+    "working_directory": "/home/inom/"
 },
     {
     "command": [
@@ -13,6 +15,6 @@
         "new",
         "-As0"
     ],
-    "working_directory": "/home/inom/.emacs.d"
+    "working_directory": "/home/inom/"
 }
 ]

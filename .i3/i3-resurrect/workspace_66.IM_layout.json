@@ -13,7 +13,7 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": 0.09702970297029703,
+  "percent": 0.08624862486248625,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -42,28 +42,78 @@
       "nodes": [
         {
           "border": "pixel",
-          "current_border_width": 4,
+          "current_border_width": -1,
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
-            "x": 2560,
-            "y": 1680,
-            "width": 3840,
-            "height": 2120
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
           },
           "layout": "splith",
           "marks": [],
-          "name": "Slack | general | Salesloop",
-          "orientation": "none",
+          "name": null,
+          "orientation": "horizontal",
           "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
           "workspace_layout": "default",
-          "swallows": [
+          "nodes": [
             {
-              "class": "^Slack$",
-              "instance": "^slack$"
+              "border": "pixel",
+              "current_border_width": 4,
+              "floating": "auto_off",
+              "fullscreen_mode": 0,
+              "geometry": {
+                "x": 0,
+                "y": 0,
+                "width": 192,
+                "height": 216
+              },
+              "layout": "splith",
+              "marks": [],
+              "name": "GNU Emacs | *scratch*",
+              "orientation": "none",
+              "percent": 0.5,
+              "scratchpad_state": "none",
+              "sticky": false,
+              "type": "con",
+              "workspace_layout": "default",
+              "swallows": [
+                {
+                  "class": "^Emacs$",
+                  "instance": "^emacs$"
+                }
+              ]
+            },
+            {
+              "border": "pixel",
+              "current_border_width": 4,
+              "floating": "auto_off",
+              "fullscreen_mode": 0,
+              "geometry": {
+                "x": 2560,
+                "y": 1680,
+                "width": 3840,
+                "height": 2120
+              },
+              "layout": "splith",
+              "marks": [],
+              "name": "Slack | Threads | Salesloop",
+              "orientation": "none",
+              "percent": 0.5,
+              "scratchpad_state": "none",
+              "sticky": false,
+              "type": "con",
+              "workspace_layout": "default",
+              "swallows": [
+                {
+                  "class": "^Slack$",
+                  "instance": "^slack$"
+                }
+              ]
             }
           ]
         },
@@ -103,7 +153,7 @@
               "marks": [],
               "name": "Chatterino 7.3.5 - intoruss0uls",
               "orientation": "none",
-              "percent": 0.7000000000000002,
+              "percent": 1.0,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
@@ -112,33 +162,6 @@
                 {
                   "class": "^chatterino$",
                   "instance": "^chatterino$"
-                }
-              ]
-            },
-            {
-              "border": "pixel",
-              "current_border_width": 4,
-              "floating": "auto_off",
-              "fullscreen_mode": 0,
-              "geometry": {
-                "x": 0,
-                "y": 0,
-                "width": 800,
-                "height": 600
-              },
-              "layout": "splith",
-              "marks": [],
-              "name": "inom",
-              "orientation": "none",
-              "percent": 0.29999999999999993,
-              "scratchpad_state": "none",
-              "sticky": false,
-              "type": "con",
-              "workspace_layout": "default",
-              "swallows": [
-                {
-                  "class": "^Alacritty$",
-                  "instance": "^Alacritty$"
                 }
               ]
             }
