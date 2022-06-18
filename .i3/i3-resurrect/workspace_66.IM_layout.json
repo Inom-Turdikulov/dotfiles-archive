@@ -42,155 +42,55 @@
       "nodes": [
         {
           "border": "pixel",
-          "current_border_width": -1,
+          "current_border_width": 4,
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
-            "x": 0,
-            "y": 0,
-            "width": 0,
-            "height": 0
+            "x": 2560,
+            "y": 1680,
+            "width": 3840,
+            "height": 2120
           },
           "layout": "splith",
           "marks": [],
-          "name": null,
-          "orientation": "horizontal",
+          "name": "Slack | Threads | Salesloop",
+          "orientation": "none",
           "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
           "workspace_layout": "default",
-          "nodes": [
+          "swallows": [
             {
-              "border": "pixel",
-              "current_border_width": 4,
-              "floating": "auto_off",
-              "fullscreen_mode": 0,
-              "geometry": {
-                "x": 0,
-                "y": 0,
-                "width": 192,
-                "height": 216
-              },
-              "layout": "splith",
-              "marks": [],
-              "name": "GNU Emacs | *notmuch-search-tag:inbox*",
-              "orientation": "none",
-              "percent": 0.5,
-              "scratchpad_state": "none",
-              "sticky": false,
-              "type": "con",
-              "workspace_layout": "default",
-              "swallows": [
-                {
-                  "class": "^Emacs$",
-                  "instance": "^emacs$"
-                }
-              ]
-            },
-            {
-              "border": "pixel",
-              "current_border_width": 4,
-              "floating": "auto_off",
-              "fullscreen_mode": 0,
-              "geometry": {
-                "x": 2560,
-                "y": 1680,
-                "width": 3840,
-                "height": 2120
-              },
-              "layout": "splith",
-              "marks": [],
-              "name": "Slack | Threads | Salesloop",
-              "orientation": "none",
-              "percent": 0.5,
-              "scratchpad_state": "none",
-              "sticky": false,
-              "type": "con",
-              "workspace_layout": "default",
-              "swallows": [
-                {
-                  "class": "^Slack$",
-                  "instance": "^slack$"
-                }
-              ]
+              "class": "^Slack$",
+              "instance": "^slack$"
             }
           ]
         },
         {
           "border": "pixel",
-          "current_border_width": -1,
+          "current_border_width": 4,
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
             "x": 0,
-            "y": 0,
-            "width": 0,
-            "height": 0
+            "y": 1726,
+            "width": 3840,
+            "height": 2074
           },
           "layout": "splith",
           "marks": [],
-          "name": null,
-          "orientation": "horizontal",
+          "name": "Chatterino 7.3.5 - intoruss0uls",
+          "orientation": "none",
           "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
           "workspace_layout": "default",
-          "nodes": [
+          "swallows": [
             {
-              "border": "pixel",
-              "current_border_width": 4,
-              "floating": "auto_off",
-              "fullscreen_mode": 0,
-              "geometry": {
-                "x": 0,
-                "y": 1726,
-                "width": 3840,
-                "height": 2074
-              },
-              "layout": "splith",
-              "marks": [],
-              "name": "Chatterino 7.3.5 - intoruss0uls",
-              "orientation": "none",
-              "percent": 0.7286458333333333,
-              "scratchpad_state": "none",
-              "sticky": false,
-              "type": "con",
-              "workspace_layout": "default",
-              "swallows": [
-                {
-                  "class": "^chatterino$",
-                  "instance": "^chatterino$"
-                }
-              ]
-            },
-            {
-              "border": "pixel",
-              "current_border_width": 4,
-              "floating": "auto_off",
-              "fullscreen_mode": 0,
-              "geometry": {
-                "x": 0,
-                "y": 0,
-                "width": 1472,
-                "height": 1872
-              },
-              "layout": "splith",
-              "marks": [],
-              "name": "GNU Emacs | \u21c4 bitlbee",
-              "orientation": "none",
-              "percent": 0.2713541666666667,
-              "scratchpad_state": "none",
-              "sticky": false,
-              "type": "con",
-              "workspace_layout": "default",
-              "swallows": [
-                {
-                  "class": "^Emacs$",
-                  "instance": "^emacs$"
-                }
-              ]
+              "class": "^chatterino$",
+              "instance": "^chatterino$"
             }
           ]
         }
