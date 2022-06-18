@@ -1,8 +1,8 @@
-# ALL apps
-restore-workspaces.sh &
-
 # Read the Xresources file if it exists.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
+# ALL apps
+restore-workspaces.sh &
 
 # NetworkManager for managing networks.
 nm-applet &
