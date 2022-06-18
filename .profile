@@ -23,7 +23,7 @@ export LC_ALL='en_US.UTF-8';
 export GPG_TTY=$(tty)
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/google-chrome-stable
+export BROWSER=linkhandler
 
 # Appearance/HighDPI configuration
 export QT_QPA_PLATFORMTHEME=qt5ct
