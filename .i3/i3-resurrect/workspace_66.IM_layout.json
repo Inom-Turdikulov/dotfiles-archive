@@ -153,7 +153,7 @@
               "marks": [],
               "name": "Chatterino 7.3.5 - intoruss0uls",
               "orientation": "none",
-              "percent": 0.76953125,
+              "percent": 0.7286458333333333,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
@@ -173,22 +173,22 @@
               "geometry": {
                 "x": 0,
                 "y": 0,
-                "width": 800,
-                "height": 600
+                "width": 1472,
+                "height": 1872
               },
               "layout": "splith",
               "marks": [],
-              "name": "IRC",
+              "name": "GNU Emacs | \u21c4 bitlbee",
               "orientation": "none",
-              "percent": 0.23046875,
+              "percent": 0.2713541666666667,
               "scratchpad_state": "none",
               "sticky": false,
               "type": "con",
               "workspace_layout": "default",
               "swallows": [
                 {
-                  "class": "^Alacritty$",
-                  "instance": "^Alacritty$"
+                  "class": "^Emacs$",
+                  "instance": "^emacs$"
                 }
               ]
             }
