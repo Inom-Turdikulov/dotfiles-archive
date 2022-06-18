@@ -71,7 +71,12 @@ for_window [class="^UnrealEditor$"]                     floating enable
 for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
 for_window [class="^Gnome-system-monitor$"]             floating enable
 for_window [class="^Pavucontrol$"]                      floating enable
+
+# MPV windows configuration
 for_window [class="mpv" instance="Picture-in-Picture"]  floating enable
+for_window [class="mpv"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+assign [class="mpv"]  $ws13
+
 for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
