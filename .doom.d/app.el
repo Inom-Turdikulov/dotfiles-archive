@@ -41,7 +41,7 @@ See `elfeed-play-with-mpv'."
     (interactive)
     (let ((entries (elfeed-search-selected)))
       (mapc (lambda (entry)
-              (assert (memq system-type '(darwin)) t "open command is macOS only")
+              (cl-assert (memq system-type '(darwin)) t "open command is macOS only")
               (start-process (concat "open " (elfeed-entry-link entry))
                              nil "open" "--background" (elfeed-entry-link entry))
               (elfeed-untag entry 'unread)
