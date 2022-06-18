@@ -4,9 +4,11 @@
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias more=less
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias git_submodlues='git submodule update --init --recursive --remote'
+alias fzp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias less="less -FX"
+alias view="nvimpager"
 
 alias mux='tmux new -As0'
 

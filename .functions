@@ -308,6 +308,6 @@ stopwatch() {
 # Initialize file at give path (better touch)
 t() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 em() { emacsclient -n -c -a emacs "$@" ; }
-ediff() { emacs -nw --eval "(ediff-files \"$1\" \"$2\")" ; }
-eman()  { emacs -nw --eval "(switch-to-buffer (man \"$1\"))" ; }
+ediff() { emacsclient -nw --eval "(ediff-files \"$1\" \"$2\")" ; }
+eman()  { emacsclient -nw --eval "(switch-to-buffer (man \"$1\"))" ; }
 ekill() { emacsclient --eval '(kill-emacs)' ; }

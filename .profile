@@ -5,7 +5,8 @@ export TERM=xterm-256color
 # Editors
 export EDITOR="env TERM=xterm-24bit emacsclient -t -a emacs"
 export VISUAL="$EDITOR"
-export PAGER='less'
+export PAGER='nvimpager'
+export MANPAGER="sh -c 'col -bx | nvimpager -p'"
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -17,14 +18,9 @@ export HISTCONTROL='ignoreboth';
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8';
 
-# Use bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 # Set GPG TTY
 # If gnupg2 and gpg-agent 2.x are used, be sure to set the environment variable GPG_TTY.
 export GPG_TTY=$(tty)
-
-
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/google-chrome-stable
