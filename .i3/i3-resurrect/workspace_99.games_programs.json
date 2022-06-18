@@ -1,8 +1,7 @@
 [
   {
     "command": [
-      "/usr/bin/python3.10",
-      "/usr/bin/lutris"
+      "/usr/bin/retroarch"
     ],
     "working_directory": "/home/inom"
   }
