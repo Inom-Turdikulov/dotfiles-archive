@@ -8,8 +8,8 @@
   },
   {
     "command": [
-      "/tmp/.mount_Chattepq27Vd/usr/bin/chatterino"
+      "/opt/Chatterino-x86_64.AppImage"
     ],
-    "working_directory": "/tmp/.mount_Chattepq27Vd/usr"
+    "working_directory": "/home/inom"
   }
 ]
