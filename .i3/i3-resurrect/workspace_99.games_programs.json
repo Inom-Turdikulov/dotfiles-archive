@@ -1,7 +1,8 @@
 [
   {
     "command": [
-      "steam"
+      "/usr/bin/python3.10",
+      "/usr/bin/lutris"
     ],
     "working_directory": "/home/inom"
   }

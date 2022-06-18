@@ -20,19 +20,19 @@
   "workspace_layout": "default",
   "nodes": [
     {
-      "border": "pixel",
+      "border": "none",
       "current_border_width": 4,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 0,
-        "y": 1712,
+        "x": 2560,
+        "y": 1680,
         "width": 3840,
-        "height": 2082
+        "height": 2120
       },
       "layout": "splith",
       "marks": [],
-      "name": "Steam",
+      "name": "Lutris",
       "orientation": "none",
       "percent": 1.0,
       "scratchpad_state": "none",
@@ -41,7 +41,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Steam$"
+          "class": "^Lutris$",
+          "instance": "^lutris$"
         }
       ]
     }
