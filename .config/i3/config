@@ -81,6 +81,7 @@ for_window [title="^Emacs Everywhere"]                  floating enable, resize 
 for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^Inkview$"]                          floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
 # Scratchpad windows

@@ -7,7 +7,9 @@
 # otherwise it opens link in browser.
 PDF_VIEWER=/usr/bin/zathura
 IMAGE_VIEWER="/usr/local/bin/nsxiv -z 200"
+SVG_IMAGE_VIEWER="/usr/bin/inkview"
 MEDIA_VIEWER=mpv
+FALLBACK_BROWSER=qutebrowser
 
 # If no url given. Opens browser. For using script as $BROWSER.
 [ -z "$1" ] && { "$BROWSER"; exit; }
@@ -24,6 +26,8 @@ case "$1" in
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
 	*png|*jpg|*jpe|*jpeg|*gif|*amuniversal.com*)
 		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && $IMAGE_VIEWER -a "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
+	*svg|*ai|wmf)
+		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && $SVG_IMAGE_VIEWER "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*pdf|*cbz|*cbr)
 		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && $PDF_VIEWER "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*mp3|*flac|*opus|*mp3?*)
@@ -31,6 +35,6 @@ case "$1" in
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
 	*)
-		[ -f "$1" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$1" >/dev/null 2>&1 || setsid -f "$BROWSER" "$1" >/dev/null 2>&1
+		[ -f "$1" ] && setsid -f "$TERMINAL" -e "$EDITOR" "$1" >/dev/null 2>&1 || setsid -f "$FALLBACK_BROWSER" "$1" >/dev/null 2>&1
 esac
 
