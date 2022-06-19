@@ -9,7 +9,7 @@ PDF_VIEWER=/usr/bin/zathura
 IMAGE_VIEWER="/usr/local/bin/nsxiv -z 200"
 SVG_IMAGE_VIEWER="/usr/bin/inkview"
 MEDIA_VIEWER=mpv
-FALLBACK_BROWSER=qutebrowser
+FALLBACK_BROWSER=chromium
 
 # If no url given. Opens browser. For using script as $BROWSER.
 [ -z "$1" ] && { "$BROWSER"; exit; }
