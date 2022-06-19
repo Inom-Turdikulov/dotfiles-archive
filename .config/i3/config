@@ -78,6 +78,7 @@ assign [class="mpv"]  $ws13
 for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^htop$"]                             floating enable, resize set 2000 1800, move position center
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Inkview$"]                          floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^FM$" class="Alacritty"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
