@@ -6,8 +6,8 @@
 (global-set-key (kbd "C-c d") 'look-up-dict-marked)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-S-p") (lambda () (interactive) (anki-editor-push-notes) (doom/reload-font)))
-(global-set-key (kbd "C-<F1>") 'execute-c-program)
-(global-set-key (kbd "C-<F1>") 'execute-c-program)
+(global-set-key (kbd "C-<f1>") 'execute-c-program)
+(global-set-key (kbd "C-<f2>") 'speed-type-buffer)
 
 (use-package! elfeed
   :general
