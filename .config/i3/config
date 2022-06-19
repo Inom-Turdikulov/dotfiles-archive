@@ -82,6 +82,7 @@ for_window [class="^Nsxiv$"]                            floating enable, resize 
 for_window [class="^Inkview$"]                          floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^FM$" class="Alacritty"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
 # Scratchpad windows
@@ -325,6 +326,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+# Dunst close
+bindsym $mod+n exec --no-startup-id dunstctl close-all
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
@@ -377,9 +380,7 @@ bindsym XF86AudioLowerVolume exec $sound_controller set-sink-volume 0 -5%
 bindsym XF86AudioMute exec $sound_controller set-sink-mute 0 toggle
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
-bindsym Shift+Print exec flameshot gui
-bindsym Control+Print exec --no-startup-id flameshot full -c
-bindsym $mod+control+q exec simplescreenrecorder
+bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
