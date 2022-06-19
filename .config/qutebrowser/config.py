@@ -505,8 +505,7 @@ c.auto_save.session = True
 c.url.default_page = "https://stackexchange.com/"
 c.url.start_pages = "https://stackexchange.com/"
 
-config.bind("<Ctrl-g>", "leave-mode", mode="passthrough")
-config.bind("<Ctrl-v>", "spawn linkhandler {url}")
+config.bind("<Ctrl-g>", "spawn linkhandler {url}")
 config.bind(",m", "hint links spawn linkhandler {hint-url}")
 config.bind(";M", "hint --rapid links spawn linkhandler {hint-url}")
 
