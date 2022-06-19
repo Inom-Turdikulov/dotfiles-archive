@@ -67,9 +67,7 @@ for_window [title="^xprop$"]                            floating enable
 for_window [class="^GParted$"]                          floating enable
 for_window [class="^Gtk-pipe-viewer$"]                  floating enable
 for_window [class="^mpv$"]                              floating enable
-for_window [class="^UnrealEditor$"]                     floating enable
 for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
-for_window [class="^Gnome-system-monitor$"]             floating enable
 for_window [class="^Pavucontrol$"]                      floating enable
 
 # MPV windows configuration
@@ -82,10 +80,11 @@ for_window [title="^org-roam-paste$"]                   floating enable, resize 
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Inkview$"]                          floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^FM$" class="Alacritty"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
 # Scratchpad windows
-for_window [class="^tabbed$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
 for_window [class="^PureRef$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
@@ -330,7 +329,7 @@ mode "$mode_system" {
 # start program launcher
 bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
 
-# Google
+# Bookmarks
 bindsym $mod+b exec ~/build/rofi-buku/rofi-buku
 
 # Passwords
@@ -361,11 +360,6 @@ mode "$mode_ytfzf" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-
-# Weechat
-bindsym $mod+shift+w workspace $ws4; exec weechat.sh
-
 
 # Sound/Player related key bindings
 set $player mpd
