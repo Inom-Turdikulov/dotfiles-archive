@@ -36,6 +36,7 @@
    "KEY_K": "alacritty --title alacritty-pop-up --hold -e xev &",
    "KEY_F": "gtk-launch nnn &",
    "KEY_N": "dunstctl history-pop &",
+   "KEY_C": "alacritty --title alacritty-pop-up --hold -e cointop &",
    "KEY_N+KEY_RIGHTMETA": "alacritty --title alacritty-pop-up --hold -e ncdu / &",
    "KEY_ESC+KEY_RIGHTMETA": "keebie --stop &",
    "KEY_RIGHTMETA": "i3lock --color=263238 & sleep 5 && xset dpms force off &",
