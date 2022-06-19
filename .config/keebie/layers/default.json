@@ -17,6 +17,7 @@
    "KEY_5+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr meditation music &",
    "KEY_6+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qam Lofi Girl Radio &",
    "KEY_7+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr focus music &",
+   "KEY_SLASH": "cat ~/.config/i3/config ~/.config/keebie/layers/default.json|egrep 'bindsym|\"KEY'  > /tmp/keybindings && alacritty --title alacritty-pop-up --hold -e less /tmp/keybindings &",
    "KEY_Q": "qcode &",
    "KEY_ESC": "alacritty --title htop -e htop &",
    "KEY_ESC+KEY_LEFTSHIFT": "gnome-system-monitor &",
