@@ -152,26 +152,25 @@
     max_icon_size=128
 
 [shortcuts]
-
     # Shortcuts are specified as [modifier+][modifier+]...key
     # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
     # "mod3" and "mod4" (windows-key).
     # Xev might be helpful to find names for keys.
 
     # Close notification.
-    close = mod1+space
+    # close = mod1+space
 
     # Close all notifications.
     # close_all = ctrl+shift+space
-    close_all = ctrl+mod1+space
+    # close_all = ctrl+mod1+space
 
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1".
-    history = shift+mod1+space
+    # history = shift+mod1+space
 
     # Context menu.
-    context = ctrl+mod1+c
+    # context = ctrl+mod1+c
 
 [urgency_low]
     background = "#263135"
