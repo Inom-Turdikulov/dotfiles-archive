@@ -13,7 +13,7 @@
   "marks": [],
   "name": "9:9.games",
   "orientation": "horizontal",
-  "percent": null,
+  "percent": 0.1111111111111111,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -21,28 +21,51 @@
   "nodes": [
     {
       "border": "pixel",
-      "current_border_width": 4,
+      "current_border_width": -1,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 960,
-        "height": 720
+        "width": 0,
+        "height": 0
       },
-      "layout": "splith",
+      "layout": "tabbed",
       "marks": [],
-      "name": "RetroArch  ",
-      "orientation": "none",
-      "percent": 1.0,
+      "name": null,
+      "orientation": "horizontal",
+      "percent": null,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "swallows": [
+      "nodes": [
         {
-          "class": "^retroarch$",
-          "instance": "^retroarch$"
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "auto_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 720
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "RetroArch  ",
+          "orientation": "none",
+          "percent": 1.0,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^retroarch$",
+              "instance": "^retroarch$"
+            }
+          ]
         }
       ]
     }
