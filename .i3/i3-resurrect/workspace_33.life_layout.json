@@ -62,8 +62,7 @@
           "workspace_layout": "default",
           "swallows": [
             {
-              "class": "^Alacritty$",
-              "name": "^0"
+              "class": "^Alacritty$"
             }
           ]
         },
@@ -89,8 +88,7 @@
           "workspace_layout": "default",
           "swallows": [
             {
-              "class": "^Alacritty$",
-              "name": "^Terminal$"
+              "class": "^Alacritty$"
             }
           ]
         }
