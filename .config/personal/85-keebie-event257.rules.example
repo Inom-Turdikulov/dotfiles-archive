@@ -1,0 +1,1 @@
+SUBSYSTEM=="input", KERNEL=="event257", MODE="0666", GROUP="users", ENV{SYSTEMD_WANTS}="keebie.service"  TAG+="systemd"
