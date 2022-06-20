@@ -86,9 +86,6 @@ for_window [class="^Gnome-system-monitor$"]             floating enable, resize 
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
-# Scratchpad windows
-for_window [class="^PureRef$"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center, move scratchpad
-
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
 default_floating_border pixel 2
