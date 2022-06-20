@@ -30,8 +30,6 @@ mpDris2 &
 
 qbittorrent-nox &
 
-tapper &
-
 syncthing --no-browser &
 
 # Proxies
@@ -40,11 +38,11 @@ sslocal -c ~/.ssh/shadowsocks.json &
 # Python blackd formatter
 blackd &
 
+# Tapper
+tapper &
+
 # Hugo server
-hugo server --buildDrafts --navigateToChanged &
+cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hugo.log & disown
 
-# Scratchpad programs
-tabbed alacritty --embed &
-PureRef &
-
-# keebie & TODO: need test & modify
+# Keebie
+keebie & disown
