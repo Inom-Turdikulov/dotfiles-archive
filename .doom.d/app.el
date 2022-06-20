@@ -79,6 +79,7 @@ See `elfeed-play-with-mpv'."
 (setq sendmail-program "/usr/bin/msmtp")
 (setq send-mail-function 'message-send-mail-with-sendmail)
 
+
 ;; Anki editor configuration
 ;;
 
