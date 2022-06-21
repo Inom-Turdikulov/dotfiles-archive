@@ -32,7 +32,7 @@
       },
       "layout": "splith",
       "marks": [],
-      "name": "qutebrowser",
+      "name": "chromium",
       "orientation": "none",
       "percent": 1.0,
       "scratchpad_state": "none",
@@ -41,8 +41,7 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^qutebrowser$",
-          "instance": "^qutebrowser$"
+          "class": "^Chromium$"
         }
       ]
     }

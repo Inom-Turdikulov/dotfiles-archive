@@ -1,7 +1,7 @@
 [
   {
     "command": [
-      "qutebrowser"
+      "chromium"
     ],
     "working_directory": "/home/inom"
   }
