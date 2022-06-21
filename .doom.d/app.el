@@ -107,3 +107,23 @@ See `elfeed-play-with-mpv'."
    :mode 'vterm-mode :tag-symbol 'def-vterm-buffer
    :save-vars '(major-mode default-directory))
 )
+
+;; Github CoPilot
+;; accept completion from copilot and fallback to company
+(setq copilot-node-executable "/home/inom/.nvm/versions/node/v17.0.0/bin/node")
+
+(defun my-tab ()
+  (interactive)
+  (or (copilot-accept-completion)
+      (company-indent-or-complete-common nil)))
+
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (("C-TAB" . 'copilot-accept-completion-by-word)
+         ("C-<tab>" . 'copilot-accept-completion-by-word)
+         :map company-active-map
+         ("<tab>" . 'my-tab)
+         ("TAB" . 'my-tab)
+         :map company-mode-map
+         ("<tab>" . 'my-tab)
+         ("TAB" . 'my-tab)))

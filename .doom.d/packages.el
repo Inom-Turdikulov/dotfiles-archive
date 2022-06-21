@@ -74,3 +74,6 @@
 (package! ue)
 (package! speed-type)
 (package! evil-terminal-cursor-changer)
+
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
