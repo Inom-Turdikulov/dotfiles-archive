@@ -27,6 +27,7 @@
       truncate-string-ellipsis "…"                ; Unicode ellispis are nicer than "...", and also save /precious/ space
       password-cache-expiry nil                   ; I can trust my computers ... can't I?
       delete-by-moving-to-trash t                 ; Delete files to trash
+      company-idle-delay 0.6                      ; Autocomplete delay timer
       tramp-use-ssh-controlmaster-options nil     ; Use the customisations in your ~/.ssh/config
       )
 
@@ -42,6 +43,7 @@
 (load! "debugger"       doom-private-dir) ;; dap-debug and specific configurations
 (load! "lang"           doom-private-dir) ;; flyspell and programming languages specific configurations
 (load! "key-bindings"   doom-private-dir) ;; global and custom keybindings
+(load! "input"          doom-private-dir) ;; Quickly switch input method
 
 ;; Fix issue with commiting from terminal and $EDITOR
 (after! persp-mode
