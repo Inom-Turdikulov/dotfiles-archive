@@ -145,3 +145,5 @@ else
   echo "Error loading git completions"
 fi
 
+alias koreader_mount='sshfs -o ssh_command="ssh -p 2222" root@koreader:/mnt/us/documents ~/public/koreader/'
+alias koreader_umount='umount ~/public/koreader'
