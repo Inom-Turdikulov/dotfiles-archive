@@ -41,8 +41,8 @@ blackd &
 # Tapper
 tapper &
 
-# Hugo server
-cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hugo.log & disown
-
 # Keebie
-keebie & disown
+keebie &
+
+# Hugo server
+cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hugo.log &
