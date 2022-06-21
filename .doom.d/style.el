@@ -37,8 +37,20 @@
 
 ;; Whether display the workspace name. Non-nil to display in the mode-line.
 (after! doom-modeline
-  (setq doom-modeline-persp-name t))
+  ;; Custom modeline items order
+  (doom-modeline-def-modeline 'main
+    '(persp-name bar workspace-name window-number modals matches buffer-info remote-host buffer-position word-count parrot selection-info)
+    '(objed-state misc-info battery grip irc mu4e gnus github debug lsp minor-modes input-method indent-info buffer-encoding major-mode process vcs checker))
+
+  ;; Show persp name
+  (setq doom-modeline-persp-name t)
+
+  ;; Whether display the IRC notifications. It requires `circe' or `erc' package.
+  (setq doom-modeline-irc nil)
+  )
 (setq all-the-icons-scale-factor 1)
+
+
 
 ;; Alert style
 (use-package! alert
