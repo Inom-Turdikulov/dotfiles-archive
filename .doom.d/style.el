@@ -28,6 +28,7 @@
 ;; Set theme
 (setq doom-theme 'my-doom-one)
 (setq doom-themes-treemacs-theme "doom-colors")
+(setq fancy-splash-image (concat doom-private-dir "themes/Emacs-logo.svg"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
