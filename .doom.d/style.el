@@ -22,7 +22,7 @@
 (setq doom-font (font-spec :family "monospace" :size 18 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 18))
 
-(setq doom-unicode-font doom-font)
+(setq doom-unicode-font (font-spec :family "Noto Color Emoji"))
 
 ;; Set theme
 (setq doom-theme 'my-doom-one)
