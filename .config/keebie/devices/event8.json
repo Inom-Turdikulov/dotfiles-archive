@@ -1,8 +1,0 @@
-{
-   "initial_layer": "default.json",
-   "event": "event8",
-   "udev_tests": [
-      "KERNEL==\"event8\""
-   ],
-   "udev_rule": "85-keebie-event8.rules"
-}
