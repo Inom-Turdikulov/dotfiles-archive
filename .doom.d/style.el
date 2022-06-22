@@ -5,6 +5,7 @@
 (tool-bar-mode -1)
 (setq frame-title-format "GNU Emacs | %b")
 (setq scroll-margin 2 ) ; It's nice to maintain a little margin
+(setq all-the-icons-scale-factor 1) ;; height face property of an icon
 
 ;; Fonts configuration
 ;;
@@ -51,9 +52,6 @@
   ;; Whether display the IRC notifications. It requires `circe' or `erc' package.
   (setq doom-modeline-irc nil)
   )
-(setq all-the-icons-scale-factor 1)
-
-
 
 ;; Alert style
 (use-package! alert
