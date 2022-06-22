@@ -42,8 +42,11 @@
     '(persp-name bar workspace-name window-number modals matches buffer-info remote-host buffer-position word-count parrot selection-info)
     '(objed-state misc-info battery grip irc mu4e gnus github debug lsp minor-modes input-method indent-info buffer-encoding major-mode process vcs checker))
 
-  ;; Show persp name
+  ;; Show workspace name
   (setq doom-modeline-persp-name t)
+
+  ;; Show wordcount in selection
+  (setq doom-modeline-enable-word-count t)
 
   ;; Whether display the IRC notifications. It requires `circe' or `erc' package.
   (setq doom-modeline-irc nil)
