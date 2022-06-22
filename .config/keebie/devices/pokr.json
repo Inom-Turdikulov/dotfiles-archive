@@ -4,5 +4,5 @@
    "udev_tests": [
       "KERNEL==\"by-id/usb-04d9_USB-HID_Keyboard-event-kbd\""
    ],
-   "udev_rule": "85-keebie-event31.rules"
+   "udev_rule": "85-keebie-systemd.rules"
 }
