@@ -21,3 +21,11 @@
 (map! :leader
       :desc "Anki editor add note"
       "N a" #'anki-editor-insert-note)
+
+(map! :leader
+      :desc "IRC client"
+      "o i" #'=irc)
+
+(map! :leader
+      :desc "News (rss) client"
+      "o n" #'=rss)
