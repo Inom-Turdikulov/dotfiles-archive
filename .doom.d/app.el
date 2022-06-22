@@ -75,6 +75,10 @@ See `elfeed-play-with-mpv'."
 
 (setq +notmuch-sync-backend 'mbsync)
 (setq +notmuch-home-function (lambda () (notmuch-search "tag:inbox")))
+
+;; use current one window - bugfix
+(after! notmuch (set-popup-rule! "^\\*notmuch-hello" :ignore t))
+
 (setq sendmail-program "/usr/bin/msmtp")
 (setq send-mail-function 'message-send-mail-with-sendmail)
 
