@@ -31,7 +31,6 @@ See `elfeed-play-with-mpv'."
         (elfeed-show-visit)))))
 
 (use-package! elfeed
-  :ensure t
   :bind (:map elfeed-search-mode-map
               ("B" . elfeed-visit-or-play-with-mpv))
   :config
@@ -127,3 +126,13 @@ See `elfeed-play-with-mpv'."
          :map company-mode-map
          ("<tab>" . 'my-tab)
          ("TAB" . 'my-tab)))
+
+;; Leetcode
+;; leetcode-show-problem-by-slug will let you put to org files with a link
+(use-package! leetcode
+  :config
+  (setq leetcode-prefer-language "python3")
+  (setq leetcode-prefer-sql "mysql")
+  (setq leetcode-save-solutions t)
+  (setq leetcode-directory "~/wiki/leetcode/")
+  )
