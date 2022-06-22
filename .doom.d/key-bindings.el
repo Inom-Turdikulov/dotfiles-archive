@@ -8,6 +8,8 @@
 (global-set-key (kbd "C-S-p") (lambda () (interactive) (anki-editor-push-notes) (doom/reload-font)))
 (global-set-key (kbd "C-<f1>") 'execute-c-program)
 (global-set-key (kbd "C-<f2>") 'speed-type-buffer)
+(global-set-key (kbd "C-<f3>") 'langtool-check)
+(global-set-key (kbd "C-S-<f3>") 'langtool-check-done)
 
 (use-package! elfeed
   :general
