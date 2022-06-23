@@ -11,6 +11,14 @@ yadm clone git@github.com:inomoz/dotfiles.git # use https if you are not owner o
 yadm status
 ```
 
+# Features
+* GNU/Linux with X11
+* Bash and alacritty
+* i3wm and polybar
+* GTK and QT
+* GNU Emacs with Doom Emacs configuration
+* CLI and GUI program configurations
+ 
 # Thanks to…
 Got a lot from here:
 
