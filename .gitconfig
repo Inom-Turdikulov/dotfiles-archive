@@ -218,3 +218,6 @@
 	rebase = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
+[filter "gitignore"]
+	clean = "sed 's/\bouauth_client[^ ]*//'"
+	smudge = cat

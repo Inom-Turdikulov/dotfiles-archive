@@ -280,3 +280,6 @@ Procfile          text
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore         text
+
+# Run filter on cfg file
+*.cfg filter=gitignore
