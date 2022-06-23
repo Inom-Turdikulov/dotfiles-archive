@@ -48,3 +48,6 @@ export LS_COLORS="su=0:sg=0:di=0;38;2;97;175;239:fi=0:tw=0:ca=0:mi=0;38;2;0;0;0;
 
 # NVM integration
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+
+# Direnv integration
+eval "$(direnv hook bash)"
