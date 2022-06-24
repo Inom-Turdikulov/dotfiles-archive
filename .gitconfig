@@ -212,12 +212,16 @@
 
 	# When set to true, git-receive-pack will advertise the push options capability to its clients. False by default.
 	advertisePushOptions = true
+
 [http]
 	proxy = socks5://127.0.0.1:8084
+
 [pull]
 	rebase = true
+
 [interactive]
 	diffFilter = diff-so-fancy --patch
+
 [filter "gitignore"]
-	clean = "sed 's/\bouauth_client[^ ]*//'"
+	clean = "sed '/^oauth_client/d'"
 	smudge = cat
