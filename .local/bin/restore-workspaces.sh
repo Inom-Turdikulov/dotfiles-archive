@@ -24,3 +24,6 @@ do
    i3-resurrect restore -w ${!workspace}
    sleep 1
 done
+
+# Set random wallpaper from ~/pictures/wallpapers
+random-wallpaper.sh
