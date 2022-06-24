@@ -49,3 +49,4 @@ cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hu
 
 # Buku server
 bukuserver run -p 8888 > /tmp/bukuserver.log &
+
