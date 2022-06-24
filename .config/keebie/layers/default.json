@@ -40,6 +40,7 @@
    "KEY_J": "alacritty --title alacritty-pop-up -e random-range.sh &",
    "KEY_K": "alacritty --title alacritty-pop-up --hold -e xev &",
    "KEY_L": "darktable &",
+   "KEY_Z": "random-wallpaper.sh &",
    "KEY_X": "alacritty --title alacritty-pop-up --hold -e xprop &",
    "KEY_C": "alacritty --title alacritty-pop-up --hold -e cointop &",
    "KEY_M": "remmina &",
