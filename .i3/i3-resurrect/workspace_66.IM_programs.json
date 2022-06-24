@@ -1,14 +1,15 @@
 [
   {
     "command": [
-      "/usr/lib/slack/slack",
-      "--enable-crashpad"
+      "/usr/bin/emacs-28.1.50"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "/opt/Chatterino-x86_64.AppImage"
+      "/usr/lib/slack/slack",
+      "--enable-crashpad",
+      "--enable-crashpad"
     ],
     "working_directory": "/home/inom"
   }
