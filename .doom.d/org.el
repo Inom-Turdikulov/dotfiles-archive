@@ -49,6 +49,9 @@
 ;;
 
 (setq org-roam-directory (file-truename "~/wiki/roam"))
+
+;; This path is relative to org-roam-directory.
+(setq org-roam-dailies-directory "../daily/")
 (setq org-roam-capture-templates
      ; file-name should not include the extension
       (list
