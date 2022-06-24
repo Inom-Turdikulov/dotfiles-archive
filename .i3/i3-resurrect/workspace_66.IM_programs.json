@@ -1,15 +1,15 @@
 [
   {
     "command": [
-      "/usr/bin/emacs-28.1.50"
+      "emacsclient",
+      "-n",
+      "-c"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "/usr/lib/slack/slack",
-      "--enable-crashpad",
-      "--enable-crashpad"
+      "slack"
     ],
     "working_directory": "/home/inom"
   }
