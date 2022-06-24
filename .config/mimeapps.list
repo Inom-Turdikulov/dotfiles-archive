@@ -222,3 +222,4 @@ image/wmf=org.inkscape.Inkscape.desktop
 image/x-xbitmap=gimp.desktop
 application/rss+xml=chromium.desktop
 application/xhtml+xml=chromium.desktop
+x-scheme-handler/mailto=emacs-mail.desktop
