@@ -71,7 +71,7 @@ for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
 for_window [class="^Pavucontrol$"]                      floating enable
 
 # MPV windows configuration
-for_window [class="mpv" instance="Picture-in-Picture"]  floating enable
+for_window [class="chatterino"]  floating enable, resize set 760 1440
 
 for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
