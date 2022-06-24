@@ -147,3 +147,5 @@ fi
 
 alias koreader_mount='sshfs -o ssh_command="ssh -p 2222" root@koreader:/mnt/us/documents ~/public/koreader/'
 alias koreader_umount='umount ~/public/koreader'
+
+alias fzf_history='cat ~/.cache/ytfzf/watch_hist | jq  ".[].title,.[].url"|tail -n 20'
