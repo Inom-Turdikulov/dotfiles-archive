@@ -27,3 +27,6 @@ done
 
 # Set random wallpaper from ~/pictures/wallpapers
 random-wallpaper.sh
+
+# Prepare mpd to qucitly play music
+mpc load favorites && mpc play && mpc pause
