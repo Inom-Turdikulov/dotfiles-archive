@@ -311,3 +311,7 @@ em() { emacsclient -n -c -a emacs "$@" ; }
 ediff() { emacsclient -nw --eval "(ediff-files \"$1\" \"$2\")" ; }
 eman()  { emacsclient -nw --eval "(switch-to-buffer (man \"$1\"))" ; }
 ekill() { emacsclient --eval '(kill-emacs)' ; }
+transfer() {
+    curl --progress-bar --upload-file "$1" https://transfer.sh/$(basename "$1") | xclip -selection clipboard && notify-send  "File uploaded $(xclip -selection clipboard -o)";
+    echo
+}
