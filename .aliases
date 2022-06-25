@@ -6,7 +6,6 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias git_submodlues='git submodule update --init --recursive --remote'
-alias fzp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias less="less -FX"
 alias view="nvimpager"
 
@@ -31,6 +30,7 @@ alias dl="cd ~/downloads"
 alias dt="cd ~/desktop"
 alias p="cd ~/projects"
 alias e="$EDITOR"
+alias E="SUDO_EDITOR=\"emacsclient\" sudo -e"
 alias vi="echo Use e instead vi"
 alias g='git'
 alias gc="git checkout"
@@ -126,7 +126,7 @@ alias pip_clear='pip cache purge'
 alias packages_statistic='yay -Ps'
 alias packages_search="yay -Ss"
 alias packages_clean='yay -Yc && yay -Scc && pip cache purge && go clean -cache'
-alias packages_list='expac "%n %m" -l'\n' -Q $(yay -Qq) | sort -rhk 2 | bat'
+alias packages_list='expac "%n %m" -l'\n' -Q $(yay -Qq) | sort -rhk 2 | view'
 
 # Color using watch
 alias watch='watch --color'
