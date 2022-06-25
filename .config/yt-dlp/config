@@ -3,3 +3,4 @@
 --no-cache-dir
 --cookies-from-browser chrome # or chrome:~/.local/share/qutebrowser
 --proxy http://127.0.0.1:8085
+--format bestvideo[ext=mp4]+bestaudio[ext=m4a]
