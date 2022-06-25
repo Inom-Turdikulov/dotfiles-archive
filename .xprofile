@@ -28,8 +28,6 @@ clipit &
 # MPD mpris support
 mpDris2 &
 
-qbittorrent-nox &
-
 syncthing --no-browser &
 
 # Proxies
