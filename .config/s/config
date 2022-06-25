@@ -1,0 +1,10 @@
+provider: google
+
+# Custom provider example
+# customProviders [
+#   {
+#     name: example
+#     url: "http://example.com?q=%s"
+#     tags: [example]
+#   }
+# ]
