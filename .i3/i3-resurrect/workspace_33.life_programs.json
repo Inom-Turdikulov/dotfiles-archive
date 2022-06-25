@@ -1,20 +1,10 @@
 [
-    {
+  {
     "command": [
-        "alacritty",
-        "--title",
-        "Terminal"
+      "/usr/bin/alacritty",
+      "--title",
+      "Terminal"
     ],
-    "working_directory": "/home/inom/"
-},
-    {
-    "command": [
-        "alacritty",
-        "-e",
-        "tmux",
-        "new",
-        "-As0"
-    ],
-    "working_directory": "/home/inom/"
-}
+    "working_directory": "/home/inom"
+  }
 ]
