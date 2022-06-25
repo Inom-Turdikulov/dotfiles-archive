@@ -82,6 +82,7 @@ for_window [class="^Inkview$"]                          floating enable, resize 
 for_window [title="^FM$" class="Alacritty"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
