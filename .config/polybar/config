@@ -31,7 +31,7 @@ blue = #00a9f4
 [bar/inomoz]
 modules-left = pomodoro filesystem temperature temperature-gpu memory weather mpris
 modules-center = i3
-modules-right = pulseaudio date-default xkeyboard
+modules-right = pulseaudio qbittorrent date-default xkeyboard
 
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
@@ -169,6 +169,11 @@ click-right = pavucontrol
 type = custom/script
 exec = ~/scripts/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {:t42:{title}:}' --icon-playing ' ' --icon-paused ' ' --icon-stopped ' '
 tail =  true
+
+[module/qbittorrent]
+type = custom/script
+exec = "~/build/polybar-qbittorrent/polybar-qbittorrent"
+interval = 120
 
 [module/filesystem]
 type = internal/fs
