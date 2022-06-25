@@ -323,6 +323,9 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+# New terminal window
+bindsym $mod+Return exec $TERMINAL
+
 # Dunst close
 bindsym $mod+n exec --no-startup-id dunstctl close-all
 
