@@ -6,5 +6,14 @@
       "ncmpcpp"
     ],
     "working_directory": "/home/inom"
+  },
+  {
+    "command": [
+      "/usr/bin/alacritty",
+      "-e",
+      "nnn",
+      "/mnt/media/downloads"
+    ],
+    "working_directory": "/home/inom"
   }
 ]

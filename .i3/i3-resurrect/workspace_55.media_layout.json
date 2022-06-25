@@ -13,7 +13,7 @@
   "marks": [],
   "name": "5:5.media",
   "orientation": "horizontal",
-  "percent": 0.056,
+  "percent": 0.1111111111111111,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -32,9 +32,36 @@
       },
       "layout": "splith",
       "marks": [],
-      "name": "Rue du Soleil - Troya",
+      "name": "04",
       "orientation": "none",
-      "percent": 1.0,
+      "percent": 0.5,
+      "scratchpad_state": "none",
+      "sticky": false,
+      "type": "con",
+      "workspace_layout": "default",
+      "swallows": [
+        {
+          "class": "^Alacritty$",
+          "instance": "^Alacritty$"
+        }
+      ]
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 4,
+      "floating": "auto_off",
+      "fullscreen_mode": 0,
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 600
+      },
+      "layout": "splith",
+      "marks": [],
+      "name": "inom",
+      "orientation": "none",
+      "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
