@@ -7,3 +7,4 @@ Without config files and aliases
 * progress - Coreutils Progress Viewer
 * ncdu - NCurses Disk Usage
 * ChooseALicense-cli - Bring http://choosealicense.com to your terminal.
+* youga - YOGA Image Optimizer
