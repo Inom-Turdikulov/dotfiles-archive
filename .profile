@@ -50,7 +50,7 @@ export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export GOPATH="$HOME/go"
 
 # Add `~/.local/bin` and $GEM_HOME to the `$PATH`
-export PATH="$HOME/.local/bin:$GEM_HOME/bin:$GOPATH/bin:$PATH";
+export PATH="$HOME/.local/bin:$GEM_HOME/bin:$GOPATH/bin:$HOME/.emacs.d/bin:$PATH";
 
 # NNN file manager configuration
 export NNN_BMS='p:~/projects;d:~/downloads/'
