@@ -123,6 +123,7 @@ alias packages_list='expac "%n %m" -l'\n' -Q $(pacman -Qq) | sort -rhk 2 | less'
 # Get Software Updates, can be extended
 alias update='yay'
 alias pip_clear='pip cache purge'
+alias pip_search='pip list | tail -n +3 | cut -d" " -f1 | xargs pip show -f | grep'
 alias packages_statistic='yay -Ps'
 alias packages_search="yay -Ss"
 alias packages_clean='yay -Yc && yay -Scc && pip cache purge && go clean -cache'
