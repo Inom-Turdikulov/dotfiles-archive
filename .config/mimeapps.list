@@ -35,6 +35,8 @@ image/jxl=darktable.desktop;mpv.desktop;
 application/octet-stream=skypeforlinux-share.desktop;
 
 [Default Applications]
+x-scheme-handler/magnet=torrent.desktop;
+application/x-bittorrent=torrent.desktop;
 x-scheme-handler/http=linkhandler.desktop
 x-scheme-handler/https=linkhandler.desktop
 x-scheme-handler/chrome=chromium.desktop
