@@ -375,6 +375,9 @@ bindsym Shift+XF86AudioPlay exec playerctl -p $player_secondary play-pause
 bindsym XF86AudioPrev exec playerctl -p $player prev
 bindsym XF86AudioNext exec playerctl -p $player next
 
+bindsym Shift+XF86AudioPrev exec playerctl -p $player_secondary prev
+bindsym Shift+XF86AudioNext exec playerctl -p $player_secondary next
+
 bindsym XF86AudioRaiseVolume exec $sound_controller set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec $sound_controller set-sink-volume 0 -5%
 bindsym XF86AudioMute exec $sound_controller set-sink-mute 0 toggle
