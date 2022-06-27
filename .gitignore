@@ -190,3 +190,6 @@ ncmpcpp/error.log
 
 # Godot 4+ specific ignores
 .godot/
+
+# My custom ideas file (per project)
+inomoz-todo.org
