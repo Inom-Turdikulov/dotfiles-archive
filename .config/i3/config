@@ -85,6 +85,9 @@ for_window [class="^SimpleScreenRecorder"]              floating enable, resize 
 for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="Steam"]                              border pixel 2
 
+for_window [title="^Picture in picture$"]               fullscreen toggle
+assign [title="^Picture in picture$"]                   $ws13
+
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
 default_floating_border pixel 2
