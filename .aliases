@@ -151,3 +151,4 @@ alias koreader_umount='umount ~/public/koreader'
 
 alias fzf_history='cat ~/.cache/ytfzf/watch_hist | jq  ".[].title,.[].url"|tail -n 20'
 alias weather='curl -s "wttr.in/$(pass location)"'
+alias q='tungsten'
