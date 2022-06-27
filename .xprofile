@@ -46,5 +46,4 @@ keebie &
 cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hugo.log &
 
 # Buku server
-bukuserver run -p 8888 > /tmp/bukuserver.log &
-
+bukuserver run --host network --port 8888 > /tmp/bukuserver.log &
