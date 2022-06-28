@@ -54,5 +54,9 @@
   :when (display-graphic-p)
   :after-call doom-first-input-hook doom-first-file-hook focus-out-hook
   :config
+  (doom-init-fonts-h 'reload) ;; Fix invalid unicode fonts (cyrilic) in various buffers
   (unless (server-running-p)
-    (server-start)))
+    (server-start)
+    ))
+
+
