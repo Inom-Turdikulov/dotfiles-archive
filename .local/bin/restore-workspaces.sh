@@ -33,3 +33,6 @@ mpc load favorites && mpc play && mpc pause
 
 # Kdeconnect
 kdeconnect-indicator &
+
+# Pass init
+pass irc/bitlbee
