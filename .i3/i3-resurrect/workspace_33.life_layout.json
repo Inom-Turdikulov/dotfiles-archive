@@ -13,7 +13,7 @@
   "marks": [],
   "name": "3:3.life",
   "orientation": "horizontal",
-  "percent": 0.125,
+  "percent": 0.16666666666666669,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -21,28 +21,51 @@
   "nodes": [
     {
       "border": "pixel",
-      "current_border_width": 4,
-      "floating": "user_off",
+      "current_border_width": -1,
+      "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 800,
-        "height": 600
+        "width": 0,
+        "height": 0
       },
-      "layout": "splith",
+      "layout": "tabbed",
       "marks": [],
-      "name": "Terminal",
-      "orientation": "none",
+      "name": null,
+      "orientation": "horizontal",
       "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "swallows": [
+      "nodes": [
         {
-          "class": "^Alacritty$",
-          "instance": "^Alacritty$"
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "user_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 600
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "inom",
+          "orientation": "none",
+          "percent": 1.0,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^Alacritty$",
+              "instance": "^Alacritty$"
+            }
+          ]
         }
       ]
     },
@@ -54,12 +77,12 @@
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 800,
-        "height": 600
+        "width": 1632,
+        "height": 1512
       },
       "layout": "splith",
       "marks": [],
-      "name": "inom",
+      "name": "GNU Emacs | init.el",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -68,8 +91,7 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Alacritty$",
-          "instance": "^Alacritty$"
+          "class": "^Emacs$"
         }
       ]
     }
