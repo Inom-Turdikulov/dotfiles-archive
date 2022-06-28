@@ -13,7 +13,7 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": 0.125,
+  "percent": null,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -25,24 +25,24 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 1472,
-        "height": 1872
+        "x": 2564,
+        "y": 1720,
+        "width": 1528,
+        "height": 2112
       },
       "layout": "splith",
       "marks": [],
-      "name": "GNU Emacs | #peksi@bitlbee-localhost",
+      "name": "#general",
       "orientation": "none",
-      "percent": 0.5,
+      "percent": 0.4,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Emacs$",
-          "instance": "^emacs$"
+          "class": "^Ripcord$",
+          "instance": "^ripcord$"
         }
       ]
     },
@@ -61,7 +61,7 @@
       "marks": [],
       "name": null,
       "orientation": "horizontal",
-      "percent": 0.5,
+      "percent": 0.6000000000000001,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
@@ -80,7 +80,7 @@
           },
           "layout": "splith",
           "marks": [],
-          "name": "Slack",
+          "name": "Slack | sentry-prod | Salesloop",
           "orientation": "none",
           "percent": 1.0,
           "scratchpad_state": "none",

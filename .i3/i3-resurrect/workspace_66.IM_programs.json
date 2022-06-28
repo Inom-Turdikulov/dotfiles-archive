@@ -1,9 +1,8 @@
 [
   {
     "command": [
-      "emacsclient",
-      "-n",
-      "-c"
+      "gtk-launch",
+       "Ripcord"
     ],
     "working_directory": "/home/inom"
   },
