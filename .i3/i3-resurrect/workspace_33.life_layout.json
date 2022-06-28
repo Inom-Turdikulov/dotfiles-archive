@@ -13,7 +13,7 @@
   "marks": [],
   "name": "3:3.life",
   "orientation": "horizontal",
-  "percent": 0.14285714285714285,
+  "percent": null,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -21,55 +21,101 @@
   "nodes": [
     {
       "border": "pixel",
-      "current_border_width": 4,
+      "current_border_width": -1,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 800,
-        "height": 600
+        "width": 0,
+        "height": 0
       },
-      "layout": "splith",
+      "layout": "tabbed",
       "marks": [],
-      "name": "inom",
-      "orientation": "none",
+      "name": null,
+      "orientation": "horizontal",
       "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "swallows": [
+      "nodes": [
         {
-          "class": "^Alacritty$",
-          "instance": "^Alacritty$"
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "auto_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 600
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "system",
+          "orientation": "none",
+          "percent": null,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^Alacritty$",
+              "instance": "^Alacritty$"
+            }
+          ]
         }
       ]
     },
     {
       "border": "pixel",
-      "current_border_width": 4,
+      "current_border_width": -1,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 800,
-        "height": 600
+        "width": 0,
+        "height": 0
       },
-      "layout": "splith",
+      "layout": "tabbed",
       "marks": [],
-      "name": "inom",
-      "orientation": "none",
+      "name": null,
+      "orientation": "horizontal",
       "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "swallows": [
+      "nodes": [
         {
-          "class": "^Alacritty$",
-          "instance": "^Alacritty$"
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "auto_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 800,
+            "height": 600
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "data",
+          "orientation": "none",
+          "percent": 1.0,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^Alacritty$",
+              "instance": "^Alacritty$"
+            }
+          ]
         }
       ]
     }
