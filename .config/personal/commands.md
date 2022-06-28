@@ -8,3 +8,6 @@ Without config files and aliases
 * ncdu - NCurses Disk Usage
 * ChooseALicense-cli - Bring http://choosealicense.com to your terminal.
 * youga - YOGA Image Optimizer
+* euporie - terminal app for running and editing Jupyter notebooks.
+* xkcd cli tool - Get your daily dose of xkcd directly from the terminal!
+* lsix - Like "ls", but for images.
