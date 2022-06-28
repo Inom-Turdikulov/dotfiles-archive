@@ -77,7 +77,20 @@ See `elfeed-play-with-mpv'."
 (setq +notmuch-home-function (lambda () (notmuch-search "tag:inbox")))
 
 ;; use current one window - bugfix
-(after! notmuch (set-popup-rule! "^\\*notmuch-hello" :ignore t))
+(after! notmuch
+  (set-popup-rule! "^\\*notmuch-hello" :ignore t))
+
+;; restore modeline in notmuch-search-mode
+(use-package! notmuch
+  :defer t
+  :config
+
+  ;; modeline doesn't have much use in these modes
+  (remove-hook! '(notmuch-show-mode-hook
+               notmuch-tree-mode-hook
+               notmuch-search-mode-hook)
+             #'hide-mode-line-mode)
+  )
 
 (setq sendmail-program "/usr/bin/msmtp")
 (setq send-mail-function 'message-send-mail-with-sendmail)
