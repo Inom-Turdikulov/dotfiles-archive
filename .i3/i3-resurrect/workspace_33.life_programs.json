@@ -1,15 +1,13 @@
 [
   {
     "command": [
-      "/usr/bin/alacritty"
+      "alacritty"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "alacritty",
-      "-e",
-      "e"
+      "alacritty"
     ],
     "working_directory": "/home/inom"
   }
