@@ -52,7 +52,14 @@
 
   ;; Whether display the IRC notifications. It requires `circe' or `erc' package.
   (setq doom-modeline-irc nil)
-  )
+
+  ;; Custom fonts for mode-line
+  (setq doom-modeline-height 25) ; optional
+  (if (facep 'mode-line-active)
+      (set-face-attribute 'mode-line-active nil :family "monospace" :height 140) ; For 29+
+    (set-face-attribute 'mode-line nil :family "monospace" :height 140))
+  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 140)
+)
 
 ;; Alert style
 (use-package! alert
