@@ -47,6 +47,3 @@ cd ~/sites/inomoz.com && hugo server --buildDrafts --navigateToChanged > /tmp/hu
 
 # Buku server
 bukuserver run --host network --port 8888 > /tmp/bukuserver.log &
-
-# Kdeconnect
-kdeconnect-indicator &
