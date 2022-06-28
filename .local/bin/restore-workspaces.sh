@@ -36,3 +36,6 @@ kdeconnect-indicator &
 
 # Pass init
 pass irc/bitlbee
+
+# Restart i3wm to fix some slight issues
+i3-msg restart &
