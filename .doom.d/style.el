@@ -23,7 +23,7 @@
 (setq doom-font (font-spec :family "monospace" :size 36 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 36))
 
-(setq doom-unicode-font (font-spec :family "sans-serif"))
+(setq doom-unicode-font (font-spec :family "monospace"))
 
 ;; Set theme
 (setq doom-theme 'my-doom-one)
