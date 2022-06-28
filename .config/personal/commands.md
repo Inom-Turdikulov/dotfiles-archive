@@ -11,3 +11,4 @@ Without config files and aliases
 * euporie - terminal app for running and editing Jupyter notebooks.
 * xkcd cli tool - Get your daily dose of xkcd directly from the terminal!
 * lsix - Like "ls", but for images.
+* reredirect - A tool to dynamically redirect outputs of a running program
