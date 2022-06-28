@@ -1,0 +1,10 @@
+[Unit]
+Description=BitlBee IRC/IM gateway
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/bitlbee -F -n
+KillMode=control-group
+
+[Install]
+WantedBy=default.target
