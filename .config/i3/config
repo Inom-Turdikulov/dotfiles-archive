@@ -190,7 +190,7 @@ bindsym $mod+shift+s sticky toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+b focus parent
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Mod1+minus move scratchpad
@@ -337,7 +337,7 @@ bindsym $mod+n exec --no-startup-id dunstctl close-all
 bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
 
 # Bookmarks
-bindsym $mod+b exec ~/build/rofi-buku/rofi-buku
+bindsym $mod+a exec ~/build/rofi-buku/rofi-buku
 
 # Passwords
 bindsym $mod+p exec rofi-pass
