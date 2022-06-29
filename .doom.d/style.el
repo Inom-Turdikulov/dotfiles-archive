@@ -21,9 +21,12 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "monospace" :size 36 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 36))
+      doom-variable-pitch-font (font-spec :family "monospace" :size 36))
 
-(setq doom-unicode-font (font-spec :family "Noto Emoji"))
+(setq doom-unicode-font (font-spec :family "monospace" :size 36))
+
+(add-hook! 'after-setting-font-hook :append
+  (set-fontset-font t 'unicode (font-spec :family "monospace" :size 36) nil 'prepend))
 
 ;; Set theme
 (setq doom-theme 'my-doom-one)
@@ -85,3 +88,5 @@
     (set-face-background 'default "unspecified-bg" frame)))
 (add-hook 'after-make-frame-functions 'set-background-for-terminal)
 (add-hook 'window-setup-hook 'set-background-for-terminal)
+
+
