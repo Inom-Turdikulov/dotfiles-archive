@@ -13,7 +13,7 @@
   "marks": [],
   "name": "2:2.web",
   "orientation": "horizontal",
-  "percent": null,
+  "percent": 0.125,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -25,14 +25,14 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 2560,
-        "y": 1726,
+        "x": 0,
+        "y": 0,
         "width": 3840,
-        "height": 2074
+        "height": 2120
       },
       "layout": "splith",
       "marks": [],
-      "name": "chromium",
+      "name": "Mozilla Firefox",
       "orientation": "none",
       "percent": 1.0,
       "scratchpad_state": "none",
@@ -41,7 +41,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Chromium$"
+          "class": "^firefox$",
+          "instance": "^Navigator$"
         }
       ]
     }
