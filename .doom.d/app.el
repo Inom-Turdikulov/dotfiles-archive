@@ -153,3 +153,10 @@ See `elfeed-play-with-mpv'."
   (setq leetcode-save-solutions t)
   (setq leetcode-directory "~/wiki/leetcode/")
   )
+
+
+;; Evil specifc
+(use-package! evil
+  :config
+  (fset 'evil-visual-update-x-selection 'ignore) ;; stop copy visual selection
+  )
