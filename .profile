@@ -64,6 +64,3 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 # Configure default fzf (fuzzy-finder) command
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --follow -g '!{.git,node_modules,tmp,build,downloads}/*'"
-
-# Fix vappi for firefox (not need from 102 version)
-export MOZ_DISABLE_RDD_SANDBOX=1
