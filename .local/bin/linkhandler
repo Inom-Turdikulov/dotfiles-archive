@@ -18,9 +18,6 @@ case "$1" in
     *twitch.tv\/videos*)
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
-    *twitch.tv*)
-		playerctl -p $MEDIA_VIEWER play-pause
-		setsid -f streamlink "$1" >/dev/null 2>&1 ;;
 	*m3u8|*m3u8\?loc=nl|*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*)
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
