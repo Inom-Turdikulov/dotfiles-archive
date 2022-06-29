@@ -150,3 +150,6 @@ alias koreader_umount='umount ~/public/koreader'
 
 alias fzf_history='cat ~/.cache/ytfzf/watch_hist | jq  ".[].title,.[].url"|tail -n 20'
 alias weather='curl -s "wttr.in/$(pass location)"'
+
+# create an alias to run yadm for system files
+alias sysyadm="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"
