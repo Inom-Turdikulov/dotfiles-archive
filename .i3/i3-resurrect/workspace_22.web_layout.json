@@ -21,28 +21,51 @@
   "nodes": [
     {
       "border": "pixel",
-      "current_border_width": 4,
+      "current_border_width": -1,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 3840,
-        "height": 2120
+        "width": 0,
+        "height": 0
       },
-      "layout": "splith",
+      "layout": "tabbed",
       "marks": [],
-      "name": "Mozilla Firefox",
-      "orientation": "none",
+      "name": null,
+      "orientation": "horizontal",
       "percent": 1.0,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "swallows": [
+      "nodes": [
         {
-          "class": "^firefox$",
-          "instance": "^Navigator$"
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "auto_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 3840,
+            "height": 2120
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "/news/ - \u0421\u0420\u041e\u0427\u041d\u041e!\u0412\u0421\u0415 \u0421\u0423\u0448\u043a\u0438 \u0440\u0435\u0437\u043a\u043e \u043f\u043e\u0442\u0435\u0440\u044f\u043b\u0438 \u0432\u0435\u043a\u0442\u043e\u0440 \u0442\u044f\u0433\u0438! \u2014 Mozilla Firefox",
+          "orientation": "none",
+          "percent": 1.0,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^firefox$",
+              "instance": "^Navigator$"
+            }
+          ]
         }
       ]
     }
