@@ -16,9 +16,11 @@ FALLBACK_BROWSER=firefox
 
 case "$1" in
     *twitch.tv\/videos*)
+		notify-send "Twitch stream $1"
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
 	*m3u8|*m3u8\?loc=nl|*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*|*bitchute.com*|*videos.lukesmith.xyz*)
+		notify-send "MPV $1"
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
 	*png|*jpg|*jpe|*jpeg|*gif|*amuniversal.com*)
