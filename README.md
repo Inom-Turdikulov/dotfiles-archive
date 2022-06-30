@@ -5,6 +5,8 @@
 ## Quickstart
 https://yadm.io/docs/getting_started
 
+https://yadm.io/docs/faq
+
 Since I use yadm config manager, need install it first and clone config repository:
 ```
 yadm clone git@github.com:inomoz/dotfiles.git # use https if you are not owner of this repo
