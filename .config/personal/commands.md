@@ -17,3 +17,4 @@ Without config files and aliases
 * ventoy - Open-Source Software Ventoy - A new bootable USB solution.
 * GitHub CLI - gh, pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with git and your code.
 * GLab - A GitLab CLI Tool, work with issues, merge requests, watch running pipelines directly from your CLI among other features.
+* wtwitch - A terminal program for Twitch
