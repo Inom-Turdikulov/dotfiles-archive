@@ -69,6 +69,7 @@ for_window [class="^Gtk-pipe-viewer$"]                  floating enable
 for_window [class="^mpv$"]                              floating enable
 for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
 for_window [class="^Pavucontrol$"]                      floating enable
+for_window [class="^SpeedCrunch$"]                      floating enable
 
 # MPV windows configuration
 for_window [class="chatterino"]  floating enable, resize set 760 1440
@@ -391,6 +392,7 @@ bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection c
 
 bindsym $mod+i exec buku_add
 bindsym $mod+shift+i exec gpick -p -s
+bindsym $mod+shift+Return exec speedcrunch
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
