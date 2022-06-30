@@ -1,14 +1,14 @@
 [
   {
     "command": [
-      "/usr/lib/ripcord/Ripcord"
+      "gtk-launch",
+       "Ripcord"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "/usr/bin/telegram-desktop",
-      "--"
+      "telegram-desktop"
     ],
     "working_directory": "/home/inom/.local/share/TelegramDesktop"
   }
