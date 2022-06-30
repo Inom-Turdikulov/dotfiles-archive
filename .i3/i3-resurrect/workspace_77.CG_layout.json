@@ -13,7 +13,7 @@
   "marks": [],
   "name": "7:7.CG",
   "orientation": "horizontal",
-  "percent": 0.1111111111111111,
+  "percent": 0.14285714285714288,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -21,51 +21,28 @@
   "nodes": [
     {
       "border": "pixel",
-      "current_border_width": -1,
+      "current_border_width": 4,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 4484,
+        "y": 1720,
+        "width": 1912,
+        "height": 2112
       },
-      "layout": "tabbed",
+      "layout": "splith",
       "marks": [],
-      "name": null,
-      "orientation": "horizontal",
-      "percent": null,
+      "name": "Krita",
+      "orientation": "none",
+      "percent": 1.0,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "nodes": [
+      "swallows": [
         {
-          "border": "pixel",
-          "current_border_width": 4,
-          "floating": "auto_off",
-          "fullscreen_mode": 0,
-          "geometry": {
-            "x": 0,
-            "y": 0,
-            "width": 3840,
-            "height": 2114
-          },
-          "layout": "splith",
-          "marks": [],
-          "name": "Unsaved Document - Xournal++",
-          "orientation": "none",
-          "percent": 1.0,
-          "scratchpad_state": "none",
-          "sticky": false,
-          "type": "con",
-          "workspace_layout": "default",
-          "swallows": [
-            {
-              "class": "^Xournalpp$",
-              "instance": "^xournalpp$"
-            }
-          ]
+          "class": "^krita$",
+          "instance": "^krita$"
         }
       ]
     }

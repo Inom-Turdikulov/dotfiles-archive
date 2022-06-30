@@ -51,15 +51,6 @@
 
 (package! anki-editor)
 (package! openwith)
-
-(if (eq system-type 'gnu/linux)
-(package! org-xournalpp
-  :recipe (:host gitlab
-           :repo "vherrmann/org-xournalpp"
-           :files ("resources" "*.el")))
-)
-
-
 (package! zeal-at-point)
 (package! org-roam-bibtex
   :recipe (:host github :repo "org-roam/org-roam-bibtex"))
@@ -79,3 +70,8 @@
   :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
 
 (package! leetcode)
+
+(package! org-krita
+  :recipe (:host github
+           :repo "lepisma/org-krita"
+           :files ("resources" "resources" "*.el" "*.el")))

@@ -22,12 +22,10 @@
   (setq org-agenda-files
         '("~/wiki/roam" "~/wiki/")))
 
-;; Insert xournal app images into org files
-(use-package! org-xournalpp
+;; Insert krita app images into org files
+(use-package! org-krita
   :config
-  (add-hook 'org-mode-hook 'org-xournalpp-mode))
-(setq org-format-latex-options (plist-put org-format-latex-options :scale 1.0))
-(setq org-latex-create-formula-image-program 'dvisvgm)
+  (add-hook 'org-mode-hook 'org-krita-mode))
 
 ;; Org-download (paste images)
 ;;
