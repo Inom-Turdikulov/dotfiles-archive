@@ -14,6 +14,7 @@
    "KEY_6": "killall -2 mpv && ytfzf -qam Lofi Girl Rado &",
    "KEY_7": "killall -2 mpv && ytfzf -qrm focus music &",
    "KEY_8": "killall -2 mpv && ytfzf -qrm ambience music &",
+   "KEY_9": "alacritty --hold --title alacritty-pop-up-w -e xkcd show --random &",
    "KEY_2+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr productivity music &",
    "KEY_3+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr workout music &",
    "KEY_4+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr gaming music &",
