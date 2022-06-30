@@ -383,9 +383,15 @@ bindsym XF86AudioNext exec playerctl -p $player next
 bindsym Shift+XF86AudioPrev exec playerctl -p $player_secondary prev
 bindsym Shift+XF86AudioNext exec playerctl -p $player_secondary next
 
-bindsym XF86AudioRaiseVolume exec $sound_controller set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec $sound_controller set-sink-volume 0 -5%
-bindsym XF86AudioMute exec $sound_controller set-sink-mute 0 toggle
+## Volume control
+# Path to volume control, without trailing slash
+set $volumepath i3-volume
+# Amount to increase/decrease volume as a percentage
+set $volumestep 2
+# Using pulseaudio-utils (append "-s $sinkname" without quotes to override default sink)
+bindsym XF86AudioRaiseVolume exec --no-startup-id i3-volume -P -p -n up $volumestep
+bindsym XF86AudioLowerVolume exec --no-startup-id i3-volume -P -p -n down $volumestep
+bindsym XF86AudioMute        exec --no-startup-id i3-volume -P -p -n mute
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
