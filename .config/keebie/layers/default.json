@@ -22,7 +22,7 @@
    "KEY_7+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr focus music &",
    "KEY_8+KEY_RIGHTMETA": "killall -2 mpv && ytfzf -qr ambience music &",
    "KEY_ESC": "alacritty --title htop -e htop &",
-   "KEY_ESC+KEY_LEFTSHIFT": "gnome-system-monitor &",
+   "KEY_ESC+KEY_LEFTSHIFT": "alacritty --title htop -e btop &",
    "KEY_Q": "qcode &",
    "KEY_W": "drawio &",
    "KEY_E": "gtk-launch nnn &",
