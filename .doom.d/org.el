@@ -205,7 +205,7 @@
 ;; Evil - TAB was changed to toggle only the visibility state of the current
 ;; subtree, rather than cycle through it recursively. This can be reversed with:
 (after! evil-org
-  (define-key org-mode-map (kbd "C-'") 'avy-goto-char)
+  (define-key org-mode-map (kbd "C-'") 'avy-goto-char-2)
   (remove-hook 'org-tab-first-hook #'+org-cycle-only-current-subtree-h))
 
 ;; TO-DO toggle custom priority
