@@ -4,6 +4,11 @@
 # set default desktop layout (default is tiling, aviable tabbed, stacking)
 workspace_layout default
 
+# Gaps
+smart_gaps on
+gaps inner 10
+gaps outer 0
+
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
@@ -77,6 +82,7 @@ for_window [class="chatterino"]  floating enable, resize set 760 1440
 for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^alacritty-pop-up-w$"]                 floating enable, resize set 2400 2000, move position center
 for_window [title="^htop$"]                             floating enable, resize set 2000 1800, move position center
 for_window [class="^Nsxiv$"]                            floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^Inkview$"]                          floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
@@ -84,7 +90,6 @@ for_window [title="^FM$" class="Alacritty"]             floating enable, resize 
 for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
-for_window [class="Steam"]                              border pixel 2
 
 for_window [title="^Picture-in-Picture$"]               fullscreen toggle
 assign [title="^Picture-in-Picture$"]                   $ws13
