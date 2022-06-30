@@ -393,6 +393,7 @@ bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection c
 bindsym $mod+i exec buku_add
 bindsym $mod+shift+i exec gpick -p -s
 bindsym $mod+shift+Return exec speedcrunch
+bindsym $mod+shift+a exec gtk-launch "emacsclient"
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
