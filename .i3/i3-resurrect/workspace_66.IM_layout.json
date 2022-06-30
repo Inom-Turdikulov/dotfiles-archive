@@ -13,7 +13,7 @@
   "marks": [],
   "name": "6:6.IM",
   "orientation": "horizontal",
-  "percent": null,
+  "percent": 0.14285714285714285,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -25,16 +25,16 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 2564,
+        "x": 2580,
         "y": 1720,
-        "width": 1528,
-        "height": 2112
+        "width": 1890,
+        "height": 2080
       },
       "layout": "splith",
       "marks": [],
-      "name": "#general",
+      "name": "Accounts",
       "orientation": "none",
-      "percent": 0.4,
+      "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
@@ -48,51 +48,28 @@
     },
     {
       "border": "pixel",
-      "current_border_width": -1,
+      "current_border_width": 4,
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 0,
-        "height": 0
+        "x": 4494,
+        "y": 1704,
+        "width": 1882,
+        "height": 2072
       },
-      "layout": "tabbed",
+      "layout": "splith",
       "marks": [],
-      "name": null,
-      "orientation": "horizontal",
-      "percent": 0.6000000000000001,
+      "name": "Telegram",
+      "orientation": "none",
+      "percent": 0.5,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
       "workspace_layout": "default",
-      "nodes": [
+      "swallows": [
         {
-          "border": "pixel",
-          "current_border_width": 4,
-          "floating": "auto_off",
-          "fullscreen_mode": 0,
-          "geometry": {
-            "x": 2560,
-            "y": 1680,
-            "width": 3840,
-            "height": 2120
-          },
-          "layout": "splith",
-          "marks": [],
-          "name": "Slack | sentry-prod | Salesloop",
-          "orientation": "none",
-          "percent": 1.0,
-          "scratchpad_state": "none",
-          "sticky": false,
-          "type": "con",
-          "workspace_layout": "default",
-          "swallows": [
-            {
-              "class": "^Slack$",
-              "instance": "^slack$"
-            }
-          ]
+          "class": "^TelegramDesktop$",
+          "instance": "^telegram\\-desktop$"
         }
       ]
     }
