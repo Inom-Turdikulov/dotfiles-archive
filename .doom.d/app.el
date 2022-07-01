@@ -80,7 +80,7 @@ See `elfeed-play-with-mpv'."
 
 ;; use current one window - bugfix
 (after! notmuch
-  (set-popup-rule! "^\\*notmuch" :ignore t))
+  (set-popup-rule! "^\\*notmuch-hello" :ignore t))
 
 ;; restore modeline in notmuch-search-mode
 (use-package! notmuch
