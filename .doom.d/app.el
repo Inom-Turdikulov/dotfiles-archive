@@ -4,6 +4,7 @@
 (enable-circe-display-images))
 
 ;; ElFeed configuraton
+(run-with-timer 0 (* 60 60 1) 'elfeed-update)
 
 (defun elfeed-play-with-mpv ()
   "Play entry link with mpv."
@@ -68,6 +69,8 @@ See `elfeed-play-with-mpv'."
 ;; Notmuch configuration
 ;;
 
+(run-with-timer 0 (* 60 60 1) 'notmuch-refresh-all-buffers)
+
 ;; Fix notmuch background colors
 (setq shr-use-colors nil
       shr-use-fonts nil)
@@ -77,7 +80,7 @@ See `elfeed-play-with-mpv'."
 
 ;; use current one window - bugfix
 (after! notmuch
-  (set-popup-rule! "^\\*notmuch-hello" :ignore t))
+  (set-popup-rule! "^\\*notmuch" :ignore t))
 
 ;; restore modeline in notmuch-search-mode
 (use-package! notmuch
