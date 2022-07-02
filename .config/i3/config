@@ -145,7 +145,7 @@ floating_modifier $mod
 # generate password and ope
 
 # kill focused window
-bindsym $mod+shift+q kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+h focus left
@@ -186,7 +186,7 @@ bindsym $mod+w layout tabbed;exec notify-send 'Tabbed layout'
 # split orientation
 bindsym $mod+control+v split h;exec notify-send 'Vertical split'
 bindsym $mod+control+s split v;exec notify-send 'Horizontal split'
-bindsym $mod+q split toggle;exec notify-send 'Tile toggle'
+bindsym $mod+control+q split toggle;exec notify-send 'Tile toggle'
 
 # toggle tiling / floating
 bindsym $mod+shift+space floating toggle
@@ -228,7 +228,6 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 bindsym $mod+t workspace $ws10
 bindsym $mod+z exec wmctrl -a "Emacs>*elfeed"
-bindsym $mod+c exec wmctrl -a "Emacs>config"
 bindsym $mod+m workspace $ws13
 
 # Anywhere
@@ -382,6 +381,7 @@ set $sound_controller pactl --
 bindsym XF86AudioPlay exec playerctl -p $player play-pause
 bindsym Shift+XF86AudioPlay exec playerctl -p $player_secondary play-pause
 bindsym Control+XF86AudioPlay exec playerctl -p $(playerctl -l|grep firefox) play-pause
+bindsym Mod1+XF86AudioPlay exec playerctl -p Blanket play-pause
 
 bindsym XF86AudioPrev exec playerctl -p $player prev
 bindsym XF86AudioNext exec playerctl -p $player next
@@ -406,6 +406,7 @@ bindsym $mod+i exec buku_add
 bindsym $mod+shift+i exec gpick -p -s
 bindsym $mod+shift+Return exec speedcrunch
 bindsym $mod+shift+a exec gtk-launch "emacsclient"
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
