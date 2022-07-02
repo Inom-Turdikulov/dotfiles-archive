@@ -10,6 +10,8 @@
 (global-set-key (kbd "C-<f2>") 'speed-type-buffer)
 (global-set-key (kbd "C-<f3>") 'langtool-check)
 (global-set-key (kbd "C-S-<f3>") 'langtool-check-done)
+(global-set-key (kbd "C-<f4>") (lambda() (interactive) (magit-status "/yadm::")))
+
 
 (use-package! elfeed
   :general
@@ -29,3 +31,4 @@
 (map! :leader
       :desc "News (rss) client"
       "o n" #'=rss)
+
