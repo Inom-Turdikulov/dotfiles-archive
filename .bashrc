@@ -54,3 +54,7 @@ eval "$(direnv hook bash)"
 
 # Navi integration
 eval "$(navi widget bash)"
+
+# Configure pinentry
+# set also GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
