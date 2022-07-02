@@ -4,7 +4,7 @@
 (enable-circe-display-images))
 
 ;; ElFeed configuraton
-(run-with-timer 0 (* 60 60 1) 'elfeed-update)
+;; (run-with-timer 0 (* 60 60 1) 'elfeed-update)
 
 (defun elfeed-play-with-mpv ()
   "Play entry link with mpv."

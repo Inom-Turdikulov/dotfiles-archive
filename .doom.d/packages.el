@@ -49,6 +49,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+(unpin! elfeed-org)
+(package! elfeed-org)
 (package! anki-editor)
 (package! openwith)
 (package! zeal-at-point)
