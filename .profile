@@ -64,3 +64,7 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 
 # Configure default fzf (fuzzy-finder) command
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --follow -g '!{.git,node_modules,tmp,build,downloads}/*'"
+
+# Set ssh agent vars
+SSH_AGENT_PID=""
+SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
