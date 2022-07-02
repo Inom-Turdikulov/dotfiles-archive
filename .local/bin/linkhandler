@@ -23,7 +23,7 @@ case "$1" in
 		notify-send "MPV $1"
 		playerctl -p $MEDIA_VIEWER play-pause
 		setsid -f $MEDIA_VIEWER --quiet "$1" >/dev/null 2>&1 ;;
-	*png|*jpg|*jpe|*jpeg|*gif|*amuniversal.com*)
+	*png|*jpg|*jpe|*jpeg|*gif|*amuniversal.com*|*.jpg?width=*)
 		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && $IMAGE_VIEWER -a "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
 	*svg|*ai|wmf)
 		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")" && $SVG_IMAGE_VIEWER "/tmp/$(echo "$1" | sed "s/.*\///;s/%20/ /g")"  >/dev/null 2>&1 & ;;
