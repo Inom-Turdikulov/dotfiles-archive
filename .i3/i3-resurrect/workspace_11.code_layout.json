@@ -13,7 +13,7 @@
   "marks": [],
   "name": "1:1.code",
   "orientation": "horizontal",
-  "percent": 0.12159884420900553,
+  "percent": 0.14285714285714288,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -42,18 +42,18 @@
       "nodes": [
         {
           "border": "pixel",
-          "current_border_width": 4,
+          "current_border_width": 5,
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
             "x": 0,
             "y": 0,
-            "width": 1632,
-            "height": 1512
+            "width": 1344,
+            "height": 1644
           },
           "layout": "splith",
           "marks": [],
-          "name": "GNU Emacs | init.el",
+          "name": "GNU Emacs | *doom*",
           "orientation": "none",
           "percent": 1.0,
           "scratchpad_state": "none",
@@ -62,8 +62,8 @@
           "workspace_layout": "default",
           "swallows": [
             {
-              "class": "^Emacs$",
-              "instance": "^emacs$"
+              "class": "^Emacs",
+              "instance": "^emacs"
             }
           ]
         }
