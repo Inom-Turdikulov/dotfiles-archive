@@ -20,13 +20,13 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 36 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "monospace" :size 36))
+(setq doom-font (font-spec :family "monospace" :size 18 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "monospace" :size 18))
 
-(setq doom-unicode-font (font-spec :family "monospace" :size 36))
+(setq doom-unicode-font (font-spec :family "monospace" :size 18))
 
 (add-hook! 'after-setting-font-hook :append
-  (set-fontset-font t 'unicode (font-spec :family "monospace" :size 36) nil 'prepend))
+  (set-fontset-font t 'unicode (font-spec :family "monospace" :size 18) nil 'prepend))
 
 ;; Set theme
 (setq doom-theme 'my-doom-one)
@@ -57,11 +57,11 @@
   (setq doom-modeline-irc nil)
 
   ;; Custom fonts for mode-line
-  (setq doom-modeline-height 25) ; optional
+  (setq doom-modeline-height 20) ; optional
   (if (facep 'mode-line-active)
-      (set-face-attribute 'mode-line-active nil :family "monospace" :height 140) ; For 29+
-    (set-face-attribute 'mode-line nil :family "monospace" :height 140))
-  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 140)
+      (set-face-attribute 'mode-line-active nil :family "monospace" :height 110) ; For 29+
+    (set-face-attribute 'mode-line nil :family "monospace" :height 110))
+  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 110)
 )
 
 ;; Alert style
