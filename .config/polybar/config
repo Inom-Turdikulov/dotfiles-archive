@@ -29,7 +29,7 @@ alert = #c2185b
 blue = #00a9f4
 
 [bar/inomoz]
-modules-left = pomodoro filesystem temperature temperature-gpu memory weather mpris
+modules-left = pomodoro filesystem temperature temperature-gpu cpu system-ati-radeontop memory weather mpris
 modules-center = i3
 modules-right = pulseaudio qbittorrent date-default xkeyboard
 
@@ -170,6 +170,13 @@ type = custom/script
 exec = ~/scripts/polybar-scripts/polybar-scripts/player-mpris-tail/player-mpris-tail.py -f '{icon} {:t42:{title}:}' --icon-playing ' ' --icon-paused ' ' --icon-stopped ' '
 tail =  true
 
+[module/system-ati-radeontop]
+type = custom/script
+exec = ~/scripts/polybar-scripts/polybar-scripts/system-ati-radeontop/system-ati-radeontop.sh
+tail = true
+format = " <label>"
+interval = 120
+
 [module/qbittorrent]
 type = custom/script
 exec = "~/build/polybar-qbittorrent/polybar-qbittorrent"
@@ -273,6 +280,41 @@ click-left = popup-calendar.sh --popup
 ; click-left =
 ; format-underline = #fb8c00
 ; label = %date% %time%
+
+[module/cpu]
+type = internal/cpu
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 10
+
+; Default: 80
+; New in version 3.6.0
+warn-percentage = 95
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label>
+
+; Format used when average CPU load (same as %percentage%) reaches warn-percentage
+; If not defined, format is used instead.
+; Available tags:
+;   <label-warn>
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+; New in version 3.6.0
+; format-warn = <label-warn>
+
+; Available tokens:
+;   %percentage% (default) - total cpu load averaged over all cores
+;   %percentage-sum% - Cumulative load on all cores
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label =  %percentage:4%%
 
 [module/xkeyboard]
 type = internal/xkeyboard
