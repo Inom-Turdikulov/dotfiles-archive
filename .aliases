@@ -153,3 +153,6 @@ alias weather='curl -s "wttr.in/$(pass location)"'
 
 # create an alias to run yadm for system files
 alias sysyadm="sudo yadm --yadm-dir /etc/yadm --yadm-data /etc/yadm/data"
+
+# Grep data from temp sensors
+alias systemperatures='sudo hddtemp /dev/disk/by-id/*ata*part1; sudo sensors'
