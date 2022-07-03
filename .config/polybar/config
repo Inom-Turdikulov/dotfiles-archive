@@ -29,7 +29,7 @@ alert = #c2185b
 blue = #00a9f4
 
 [bar/inomoz]
-modules-left = pomodoro filesystem temperature temperature-gpu cpu system-ati-radeontop memory weather mpris
+modules-left = pomodoro filesystem weather mpris
 modules-center = i3
 modules-right = pulseaudio qbittorrent date-default xkeyboard
 
