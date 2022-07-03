@@ -89,6 +89,7 @@ for_window [title="^FM$" class="Alacritty"]             floating enable, resize 
 for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [class="^UnrealEditor$"]                     floating enable, resize set 2900 2000, move position center
 for_window [class="^telegram-desktop$"]                 border pixel 2
 
 for_window [title="^Picture-in-Picture$"]               fullscreen toggle
