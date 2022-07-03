@@ -225,3 +225,4 @@ image/x-xbitmap=gimp.desktop
 application/rss+xml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 x-scheme-handler/mailto=emacs-mail.desktop
+application/uproject=com.epicgames.UnrealEngineEditor.desktop
