@@ -77,3 +77,5 @@
   :recipe (:host github
            :repo "lepisma/org-krita"
            :files ("resources" "resources" "*.el" "*.el")))
+
+(package! reverse-im)
