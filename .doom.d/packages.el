@@ -64,7 +64,6 @@
 (package! python-pytest)
 (package! pyimport)
 (package! edbi)
-(package! ue)
 (package! speed-type)
 (package! evil-terminal-cursor-changer)
 
