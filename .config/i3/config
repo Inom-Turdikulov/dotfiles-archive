@@ -89,7 +89,6 @@ for_window [title="^FM$" class="Alacritty"]             floating enable, resize 
 for_window [class="^Gnome-system-monitor$"]             floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
-for_window [class="^UnrealEditor$"]                     floating enable, resize set 2900 2000, move position center
 for_window [class="^telegram-desktop$"]                 border pixel 2
 
 for_window [title="^Picture-in-Picture$"]               fullscreen toggle
@@ -383,6 +382,7 @@ bindsym XF86AudioPlay exec playerctl -p $player play-pause
 bindsym Shift+XF86AudioPlay exec playerctl -p $player_secondary play-pause
 bindsym Control+XF86AudioPlay exec playerctl -p $(playerctl -l|grep firefox) play-pause
 bindsym Mod1+XF86AudioPlay exec playerctl -p Blanket play-pause
+bindsym $mod+XF86AudioPlay exec playerctl -a pause
 
 bindsym XF86AudioPrev exec playerctl -p $player prev
 bindsym XF86AudioNext exec playerctl -p $player next
@@ -408,6 +408,9 @@ bindsym $mod+shift+i exec gpick -p -s
 bindsym $mod+shift+Return exec speedcrunch
 bindsym $mod+shift+a exec gtk-launch "emacsclient"
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+
+# need initialize db first, `frece init rofi-search rofi-search.txt`
+bindsym $mod+g exec s $(echo ""|rofi-dmenu-frece --db ~/.cache/rofi-search --remember-unknown)
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
