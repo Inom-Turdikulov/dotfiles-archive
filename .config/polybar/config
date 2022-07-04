@@ -324,13 +324,17 @@ format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = #ef5350
 
-label-layout = %layout%
+label-layout = %icon%
 label-layout-underline = #ef5350
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = #1565c0
+
+layout-icon-0 = us;us
+layout-icon-1 = ru;RUSSIAN
+layout-icon-1-background = #ef5350
 
 [settings]
 screenchange-reload = true
