@@ -56,10 +56,6 @@
       :desc "dap breakpoint hit count"   "h" #'dap-breakpoint-hit-condition
       :desc "dap breakpoint log message" "l" #'dap-breakpoint-log-message)
 
-(use-package! ue
-  :init   (ue-global-mode +1)
-  :config (define-key ue-mode-map (kbd "C-c u") 'ue-command-map))
-
 ;; Run C programs directly from within emacs
 (defun execute-c-program ()
   (interactive)
