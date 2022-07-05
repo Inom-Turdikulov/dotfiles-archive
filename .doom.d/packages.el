@@ -78,3 +78,5 @@
            :files ("resources" "resources" "*.el" "*.el")))
 
 (package! reverse-im)
+
+(package! lexic :recipe (:local-repo "lisp/lexic"))
