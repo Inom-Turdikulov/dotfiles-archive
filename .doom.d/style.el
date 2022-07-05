@@ -59,9 +59,9 @@
   ;; Custom fonts for mode-line
   (setq doom-modeline-height 20) ; optional
   (if (facep 'mode-line-active)
-      (set-face-attribute 'mode-line-active nil :family "monospace" :height 110) ; For 29+
-    (set-face-attribute 'mode-line nil :family "monospace" :height 110))
-  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 110)
+      (set-face-attribute 'mode-line-active nil :family "monospace" :size 140) ; For 29+
+    (set-face-attribute 'mode-line nil :family "monospace" :height 140))
+  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 140)
 )
 
 ;; Alert style
