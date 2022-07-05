@@ -3,9 +3,9 @@
     "command": [
       "/usr/bin/alacritty",
       "-e",
-      "ncmpcpp"
+      "cmus"
     ],
-    "working_directory": "/home/inom"
+    "working_directory": "/data/music"
   },
   {
     "command": [
@@ -14,6 +14,6 @@
       "nnn",
       "/mnt/media/downloads"
     ],
-    "working_directory": "/home/inom"
+    "working_directory": "/mnt/media/downloads"
   }
 ]
