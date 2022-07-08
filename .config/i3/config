@@ -339,7 +339,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+n exec --no-startup-id dunstctl close-all
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
+bindsym $mod+control+Mod1+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
 
 # Bookmarks
 bindsym $mod+a exec ~/build/rofi-buku/rofi-buku
@@ -374,18 +374,19 @@ mode "$mode_ytfzf" {
 }
 
 # Sound/Player related key bindings
-set $player mpd
+set $player cmus
 set $player_secondary mpv
 set $sound_controller pactl --
 
-bindsym XF86AudioPlay exec playerctl -p $player play-pause
-bindsym Shift+XF86AudioPlay exec playerctl -p $player_secondary play-pause
+bindsym $mod+F4 exec playerctl -p $player play-pause
+bindsym $mod+F5 exec playerctl -p $player prev
+bindsym $mod+F6 exec playerctl -p $player next
+
+bindsym $mod+Shift+F4 exec playerctl -p $player_secondary play-pause
 bindsym Control+XF86AudioPlay exec playerctl -p $(playerctl -l|grep firefox) play-pause
 bindsym Mod1+XF86AudioPlay exec playerctl -p Blanket play-pause
 bindsym $mod+XF86AudioPlay exec playerctl -a pause
 
-bindsym XF86AudioPrev exec playerctl -p $player prev
-bindsym XF86AudioNext exec playerctl -p $player next
 
 bindsym Shift+XF86AudioPrev exec playerctl -p $player_secondary prev
 bindsym Shift+XF86AudioNext exec playerctl -p $player_secondary next
@@ -410,7 +411,7 @@ bindsym $mod+shift+a exec gtk-launch "emacsclient"
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # need initialize db first, `frece init rofi-search rofi-search.txt`
-bindsym $mod+g exec s $(echo ""|rofi-dmenu-frece --db ~/.cache/rofi-search --remember-unknown)
+bindsym $mod+control+Mod1+g exec s $(echo ""|rofi-dmenu-frece --db ~/.cache/rofi-search --remember-unknown)
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
