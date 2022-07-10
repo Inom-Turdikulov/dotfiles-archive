@@ -202,3 +202,7 @@ See `elfeed-play-with-mpv'."
              (read-string "Look up in dictionary: "))
          current-prefix-arg))
   (lexic-search identifier nil nil t))
+
+(use-package! evil-lion
+  :config
+  (evil-lion-mode))

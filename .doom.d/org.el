@@ -243,3 +243,9 @@
           ("PROJ" . +org-todo-project)
           ("NO"   . +org-todo-cancel)
           ("KILL" . +org-todo-cancel))))
+
+
+;; Append addtional languages
+(org-babel-do-load-languages 'org-babel-load-languages
+                             (append org-babel-load-languages
+                              '((spice     . t))))

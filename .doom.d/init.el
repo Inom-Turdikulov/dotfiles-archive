@@ -38,7 +38,7 @@
        ;;ligatures  ; ligatures and symbols to make your code pretty again
        minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
-       ;;nav-flash         ; blink cursor line after big motions
+       nav-flash         ; blink cursor line after big motions
        ;;neotree           ; a project drawer, like NERDTree for vim
        ophints           ; highlight the region an operation acts on
        (popup +defaults)   ; tame sudden yet inevitable temporary windows
@@ -79,8 +79,8 @@
        vterm             ; the best terminal emulation in Emacs
 
        :checkers
-       syntax              ; tasing you for every semicolon you forget
-       ;; (spell +flyspell) ; tasing you for misspelling mispelling
+       syntax            ; tasing you for every semicolon you forget
+       (spell +flyspell +hunspell) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
        :tools
@@ -92,7 +92,7 @@
        editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
-       ;;gist              ; interacting with github gists
+       gist              ; interacting with github gists
        (lookup +docsets +dictionary +offline)              ; navigate your code and its documentation
        lsp               ; M-x vscode
        (magit +forge)    ; a git porcelain for Emacs
