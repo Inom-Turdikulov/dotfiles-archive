@@ -232,7 +232,7 @@ bindsym $mod+m workspace $ws13
 
 # Anywhere
 # translate
-bindsym $mod+shift+v exec emacsclient --eval "(emacs-everywhere)"
+bindsym $mod+shift+v exec doom +everywhere
 bindsym $mod+Mod1+c exec emacsclient --alternate-editor='' --no-wait --create-frame --frame-parameters='(quote (name . "org-roam-paste"))' --eval "(org-roam-node-find)" --display $DISPLAY
 
 bindsym $mod+minus workspace $ws11
@@ -373,33 +373,17 @@ mode "$mode_ytfzf" {
     bindsym Escape mode "default"
 }
 
-# Sound/Player related key bindings
-set $player cmus
-set $player_secondary mpv
-set $sound_controller pactl --
-
-bindsym $mod+F4 exec playerctl -p $player play-pause
-bindsym $mod+F5 exec playerctl -p $player prev
-bindsym $mod+F6 exec playerctl -p $player next
-
-bindsym $mod+Shift+F4 exec playerctl -p $player_secondary play-pause
-bindsym Control+XF86AudioPlay exec playerctl -p $(playerctl -l|grep firefox) play-pause
-bindsym Mod1+XF86AudioPlay exec playerctl -p Blanket play-pause
-bindsym $mod+XF86AudioPlay exec playerctl -a pause
-
-
-bindsym Shift+XF86AudioPrev exec playerctl -p $player_secondary prev
-bindsym Shift+XF86AudioNext exec playerctl -p $player_secondary next
-
-## Volume control
-# Path to volume control, without trailing slash
+# Sound configuration
 set $volumepath i3-volume
-# Amount to increase/decrease volume as a percentage
 set $volumestep 2
-# Using pulseaudio-utils (append "-s $sinkname" without quotes to override default sink)
+
 bindsym XF86AudioRaiseVolume exec --no-startup-id i3-volume -P -p -n up $volumestep
 bindsym XF86AudioLowerVolume exec --no-startup-id i3-volume -P -p -n down $volumestep
-bindsym XF86AudioMute        exec --no-startup-id i3-volume -P -p -n mute
+bindsym Control+XF86AudioLowerVolume exec --no-startup-id i3-volume -P -p -n mute
+
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id playerctl -p mpv previous && notify-send "⏮ Switch to $(playerctl metadata xesam:title)"
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id playerctl -p mpv next && notify-send "⏭ Switch to $(playerctl metadata xesam:title)"
+bindsym Control+XF86AudioRaiseVolume exec --no-startup-id playerctl -p mpv play-pause && notify-send "⏯ Play or Pause $(playerctl metadata xesam:title)"
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
@@ -409,6 +393,8 @@ bindsym $mod+shift+i exec gpick -p -s
 bindsym $mod+shift+Return exec speedcrunch
 bindsym $mod+shift+a exec gtk-launch "emacsclient"
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+bindsym $mod+shift+m exec --no-startup-id umpv /data/music
+bindsym $mod+Menu exec zzzfoo -o xdg-open
 
 # need initialize db first, `frece init rofi-search rofi-search.txt`
 bindsym $mod+control+Mod1+g exec s $(echo ""|rofi-dmenu-frece --db ~/.cache/rofi-search --remember-unknown)
