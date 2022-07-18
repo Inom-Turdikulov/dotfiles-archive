@@ -1,6 +1,0 @@
-#!/bin/bash
-
-MESSAGE=$( { xsel | buku -f 3 -a; } 2>&1 )
-
-notify-send "buku add" "$MESSAGE"
-xdg-open http://network:8888/bookmark/?flt2_tags_number_equal=0
