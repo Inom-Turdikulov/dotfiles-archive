@@ -48,10 +48,10 @@ table {
 
 html,
 body {
-    font-size: 24px !important;
+    font-size: 18px !important;
     line-height: 1.4 !important;
     font-family: sans-serif !important;
-    font: 24px/1.4 sans-serif, serif !important;
+    font: 18px/1.4 sans-serif, serif !important;
 }
 
 table,
@@ -78,7 +78,6 @@ pre{
 body > div:not(.wy-grid-for-nav),
 body > article,
 body > table{
-    max-width: 960px !important;
     margin: 0 15px !important;
     font: 24px/1.4 sans-serif, serif !important;
 }
