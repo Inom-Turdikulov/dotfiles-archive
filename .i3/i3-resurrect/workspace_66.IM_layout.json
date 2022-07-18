@@ -32,7 +32,7 @@
       },
       "layout": "splith",
       "marks": [],
-      "name": "Accounts",
+      "name": "* #general",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -52,14 +52,14 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 4494,
-        "y": 1704,
+        "x": 1934,
+        "y": 24,
         "width": 1882,
         "height": 2072
       },
       "layout": "splith",
       "marks": [],
-      "name": "Telegram",
+      "name": "Chatterino 7.3.5 - intoruss0uls",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -68,8 +68,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^TelegramDesktop$",
-          "instance": "^telegram\\-desktop$"
+          "class": "^chatterino$",
+          "instance": "^chatterino$"
         }
       ]
     }

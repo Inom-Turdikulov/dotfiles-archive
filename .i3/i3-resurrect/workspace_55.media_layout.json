@@ -13,7 +13,7 @@
   "marks": [],
   "name": "5:5.media",
   "orientation": "horizontal",
-  "percent": 0.14285714285714285,
+  "percent": 0.12500000000000003,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -25,14 +25,14 @@
       "floating": "auto_off",
       "fullscreen_mode": 0,
       "geometry": {
-        "x": 0,
-        "y": 0,
-        "width": 800,
-        "height": 600
+        "x": 2580,
+        "y": 1700,
+        "width": 1882,
+        "height": 2072
       },
       "layout": "splith",
       "marks": [],
-      "name": "Music For Programming -  - Episode 6 (Compiled by Gods Of The New Age) (2012)",
+      "name": "DeaDBeeF - Music For Programming - Episode 18 (Compiled by Konx Om Pax)",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -41,8 +41,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Alacritty$",
-          "instance": "^Alacritty$"
+          "class": "^Deadbeef$",
+          "instance": "^deadbeef$"
         }
       ]
     },

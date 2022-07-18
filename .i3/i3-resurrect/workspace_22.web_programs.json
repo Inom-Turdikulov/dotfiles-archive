@@ -1,7 +1,13 @@
 [
   {
     "command": [
-      "/usr/lib/firefox/firefox"
+      "/opt/google/chrome/chrome",
+      "--remote-debugging-port=12039",
+      "--enable-features=VaapiVideoDecoder",
+      "--disable-features=UseChromeOSDirectVideoDecoder",
+      "--use-gl=desktop",
+      "--use-vulkan",
+      "--enable-crashpad"
     ],
     "working_directory": "/home/inom"
   }

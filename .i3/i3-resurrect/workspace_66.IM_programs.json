@@ -2,14 +2,14 @@
   {
     "command": [
       "gtk-launch",
-       "Ripcord"
+      "Ripcord"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "telegram-desktop"
+      "/opt/Chatterino-x86_64.AppImage"
     ],
-    "working_directory": "/home/inom/.local/share/TelegramDesktop"
+    "working_directory": "/home/inom"
   }
 ]

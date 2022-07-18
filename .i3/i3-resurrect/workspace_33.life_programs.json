@@ -1,13 +1,13 @@
 [
   {
     "command": [
-      "alacritty"
+      "emacs"
     ],
     "working_directory": "/home/inom"
   },
   {
     "command": [
-      "alacritty"
+      "emacs"
     ],
     "working_directory": "/home/inom"
   }

@@ -1,11 +1,9 @@
 [
   {
     "command": [
-      "/usr/bin/alacritty",
-      "-e",
-      "cmus"
+      "/usr/bin/deadbeef"
     ],
-    "working_directory": "/data/music"
+    "working_directory": "/home/inom"
   },
   {
     "command": [

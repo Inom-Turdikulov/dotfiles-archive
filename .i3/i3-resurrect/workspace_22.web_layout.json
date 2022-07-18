@@ -13,7 +13,7 @@
   "marks": [],
   "name": "2:2.web",
   "orientation": "horizontal",
-  "percent": 0.125,
+  "percent": 0.14285714285714285,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -34,7 +34,7 @@
       "marks": [],
       "name": null,
       "orientation": "horizontal",
-      "percent": 1.0,
+      "percent": null,
       "scratchpad_state": "none",
       "sticky": false,
       "type": "con",
@@ -46,14 +46,14 @@
           "floating": "auto_off",
           "fullscreen_mode": 0,
           "geometry": {
-            "x": 0,
-            "y": 0,
+            "x": 2560,
+            "y": 1680,
             "width": 3840,
             "height": 2120
           },
           "layout": "splith",
           "marks": [],
-          "name": "/news/ - \u0421\u0420\u041e\u0427\u041d\u041e!\u0412\u0421\u0415 \u0421\u0423\u0448\u043a\u0438 \u0440\u0435\u0437\u043a\u043e \u043f\u043e\u0442\u0435\u0440\u044f\u043b\u0438 \u0432\u0435\u043a\u0442\u043e\u0440 \u0442\u044f\u0433\u0438! \u2014 Mozilla Firefox",
+          "name": "Brain.fm: Music to improve focus, meditation & sleep. - Google Chrome",
           "orientation": "none",
           "percent": 1.0,
           "scratchpad_state": "none",
@@ -62,8 +62,8 @@
           "workspace_layout": "default",
           "swallows": [
             {
-              "class": "^firefox$",
-              "instance": "^Navigator$"
+              "class": "^Google\\-chrome$",
+              "instance": "^google\\-chrome$"
             }
           ]
         }
