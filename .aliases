@@ -29,8 +29,7 @@ alias d="cd ~/docs"
 alias dl="cd ~/downloads"
 alias dt="cd ~/desktop"
 alias p="cd ~/projects"
-alias E="SUDO_EDITOR=\"TERM=xterm-24bit emacsclient -t -a emacs\" sudo -e"
-alias vi="echo Use e instead vi"
+alias vi="nvim"
 alias g='git'
 alias gc="git checkout"
 alias gp="git push"
@@ -125,7 +124,7 @@ alias pip_clear='pip cache purge'
 alias pip_search='pip list | tail -n +3 | cut -d" " -f1 | xargs pip show -f | grep'
 alias packages_statistic='yay -Ps'
 alias packages_search="yay -Ss"
-alias packages_clean='yay -Yc && yay -Scc && pip cache purge && go clean -cache'
+alias packages_clean='yay -Yc && yay -Scc --aur && pip cache purge && go clean -cache'
 alias packages_list='expac "%n %m" -l'\n' -Q $(yay -Qq) | sort -rhk 2 | view'
 
 # Color using watch
