@@ -29,3 +29,4 @@ Got a lot from here:
 * Henrik Lissner and others (emacs) - https://github.com/doomemacs/doomemacs
 * Luke Smith - https://github.com/LukeSmithxyz/voidrice
 * ThePrimeagen - https://github.com/ThePrimeagen ( starting point https://github.com/ThePrimeagen/.dotfiles/blob/master/zsh/.zsh_profile).
+* Harry R. Schwartz - https://github.com/hrs/dotfiles
