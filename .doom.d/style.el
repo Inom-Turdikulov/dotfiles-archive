@@ -1,6 +1,6 @@
 ;;; style.el -*- lexical-binding: t; -*-
 
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (setq frame-title-format "GNU Emacs | %b")
@@ -20,13 +20,13 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 18 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "monospace" :size 18))
+(setq doom-font (font-spec :family "monospace" :size 36 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "monospace" :size 36))
 
-(setq doom-unicode-font (font-spec :family "monospace" :size 18))
+(setq doom-unicode-font (font-spec :family "Noto Color Emoji" :size 36))
 
 (add-hook! 'after-setting-font-hook :append
-  (set-fontset-font t 'unicode (font-spec :family "monospace" :size 18) nil 'prepend))
+  (set-fontset-font t 'unicode (font-spec :family "monospace" :size 36) nil 'prepend))
 
 ;; Set theme
 (setq doom-theme 'my-doom-one)
@@ -53,16 +53,16 @@
   ;; Show wordcount in selection
   (setq doom-modeline-enable-word-count t)
 
+  (custom-set-faces
+    '(mode-line ((t (:family "monospace" :height 1.0))))
+    '(mode-line-inactive ((t (:family "monospace" :height 1.0)))))
+    (advice-add #'doom-modeline--font-height :override #'(lambda () (progn 1.0)))
+
   ;; Whether display the IRC notifications. It requires `circe' or `erc' package.
   (setq doom-modeline-irc nil)
-
-  ;; Custom fonts for mode-line
-  (setq doom-modeline-height 20) ; optional
-  (if (facep 'mode-line-active)
-      (set-face-attribute 'mode-line-active nil :family "monospace" :size 140) ; For 29+
-    (set-face-attribute 'mode-line nil :family "monospace" :height 140))
-  (set-face-attribute 'mode-line-inactive nil :family "monospace" :height 140)
 )
+
+
 
 ;; Alert style
 (use-package! alert
@@ -89,4 +89,20 @@
 (add-hook 'after-make-frame-functions 'set-background-for-terminal)
 (add-hook 'window-setup-hook 'set-background-for-terminal)
 
+;; Syntax highlight
+(use-package! tree-sitter
+  :config
+  (require 'tree-sitter-langs)
+  (global-tree-sitter-mode)
+  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
 
+;; enable word-wrap in org-mode, csv-mode
+(add-hook 'org-mode-hook (lambda ()
+                             ;; make the lines in the buffer wrap around the edges of the screen.
+                             ;; to press C-c q  or fill-paragraph ever again!
+                             (auto-fill-mode)))
+
+;; vterm on right side
+(set-popup-rules!
+ '(("^\\*doom:vterm" :size 0.4 :vslot -4 :select t :quit nil :ttl 0 :side right)
+ ))
