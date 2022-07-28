@@ -5,16 +5,6 @@ set statusbar-v-padding     10
 set font "monspace Regular 12"
 set selection-clipboard clipboard
 
-## Keys
-
-# Press d to toggle side-by-side mode.
-map D set "first-page-column 1:1"
-map <C-d> set "first-page-column 1:2"
-
-# Zoom
-map <C-i> zoom in
-map <C-o> zoom out
-
 ## Colors
 
 # Base16 OneDark
