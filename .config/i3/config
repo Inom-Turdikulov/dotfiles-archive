@@ -26,33 +26,20 @@ for_window [class=".*"] title_format " %title "
 # Workspace names
 set $ws1  1:1.code
 set $ws2  2:2.web
-set $ws3  3:3.life
-set $ws4  4:4.dict
-set $ws5  5:5.media
-set $ws6  6:6.IM
-set $ws7  7:7.CG
-set $ws8  8:8.flashcards
-set $ws9  9:9.games
-set $ws10 10:10.help
-set $ws11 11:11.lib
-set $ws12 12:12.email
-set $ws13 13:13.projector
+set $ws3  3:3.im
+set $ws4  4:4.help
+set $ws5  5:5.music
+set $ws6  6:6.6
+set $ws7  7:7.7
+set $ws8  8:8.8
+set $ws9  9:9.9
+set $ws10 10:10.10
+set $ws11 11:11.11
 
+set $DISPLAY_1 DisplayPort-9
 set $DISPLAY_2 DisplayPort-1
 set $DISPLAY_3 DisplayPort-2
-workspace $ws1 output primary
-workspace $ws2  output primary
-workspace $ws3  output primary
-workspace $ws4  output primary
-workspace $ws5  output primary
-workspace $ws6  output primary
-workspace $ws7  output primary
-workspace $ws8  output primary
-workspace $ws9  output primary
-workspace $ws10 output $DISPLAY_3
-workspace $ws11 output $DISPLAY_3
-workspace $ws12 output $DISPLAY_3
-workspace $ws13 output $DISPLAY_2
+workspace $ws4 output $DISPLAY_3
 
 # Specify windows dimensions
 set $FLOAT_WIDTH 1800
@@ -74,12 +61,11 @@ for_window [class="^mpv$"]                              floating enable
 for_window [class="^Godot$" title="^.*DEBUG\)$"]        floating enable
 for_window [class="^Pavucontrol$"]                      floating enable
 for_window [class="^SpeedCrunch$"]                      floating enable
+for_window [class="^UnrealEditor$"]                     floating enable
 
 # MPV windows configuration
-for_window [class="chatterino"]  floating enable, resize set 760 1440
-
 for_window [title="^Emacs Everywhere"]                  floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
-for_window [title="^org-roam-paste$"]                   floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
+for_window [title="^org-roam-paste$"]                   floating enable, resize set 2400 1800, move position center
 for_window [title="^alacritty-pop-up$"]                 floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [title="^alacritty-pop-up-w$"]                 floating enable, resize set 2400 2000, move position center
 for_window [title="^htop$"]                             floating enable, resize set 2000 1800, move position center
@@ -90,10 +76,6 @@ for_window [class="^Gnome-system-monitor$"]             floating enable, resize 
 for_window [class="^SimpleScreenRecorder"]              floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^matplotlib$"]                       floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 for_window [class="^telegram-desktop$"]                 border pixel 2
-
-for_window [title="^Picture-in-Picture$"]               fullscreen toggle
-assign [title="^Picture-in-Picture$"]                   $ws13
-assign [class="^mpv$"]                                  $ws13
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border pixel 2
@@ -170,6 +152,17 @@ bindsym Mod1+shift+control+j resize grow down 1 px or 1 ppt
 bindsym Mod1+shift+control+k resize grow up 1 px or 1 ppt
 bindsym Mod1+shift+control+l resize grow right 1 px or 1 ppt
 
+bindsym $mod+mod1+1 resize set 70 ppt 70 ppt, move position 0 ppt 0 ppt
+bindsym $mod+mod1+2 resize set 25 ppt 25 ppt, move position 75 ppt 0 ppt
+bindsym $mod+mod1+3 resize set 25 ppt 25 ppt, move position 0 ppt 73 ppt
+bindsym $mod+mod1+4 resize set 25 ppt 25 ppt, move position 75 ppt 73 ppt
+bindsym $mod+mod1+5 resize set 70 ppt 28 ppt, move position 0 ppt 70 ppt
+bindsym $mod+mod1+6 resize set 30 ppt 98 ppt, move position 70 ppt 0 ppt
+bindsym $mod+mod1+7 move position center
+for_window [title="^twitch.tv" class="^mpv$"]  resize set 70 ppt 70 ppt, move position 0 ppt 0 ppt
+assign [title="^twitch.tv" class="^mpv$"] $ws5
+
+
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth no
 bindsym $mod+Tab workspace back_and_forth
@@ -180,17 +173,16 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+e layout toggle split;exec notify-send 'Split layout'
-bindsym $mod+s layout stacking;exec notify-send 'Stacking layout'
 bindsym $mod+w layout tabbed;exec notify-send 'Tabbed layout'
 
 # split orientation
-bindsym $mod+control+v split h;exec notify-send 'Vertical split'
-bindsym $mod+control+s split v;exec notify-send 'Horizontal split'
-bindsym $mod+control+q split toggle;exec notify-send 'Tile toggle'
+bindsym $mod+control+v split h, exec notify-send 'Vertical split'
+bindsym $mod+control+s split v, exec notify-send 'Horizontal split'
+bindsym $mod+control+q split toggle, exec notify-send 'Tile toggle'
 
 # toggle tiling / floating
-bindsym $mod+shift+space floating toggle
-bindsym $mod+shift+s sticky toggle
+bindsym $mod+shift+space floating toggle, exec notify-send "floating toggle"
+bindsym $mod+shift+s sticky toggle, exec notify-send "sticky toggle"
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -199,18 +191,35 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+b focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Mod1+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+x scratchpad show
+set $scratchpad_settings sticky enable, floating enable, resize set 55 ppt 75 ppt, move position center, move scratchpad, scratchpad show
+bindsym mod1+control+x [title="^alacritty-popup$"] scratchpad show
+bindsym mod1+control+shift+x exec jumpapp -t alacritty-popup -f alacritty --title alacritty-popup
+for_window [title="^alacritty-popup$" class="^Alacritty"] $scratchpad_settings
+
+bindsym mod1+control+c [title="Bitlbee$" class="^Emacs"] scratchpad show
+bindsym mod1+control+shift+c exec jumpapp -t Bitlbee -f emacs --eval '(progn (telega) (setq frame-title-format "%b - Bitlbee"))'
+for_window [title="Bitlbee" class="^Emacs"] $scratchpad_settings
+
+bindsym mod1+control+s [title="^GNU Emacs \| \*notmuch" class="^Emacs"] scratchpad show
+bindsym mod1+control+shift+s exec jumpapp -t notmuch -f emacs --eval '(notmuch-search "tag:inbox")'
+for_window [title="^GNU Emacs \| \*notmuch" class="^Emacs"] $scratchpad_settings
+
+bindsym mod1+control+d [title="GNU Emacs \| \*elfeed" class="^Emacs"] scratchpad show
+bindsym mod1+control+shift+d exec jumpapp -t elfeed -f emacs --eval '(elfeed)'
+for_window [title="GNU Emacs \| \*elfeed" class="^Emacs"] $scratchpad_settings
+
+
+bindsym $mod+control+x floating enable, move scratchpad
 
 #navigate workspaces next / previous
 bindsym $mod+Shift+control+l workspace next
 bindsym $mod+Shift+control+h workspace prev
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload; exec notify-send "Config reloaded"
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -223,12 +232,6 @@ bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-bindsym $mod+t workspace $ws10
-bindsym $mod+z exec wmctrl -a "Emacs>*elfeed"
-bindsym $mod+m workspace $ws13
 
 # Anywhere
 # translate
@@ -322,7 +325,7 @@ mode "$mode_system" {
     # run i3lock (doesn't retrun exit code whilte running) in background and monitor off in same time
     bindsym l exec --no-startup-id i3lock --color=263238 & sleep 5 && xset dpms force off, mode "default"
 
-    bindsym e exec --no-startup-id graceful_shutdown.sh && i3-msg exit, mode "default"
+    bindsym e exec --no-startup-id graceful_shutdown.sh && i3-msg exit||i3-msg exit, mode "default"
     bindsym s exec --no-startup-id systemctl suspend, mode "default"
     bindsym r exec --no-startup-id graceful_shutdown.sh && systemctl reboot, mode "default"
     bindsym d exec --no-startup-id graceful_shutdown.sh && power-off.sh, mode "default"
@@ -332,17 +335,16 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# New terminal window
-bindsym $mod+Return exec $TERMINAL
-
 # Dunst close
-bindsym $mod+n exec --no-startup-id dunstctl close-all
+bindsym $mod+n exec --no-startup-id notify-send "Disable Notifications!" && sleep 1 && dunstctl close-all && dunstctl set-paused true && polybar-msg hook dunst 2
+bindsym $mod+shift+n exec --no-startup-id dunstctl set-paused false && polybar-msg hook dunst 1 && notify-send "Enable Notifications!"
+bindsym $mod+ctrl+n exec --no-startup-id dunstctl close-all
 
 # start program launcher
 bindsym $mod+control+Mod1+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
 
 # Bookmarks
-bindsym $mod+a exec ~/build/rofi-buku/rofi-buku
+bindsym $mod+a exec ~/.local/bin/rofi-mvp.sh
 
 # Passwords
 bindsym $mod+p exec rofi-pass
@@ -353,7 +355,7 @@ bindsym $mod+u exec rofimoji --skin-tone neutral --action copy
 # Youtube FZF
 for_window [title="YTFZF"] floating enable, resize set $FLOAT_WIDTH $FLOAT_HEIGHT, move position center
 
-bindsym $mod+y exec --no-startup-id YTFZF_EXTMENU=" rofi -dmenu -fuzzy -width 1500" ytfzf -D , mode "default"
+bindsym $mod+y exec YTFZF_EXTMENU=" rofi -dmenu -fuzzy" ytfzf -D , mode "default"
 
 set $mode_ytfzf ytfzf: [V]ideo, [A]udio, [P]aylists, Playli[s]ts Audio, Open [c]lipboard
 bindsym $mod+shift+y mode "$mode_ytfzf"
@@ -376,28 +378,40 @@ mode "$mode_ytfzf" {
 # Sound configuration
 set $volumepath i3-volume
 set $volumestep 2
+set $player playerctl -p DeaDBeeF
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id i3-volume -P -p -n up $volumestep
 bindsym XF86AudioLowerVolume exec --no-startup-id i3-volume -P -p -n down $volumestep
 bindsym Control+XF86AudioLowerVolume exec --no-startup-id i3-volume -P -p -n mute
 
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id playerctl -p mpv previous && notify-send "⏮ Switch to $(playerctl metadata xesam:title)"
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id playerctl -p mpv next && notify-send "⏭ Switch to $(playerctl metadata xesam:title)"
-bindsym Control+XF86AudioRaiseVolume exec --no-startup-id playerctl -p mpv play-pause && notify-send "⏯ Play or Pause $(playerctl metadata xesam:title)"
+bindsym Control+XF86AudioRaiseVolume exec --no-startup-id $player play-pause
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id $player previous
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id $player next
+bindsym $mod+XF86AudioRaiseVolume exec rofi-pulse.sh
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
 bindsym Shift+Print exec maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 
-bindsym $mod+i exec buku_add
-bindsym $mod+shift+i exec gpick -p -s
+bindsym $mod+c exec gpick -p -s
 bindsym $mod+shift+Return exec speedcrunch
 bindsym $mod+shift+a exec gtk-launch "emacsclient"
-bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
-bindsym $mod+shift+m exec --no-startup-id umpv /data/music
 bindsym $mod+Menu exec zzzfoo -o xdg-open
+bindsym $mod+period exec cd "$HOME" && rofi-fm.sh "1"
+bindsym $mod+ctrl+period exec cd "$HOME/downloads" && rofi-fm.sh "2"
+bindsym $mod+shift+period exec cd "/data" && rofi-fm.sh "3"
 
-# need initialize db first, `frece init rofi-search rofi-search.txt`
+# Need initialize db first, `frece init rofi-search rofi-search.txt`
 bindsym $mod+control+Mod1+g exec s $(echo ""|rofi-dmenu-frece --db ~/.cache/rofi-search --remember-unknown)
 
 # Polybar startup script
 exec_always ~/.config/polybar/launch.sh &
+
+# Save names of worksapces
+exec_always exec printf "$ws1\n$ws2\n$ws3\n$ws4\n$ws5\n$ws6\n$ws7\n$ws8\n$ws9\n$ws10\n$ws11\n$ws12" > ~/.i3/workspaces
+
+bindsym $mod+t exec wmctrl -a ' Emacs' && emacsclient --alternate-editor='' --no-wait --eval '(progn (persp-switch "TERM"))' --display $DISPLAY
+bindsym $mod+d exec --no-startup-id rofi -run-shell-command 'alacritty --title alacritty-pop-up --hold -e {cmd}' -show combi
+
+bindsym $mod+9 exec setxkbmap us
+bindsym $mod+0 exec setxkbmap ru
+
