@@ -14,4 +14,3 @@ do
 done
 
 kdeconnect-indicator &
-emacs --daemon &
