@@ -13,7 +13,7 @@
   "marks": [],
   "name": "1:1.code",
   "orientation": "horizontal",
-  "percent": 0.125,
+  "percent": null,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -43,19 +43,46 @@
         {
           "border": "pixel",
           "current_border_width": 4,
-          "floating": "auto_off",
+          "floating": "user_off",
           "fullscreen_mode": 0,
           "geometry": {
             "x": 0,
             "y": 0,
-            "width": 176,
-            "height": 216
+            "width": 3832,
+            "height": 2092
           },
           "layout": "splith",
           "marks": [],
-          "name": "GNU Emacs | wsgi.py",
+          "name": "john_linkedin \u2013 inomoz-todo.org",
           "orientation": "none",
-          "percent": 1.0,
+          "percent": 0.5,
+          "scratchpad_state": "none",
+          "sticky": false,
+          "type": "con",
+          "workspace_layout": "default",
+          "swallows": [
+            {
+              "class": "^jetbrains\\-pycharm$",
+              "instance": "^jetbrains\\-pycharm$"
+            }
+          ]
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 4,
+          "floating": "user_off",
+          "fullscreen_mode": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1296,
+            "height": 1314
+          },
+          "layout": "splith",
+          "marks": [],
+          "name": "GNU Emacs | *doom*",
+          "orientation": "none",
+          "percent": 0.5,
           "scratchpad_state": "none",
           "sticky": false,
           "type": "con",
