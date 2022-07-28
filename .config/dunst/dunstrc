@@ -22,9 +22,6 @@
     markup = yes
     format = "%s %p\n%b"
 
-    # Sort messages by urgency.
-    sort = yes
-
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 
@@ -214,10 +211,11 @@
 #    summary = "*script*"
 #    script = dunst_test.sh
 
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
+[ignore]
+   # This notification will not be displayed
+   appname = DeaDBeeF
+   # summary = "foobar"
+   format = ""
 
 #[signed_on]
 #    appname = Pidgin
