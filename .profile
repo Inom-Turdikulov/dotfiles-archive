@@ -65,7 +65,10 @@ export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
 # Configure default fzf (fuzzy-finder) command
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore --follow -g '!{.git,node_modules,tmp,build,downloads}/*'"
+export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+
 
 # Set ssh agent vars
 export SSH_AGENT_PID=""
