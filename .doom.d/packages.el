@@ -65,14 +65,16 @@
 (package! speed-type)
 (package! evil-terminal-cursor-changer)
 
-(package! copilot
-  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
-
 (package! leetcode)
 
 (package! org-krita
   :recipe (:host github
            :repo "lepisma/org-krita"
+           :files ("resources" "resources" "*.el" "*.el")))
+
+(package! redbaron4emacs
+  :recipe (:host github
+           :repo "vindarel/redbaron4emacs"
            :files ("resources" "resources" "*.el" "*.el")))
 
 (package! reverse-im)
@@ -81,3 +83,16 @@
 
 (package! evil-lion)
 (package! ob-spice)
+(package! fzf)
+(package! blacken)
+
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+
+(package! md4rd)
+(package! pulsar)
+;; (package! shx) ;; images in shell
+(package! sx) ;; stack exchange client
+(package! elfeed-tube) ;; elfeed tube
+(package! telega)
+(package! dirvish)
