@@ -3,14 +3,32 @@
 (after! circe
 (enable-circe-display-images))
 
-;; ElFeed configuraton
-;; (run-with-timer 0 (* 60 60 1) 'elfeed-update)
+;; Run elfeed update
+(use-package! elfeed
+  :config
+  (evil-define-key 'normal elfeed-show-mode-map (kbd "U") 'elfeed-show-tag--unread)
+
+  (defun hrs/custom-elfeed-sort (a b)
+    (let* ((a-tags (format "%s" (elfeed-entry-tags a)))
+           (b-tags (format "%s" (elfeed-entry-tags b)))
+           (a-title (elfeed-feed-title (elfeed-entry-feed a)))
+           (b-title (elfeed-feed-title (elfeed-entry-feed b))))
+      (if (string= a-tags b-tags)
+          (if (string= a-title b-title)
+              (< (elfeed-entry-date b) (elfeed-entry-date a))
+            (string< b-title a-title))
+        (string< a-tags b-tags))))
+  (setf elfeed-search-sort-function #'hrs/custom-elfeed-sort)
+
+  (elfeed-set-max-connections 32)
+
+  (global-set-key (kbd "C-c r") 'elfeed))
 
 (defun elfeed-play-with-mpv ()
   "Play entry link with mpv."
   (interactive)
   (let ((entry (if (eq major-mode 'elfeed-show-mode) elfeed-show-entry (elfeed-search-selected :single))))
-    (start-process "elfeed-mpv" nil "mpv" (elfeed-entry-link entry))))
+    (start-process "elfeed-mpv" nil "linkhandler" (elfeed-entry-link entry))))
 
 (defvar elfeed-mpv-patterns
   '("twit\\.?ch" "youtu\\.?be")
@@ -48,6 +66,15 @@ See `elfeed-play-with-mpv'."
             entries)
       (unless (or elfeed-search-remain-on-entry (use-region-p))
         (forward-line)))))
+
+(use-package! elfeed-tube
+  :after elfeed
+  :demand t
+  :config
+  (elfeed-tube-setup))
+
+(add-hook! 'elfeed-search-mode-hook #'elfeed-update)
+
 ;; Ebooks configuration
 ;;
 
@@ -124,10 +151,8 @@ See `elfeed-play-with-mpv'."
    :save-vars '(major-mode default-directory))
 )
 
-;; Github CoPilot
+;; Copilot
 ;; accept completion from copilot and fallback to company
-(setq copilot-node-executable "/home/inom/.nvm/versions/node/v17.0.0/bin/node")
-
 (defun my-tab ()
   (interactive)
   (or (copilot-accept-completion)
@@ -206,3 +231,45 @@ See `elfeed-play-with-mpv'."
 (use-package! evil-lion
   :config
   (evil-lion-mode))
+
+
+;; Vterm func
+(after! vterm
+(add-to-list 'vterm-eval-cmds '("update-pwd" (lambda (path) (setq default-directory path))))
+(push (list "find-file-below"
+            (lambda (path)
+              (if-let* ((buf (find-file-noselect path))
+                        (window (display-buffer-below-selected buf nil)))
+                  (select-window window)
+                (message "Failed to open file: %s" path))))
+      vterm-eval-cmds))
+(add-hook 'prog-mode-hook 'blacken-mode)
+
+(use-package! sx
+  :config
+  (bind-keys :prefix "C-c s"
+             :prefix-map my-sx-map
+             :prefix-docstring "Global keymap for SX."
+             ("q" . sx-tab-all-questions)
+             ("i" . sx-inbox)
+                ("o" . sx-open-link)
+             ("u" . sx-tab-unanswered-my-tags)
+             ("a" . sx-ask)
+             ("s" . sx-search)))
+
+;; csv
+(add-hook 'csv-mode-hook (lambda () (setq truncate-lines t)))
+
+(setq telega-server-libs-prefix "/usr/local")
+
+(use-package! dirvish
+  :config
+  (dirvish-override-dired-mode))
+
+(with-eval-after-load "ispell"
+  (setenv "LANG" "en_GB.UTF-8")
+  (setq! ispell-program-name "hunspell")
+  (setq! ispell-dictionary "en_GB,ru_RU")
+  (ispell-set-spellchecker-params)
+  (ispell-hunspell-add-multi-dic "en_GB,ru_RU")
+  )
