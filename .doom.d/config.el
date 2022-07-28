@@ -29,6 +29,7 @@
       delete-by-moving-to-trash t                 ; Delete files to trash
       company-idle-delay 0.6                      ; Autocomplete delay timer
       tramp-use-ssh-controlmaster-options nil     ; Use the customisations in your ~/.ssh/config
+      fill-column 120
       )
 
 ;; Personal configuraton, like name, email, etc
@@ -48,16 +49,6 @@
 ;; Fix issue with commiting from terminal and $EDITOR
 (after! persp-mode
   (setq persp-emacsclient-init-frame-behaviour-override "main"))
-
-;; Start server
-(use-package! server
-  :when (display-graphic-p)
-  :after-call doom-first-input-hook doom-first-file-hook focus-out-hook
-  :config
-  (doom-init-fonts-h 'reload) ;; Fix invalid unicode fonts (cyrilic) in various buffers
-  (unless (server-running-p)
-    (server-start)
-    ))
 
 (add-to-list 'tramp-methods
              '("yadm"
