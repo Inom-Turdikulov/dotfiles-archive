@@ -141,6 +141,8 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	quotePath = false
+	commitGraph = true
 
 [color]
 
@@ -216,6 +218,7 @@
 
 	# When set to true, git-receive-pack will advertise the push options capability to its clients. False by default.
 	advertisePushOptions = true
+	procReceiveRefs = refs/for
 
 [http]
 	proxy = socks5://127.0.0.1:8084
@@ -234,3 +237,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[gc]
+	writeCommitGraph = true
