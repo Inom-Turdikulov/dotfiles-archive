@@ -19,8 +19,7 @@
   ;; Automatically toggle Org mode LaTeX fragment previews as the cursor enters and exits them
   (add-hook 'org-mode-hook 'org-fragtog-mode)
   (setq org-deadline-warning-days 7)
-  (setq org-agenda-files
-        '("~/wiki/roam" "~/wiki/")))
+  (setq org-agenda-files '("~/wiki/")))
 
 ;; Insert krita app images into org files
 (use-package! org-krita
