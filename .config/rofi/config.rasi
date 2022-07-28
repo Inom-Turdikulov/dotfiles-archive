@@ -1,9 +1,9 @@
 configuration {
 	modi: "run";
 	width: 150;
-	lines: 15;
+	lines: 20;
 	columns: 2;
-	font: "monospace 16";
+	font: "monospace 15";
 	bw: 0;
 	location: 2;
 	padding: 20;
@@ -80,23 +80,23 @@ configuration {
 /*	kb-move-char-forward: "Right,Control+f";*/
 /*	kb-remove-word-back: "Control+Alt+h,Control+BackSpace";*/
 /*	kb-remove-word-forward: "Control+Alt+d";*/
-/*	kb-remove-char-forward: "Delete,Control+d";*/
-/*	kb-remove-char-back: "BackSpace,Shift+BackSpace,Control+h";*/
-/*	kb-remove-to-eol: "Control+k";*/
-/*	kb-remove-to-sol: "Control+u";*/
-/*	kb-accept-entry: "Control+j,Control+m,Return,KP_Enter";*/
+	kb-remove-char-forward: "Delete";
+	kb-remove-char-back: "BackSpace,Shift+BackSpace";
+	kb-remove-to-eol: "Control+Shift+e";
+	kb-remove-to-sol: "Control+Shift+u";
+	kb-accept-entry: "Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
 /*	kb-delete-entry: "Shift+Delete";*/
-/*	kb-mode-next: "Shift+Right,Control+Tab";*/
-/*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
+/* kb-mode-next: "Shift+Right,Control+Tab"; */
+	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab,Control+h";
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
-/*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
-/*	kb-row-down: "Down,Control+n";*/
+	kb-row-up: "Up,Control+k,ISO_Left_Tab";
+	kb-row-down: "Down,Control+j";
 /*	kb-row-tab: "Tab";*/
-/*	kb-page-prev: "Page_Up";*/
-/*	kb-page-next: "Page_Down";*/
+	kb-page-prev: "Page_Up,Control+u";
+	kb-page-next: "Page_Down,Control+d";
 /*	kb-row-first: "Home,KP_Home";*/
 /*	kb-row-last: "End,KP_End";*/
 /*	kb-row-select: "Control+space";*/
