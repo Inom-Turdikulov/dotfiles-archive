@@ -6,9 +6,6 @@
 (after! dap-mode
   (setq dap-python-debugger 'debugpy)
 
-  (add-hook 'dap-stopped-hook
-            (lambda (arg) (call-interactively #'dap-hydra)))
-
   (dap-register-debug-template "Flask"
                                (list :type "python"
                                      :args "-i"
@@ -21,6 +18,7 @@
                                      :args (concat
                                             "run"
                                             "--no-debugger" ;; dap-debug had conflicts with built-in debugger
+                                            "--port 45120"
                                             )
                                      :request "launch"
                                      :name "Flask")))
@@ -81,3 +79,10 @@
    conda-env-subdirectory "envs"
    conda-anaconda-home "/opt/miniconda3")
   (conda-env-autoactivate-mode t))
+
+
+;; Fix debugger breakpoints view
+(add-hook! +dap-running-session-mode
+  (set-fringe-style (quote (20 . 10)))
+  (set-window-buffer nil (current-buffer))
+  )
