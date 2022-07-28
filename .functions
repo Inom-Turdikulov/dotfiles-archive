@@ -349,3 +349,14 @@ function mergemp4() {
 
   if test -f "$outputfile"; then echo "$outputfile created"; fi
 }
+
+function mem_total(){
+    ps_mem -S -p $(pgrep "$1"|head -n 1)
+}
+
+lfiles() {
+    files="$(fzf --query="$1" --multi --select-1 --exit-0)"
+    if test -n "$files"; then
+        xdg-open "$files"
+    fi
+}
