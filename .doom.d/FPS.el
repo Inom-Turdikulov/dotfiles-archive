@@ -10,8 +10,8 @@
             web-mode
             latex-mode))
 
-;; This will save all unsaved buffers visiting file
-(add-to-list 'focus-out-hook (lambda () (save-some-buffers t nil)))
+;; ;; This will save all unsaved buffers visiting file
+;; (add-to-list 'focus-out-hook (lambda () (save-some-buffers t nil)))
 
 ;; Automatically reload files was modified by external program
 (global-auto-revert-mode t)
@@ -26,6 +26,7 @@
   (setq openwith-associations '(("\\.gif\\'" "xdg-open" (file))
                               ("\\.avi\\'" "xdg-open" (file))
                               ("\\.mkv\\'" "xdg-open" (file))
+                              ("\\.mp3\\'" "xdg-open" (file))
                               ("\\.mp3u\\'" "xdg-open" (file))
                               ("\\.mp4\\'" "xdg-open" (file))
                               ("\\.webm\\'" "xdg-open" (file))
